@@ -1,69 +1,47 @@
 <section class="music grid-container" id="music">
   <div class="grid-x">
-    <div class="cell music-container grid-x align-justify">
-      <div class="cell medium-6 align-middle grid-x title-wrapper">
-        <!-- As of November 28th -->
-        <h2>12,861<span class="hrs">mins</span> <span class="description">of music listened to</span></h2>
-        <div class="musicnotes">
-          <div class="note-1">
-            &#9835; &#9833;
+    <div class="cell title-wrapper">
+      <!-- As of November 28th -->
+      <h2>12,861<span class="hrs">mins</span> <span class="description">of music listened to</span></h2>
+    </div>
+    <div class="cell grid-x cassette-row">
+      <div class="cassette-wrapper cell medium-4">
+        <div>label and words</div>
+        <div class="cassette">
+          <div class="sticker">
+            image sticker
           </div>
-          <div class="note-2">
-            &#9833;
-          </div>
-          <div class="note-3">
-            &#9839; &#9834;
-          </div>
-          <div class="note-4">
-            ♬
-          </div>
-        </div>
-      </div>
-      <div class="cell medium-6">
-        <div class="jukebox">
-          <div class="head">
-            <div class="empty">
-              <div class="record">
-                <img src="img/music/loveliest-time.jpg" alt="Carly Rae Jepsen's Loveliest Time Album Cover">
-              </div>
+          <div class="bump-out">
+            <div class="left">
+              <div class="circle"></div>
+              <div class="pill"></div>
             </div>
-          </div>
-          <div class="body">
-            <div class="song-container cell medium-5 grid-x align-center">
-              <h3>Top 5 most played songs</h3>
-              {% assign songs_order = site.songs | sort: 'play-count' | reverse %}
-                {%- for song in songs_order -%}
-                {% capture song-card %}
-                  <div class="album-cover-wrapper cell shrink">
-                    <div class="record">
-                      <div class="art">
-                        <img src="img/music/{{song.album-cover}}" alt="{{song.song-name}} Album Cover">
-                      </div>
-                    </div>
-                    <img src="img/music/{{song.album-cover}}" alt="{{song.song-name}} Album Cover" class="album-cover">
-                  </div>
-                  <div class="text-container cell auto grid-x">
-                    <div class="cell grid-x align-middle">
-                      <div class="cell auto grid-x">
-                        <p class="title cell">{{song.song-name}} 
-                          <i class="fas fa-external-link-square-alt"></i>
-                        </p>
-                        <div class="cell grid-x">
-                          <p class="artist cell medium-auto">{{song.artist}}</p>
-                          <p class="play-count cell medium-shrink">{{song.play-count}} plays</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                {% endcapture %}
-                <div class="song-tile cell small-12 grid-x">
-                  {%- include external-link.html link=song.link content=song-card css-class="grid-x cell" -%}
-                </div>
-              {%- endfor -%}
+            <div class="right">
+              <div class="pill"></div>
+              <div class="circle"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 </section>
+
+
+<!-- <h3>Top 5 most played songs</h3>
+{% assign songs_order = site.songs | sort: 'play-count' | reverse %}
+  {%- for song in songs_order -%}
+  {% capture song-card %}
+    <div class="album-cover-wrapper cell shrink">
+      <div class="record">
+        <div class="art">
+          <img src="img/music/{{song.album-cover}}" alt="{{song.song-name}} Album Cover">
+        </div>
+      </div>
+    </div>
+  {% endcapture %}
+  <div class="song-tile cell small-12 grid-x">
+    {%- include external-link.html link=song.link content=song-card css-class="grid-x cell" -%}
+  </div>
+{%- endfor -%} -->
