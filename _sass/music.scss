@@ -61,8 +61,6 @@
     }
   }
   h2{
-    font-family: $montserrat;
-    font-weight: $montserrat-black;
     font-size: 5rem;
     line-height: 4rem;
     margin-top: 0.1em;
@@ -70,9 +68,6 @@
       font-size: 3rem;
       line-height: 3rem;
       margin-top: 0.25em;
-    }
-    .hrs{
-      font-weight: $montserrat-light;
     }
     .description{
       font-size: 3rem;
@@ -83,8 +78,6 @@
     }
   }
   h3{
-    font-family: $montserrat;
-    font-weight: $montserrat-bold;
     margin-bottom: 1em;
     font-size: 1.5em;
     line-height: 1;
@@ -268,7 +261,6 @@
         }
         .text-container{
           margin-left: 0.5em;
-          font-family: $montserrat;
           color: semantic-color(text);
           transition: $sprint;
           padding: 0 0.5rem;
@@ -284,17 +276,12 @@
             }
           }
           .title{
-            font-weight: $montserrat-black;
             i{
               font-size: 0.75em;
             }
           }
           .artist{
-            font-weight: $montserrat-bold;
             line-height: 1.2;
-          }
-          .play-count{
-            font-weight: $montserrat-regular;
           }
         }
       }

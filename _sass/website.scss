@@ -17,7 +17,6 @@
     }
     .title-section{
       h2{
-        font-family: $source-code;
         font-size: 1em;
         writing-mode: vertical-rl;
         rotate: 180deg;
@@ -30,10 +29,8 @@
       }
       h2{
         text-transform: uppercase;
-        font-weight: $source-code-regular;
         a{
           text-transform: lowercase;
-          font-weight: $source-code-bold;
           color: $pure-white;
           float: right;
         }

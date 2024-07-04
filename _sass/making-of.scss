@@ -1,82 +1,89 @@
 .making-of{
   margin-top: 5rem;
-  @include breakpoint(small only) {
-    margin-top: 0;
-  }
   .content-area{
-    position: relative;
+    border-radius: $tile-radius-big;
+    background-color: semantic-color(making-of-bg);
     overflow: hidden;
-    border-radius: $tile-radius-medium;
-    background-color: semantic-color(flowstate-bg);
-    padding-top: 3em;
-    padding-bottom: 3em;
-    @include breakpoint(small only) {
-     padding-top: 1.5em;
-     padding-bottom: 1.5em;
-    }
-    .background-shapes{
-      position: absolute;
-      height: 150%;
-      top: -25%;
-      left: -15%;
-      aspect-ratio: 1106 / 1301;
-      @include breakpoint(small only){
-        height: auto;
-        scale: 1.75;
-        top: 5%;
-        left: -45%;
-      }
-    }
     .text-area{
-      z-index: 2;
-      padding-left: 3em;
-      @include breakpoint(small only) {
-        padding-left: 1.5em;
-        padding-right: 1.5em;
-        margin-bottom: 2rem;
-       }
-      i{
-        font-size: 2.5em;
-        @include breakpoint(small only) {
-          font-size: 1.5em;
-        }
+      padding: 2em;
+      background-color: semantic-color(making-of-header-bg);
+      font-family: $merriweather;
+      .divider{
+        background-color: semantic-color(text);
+        border-radius: 500px;
+        content: '';
+        height: 0.1rem;
+        width: 3em;
+        margin-block-end: 1.5em;
       }
       h2{
-        font-family: $big-shoulders;
-        font-weight: $big-shoulders-black;
-        line-height: 1;
-        @include breakpoint(small only) {
-          font-size: 2.5em;
-          padding: 0;
+        font-family: $merriweather;
+        font-weight: $merriweather-bold;
+        span{
+          display: block;
+          &:first-of-type{
+            font-family: $big-shoulders;
+            font-weight: $big-shoulders-regular;
+            font-size: 0.4em;
+            text-transform: uppercase;
+            margin-block-end: -0.5em;
+          }
         }
       }
       p{
         padding: 0;
         margin: 0;
-        margin-top: 1em;
-        margin-bottom: 2em;
+        font-size: 1.25em;
+        margin-block-end: 1.25em;
       }
-      .flowstate-link{
-        border-radius: $pill-radius;
-        background-color: $flowstate-pink;
-        padding: 0.5em 1em;
-        color: white;
-        font-weight: $lato-bold;
-        transition: $sprint;
+      a{
+        display: inline-block;
+        padding-inline: 1.75em;
+        padding-block: 0.5em;
+        background-color: $navy-black;
+        font-family: $lato;
+        color: $pure-white;
+        border-radius: $tile-radius;
         &:hover{
-          background-color: mix($pure-black, $flowstate-pink, 20%);
+          background-color: $navy-black-d4;
         }
       }
     }
     .image-area{
-      padding-left: 3em;
-      position: relative;
-      @include breakpoint(small only) {
-        padding-left: 1.5em;
+      padding-inline: 2em;
+      padding-block-start: 2em;
+      .lightmode-flip{
+        @media (prefers-color-scheme: dark) {
+          display: none;
+        } 
       }
-      img{
-        border-radius: $tile-radius 0 0 $tile-radius;
-        box-shadow: $pure-black $soft-shadow;
+      .darkmode-flip{
+        display: none;
+        @media (prefers-color-scheme: dark) {
+          display: block;
+        } 
+      }
+      .cell{
+        &:first-of-type{
+          padding-left: 0;
+        }
+        &:last-of-type{
+          padding-right: 0;
+        }
+      }
+      // TODO check if this is needed
+      // Reduces the spacing between hero screenshots
+      @include breakpoint(small only) {
+        .grid-padding-x > .cell{
+          padding-left: 0.25rem;
+          padding-right: 0.25rem;
+        }
+        .grid-padding-x > .cell:first-of-type{
+          padding-left: 0.625rem;
+        }
+        .grid-padding-x > .cell:last-of-type{
+          padding-right: 0.625rem;
+        }
       }
     }
   }

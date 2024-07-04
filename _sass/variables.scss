@@ -85,39 +85,15 @@ $semantic-colors:(
     page-bg: $pure-white,
     text: $navy-black,
     text-inverted: $pure-white,
-    link: $signature-teal,
-    shadow: rgba($navy-black,0.75),
-    footer-logo: $navy-black,
-    selection-background: $signature-teal-l6,
-    logo-header: $pure-white,
-    lastly-card-bg: #F7F7F7,
-    movie-card-bg: $navy-black-l9,
-    movie-number-badge-bg: $navy-black, 
-    flowstate-bg: $flowstate-light-pink,
-    jukebox-bg: $pure-white,
-    jukebox-border: $navy-black-d4,
-    movie-sub-description: $navy-black-l2,
-    hero-text: #6E7D93,
-    hero-text-stand-out: $navy-black,
+    making-of-bg: #FFF0E5,
+    making-of-header-bg: #FEE7D6,
   ),
   dark:(
     page-bg: $navy-black-d3,
     text: $pure-white,
     text-inverted: $navy-black,
-    link: $signature-teal,
-    shadow: rgba($navy-black-d9,0.75),
-    footer-logo: $pure-white,
-    selection-background: $signature-teal-d3,
-    logo-header: $pure-white,
-    lastly-card-bg: $navy-black-d2,
-    movie-card-bg: $navy-black,
-    movie-number-badge-bg: $pure-white,
-    flowstate-bg: #542135,
-    jukebox-bg: $navy-black,
-    jukebox-border: $navy-black-l2,
-    movie-sub-description: rgba($pure-white,0.5),
-    hero-text: #889AB4,
-    hero-text-stand-out: #E7F0FF,
+    making-of-bg: $navy-black-d4,
+    making-of-header-bg: $navy-black-d1,
   ),
 );
 
@@ -244,17 +220,12 @@ $lato-regular: 400;
 $lato-bold: 700;
 $lato-black: 900;
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
-$caveat: 'Caveat', cursive;
-$caveat-regular: 400;
-$caveat-bold: 700;
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&display=swap');
-$montserrat: 'Montserrat', sans-serif;
-$montserrat-light: 200;
-$montserrat-regular: 400;
-$montserrat-bold: 700;
-$montserrat-black: 900;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+$merriweather: "Merriweather", serif;
+$merriweather-light: 300;
+$merriweather-regular: 400;
+$merriweather-bold: 700;
+$merriweather-black: 900;
 
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400;700;900&display=swap');
 $big-shoulders: 'Big Shoulders Display', cursive;
@@ -262,8 +233,3 @@ $big-shoulders-light: 300;
 $big-shoulders-regular: 400;
 $big-shoulders-bold: 700;
 $big-shoulders-black: 900;
-
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
-$source-code: 'Source Code Pro', monospace;
-$source-code-regular: 400;
-$source-code-bold: 700;

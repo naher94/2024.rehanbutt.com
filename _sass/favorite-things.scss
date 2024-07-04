@@ -5,8 +5,6 @@ $things-gradient-dark-flip: linear-gradient(270deg, rgb(184, 136, 34) 0%, rgb(26
 .favorite-things{
   margin-block-start: 5em;
   h2, h3{
-    font-family: $montserrat;
-    font-weight: $montserrat-black;
   }
   h2{
     margin-bottom: 0;
@@ -14,7 +12,6 @@ $things-gradient-dark-flip: linear-gradient(270deg, rgb(184, 136, 34) 0%, rgb(26
   h3{
     font-size: 1.25em;
     margin-bottom: -1em;
-    font-weight: $montserrat-bold;
     letter-spacing: 0.75em;
   }
   .row-pill{
