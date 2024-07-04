@@ -1,18 +1,29 @@
 <section class="music grid-container" id="music">
   <div class="grid-x">
+    <!-- TODO adjust this with order logic to keep DOM order in check -->
     <div class="cell title-wrapper">
       <!-- As of November 28th -->
       <h2>12,861<span class="hrs">mins</span> <span class="description">of music listened to</span></h2>
     </div>
     <div class="cell grid-x cassette-row">
-      <div class="cassette-wrapper cell medium-4">
-        <div>label and words</div>
-        <div class="cassette">
+      <div class="cassette-wrapper cell grid-x medium-4">
+        <div class="cell song-details grid-x">
+          <div class="cell">song name</div>
+          <div class="cell grid-x align-justify">
+            <div class="cell shrink">artist</div>
+            <div class="cell shrink">count</div>
+          </div>
+        </div>
+        <div class="cassette cell">
+          <div class="screw screw__1"></div>
+          <div class="screw screw__2"></div>
+          <div class="screw screw__3"></div>
+          <div class="screw screw__4"></div>
           <div class="sticker">
             <div class="reel-window">
-              <div class="reel-left"></div>
+              <div class="reel-left">{% include_relative img/music/reel-teeth.svg %}</div>
               <div class="window"></div>
-              <div class="reel-right"></div>
+              <div class="reel-right">{% include_relative img/music/reel-teeth.svg %}</div>
             </div>
           </div>
           <div class="bump-out">

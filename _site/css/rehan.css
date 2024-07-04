@@ -7433,6 +7433,16 @@ footer .logo #rehan-logo-footer g {
     font-size: 1.5rem;
   }
 }
+.music .cassette-wrapper .song-details {
+  background-color: rgba(180, 180, 180, 0.1);
+  --blur: 10px;
+  -webkit-backdrop-filter: blur(var(--blur));
+  backdrop-filter: blur(var(--blur));
+  border-radius: 10px;
+  margin-block-end: 0.5em;
+  padding-inline: 1.5em;
+  padding-block: 0.5em;
+}
 .music .cassette-wrapper .cassette {
   aspect-ratio: 3/2;
   border-radius: 10px;
@@ -7442,13 +7452,39 @@ footer .logo #rehan-logo-footer g {
   flex-direction: column;
   justify-content: space-between;
   background-color: pink;
+  position: relative;
+}
+.music .cassette-wrapper .cassette .screw {
+  aspect-ratio: 1/1;
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 0.5em;
+  border-radius: 500px;
+  position: absolute;
+}
+.music .cassette-wrapper .cassette .screw__1 {
+  top: 0.75em;
+  left: 1em;
+}
+.music .cassette-wrapper .cassette .screw__2 {
+  top: 0.75em;
+  right: 1em;
+}
+.music .cassette-wrapper .cassette .screw__3 {
+  bottom: 0.75em;
+  left: 1em;
+}
+.music .cassette-wrapper .cassette .screw__4 {
+  bottom: 0.75em;
+  right: 1em;
 }
 .music .cassette-wrapper .cassette .sticker {
+  position: relative;
   flex-grow: 1;
   margin-block-end: 0.5em;
   border-radius: 10px;
-  background-color: aqua;
-  position: relative;
+  background-color: black;
+  background-image: url("../img/music/kelly-time.jpg");
+  background-size: cover;
 }
 .music .cassette-wrapper .cassette .reel-window {
   background-color: pink;
@@ -7463,16 +7499,27 @@ footer .logo #rehan-logo-footer g {
   margin: auto;
 }
 .music .cassette-wrapper .cassette .reel-window .reel-left, .music .cassette-wrapper .cassette .reel-window .reel-right {
-  aspect-ratio: 1/1;
   border-radius: 500px;
   width: 2em;
-  background-color: red;
+  height: 2em;
+  background-color: white;
   display: inline-block;
 }
+@keyframes rotate {
+  to {
+    rotate: 0deg;
+  }
+  from {
+    rotate: 360deg;
+  }
+}
+.music .cassette-wrapper .cassette .reel-window .reel-left svg, .music .cassette-wrapper .cassette .reel-window .reel-right svg {
+  animation: 15s rotate linear infinite;
+}
 .music .cassette-wrapper .cassette .reel-window .window {
-  background-color: red;
+  background-color: white;
   margin-inline: 0.5em;
-  width: 3em;
+  width: 4em;
   border-radius: 5px;
 }
 .music .cassette-wrapper .cassette .bump-out {
@@ -7480,7 +7527,7 @@ footer .logo #rehan-logo-footer g {
   clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
   margin-inline: 2em;
   padding-block-start: 1em;
-  padding-block-end: 0.5em;
+  padding-block-end: 0.25em;
   padding-inline: 1.5em;
   display: flex;
   flex-direction: row;
@@ -7490,14 +7537,14 @@ footer .logo #rehan-logo-footer g {
   border-radius: 500px;
   aspect-ratio: 1/1;
   width: 1em;
-  background-color: red;
+  background-color: white;
   display: inline-block;
 }
 .music .cassette-wrapper .cassette .bump-out .left .pill, .music .cassette-wrapper .cassette .bump-out .right .pill {
   border-radius: 500px;
   aspect-ratio: 2/1;
   width: 0.75em;
-  background-color: red;
+  background-color: white;
   display: inline-block;
   vertical-align: top;
 }

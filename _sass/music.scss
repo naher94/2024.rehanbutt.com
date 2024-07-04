@@ -1,3 +1,5 @@
+$cassette-case-color: pink;
+$cassette-punchouts: white; //should be page-bg
 .music{
   h2{
     font-size: 5rem;
@@ -12,6 +14,16 @@
     }
   }
   .cassette-wrapper{
+    .song-details{
+      background-color: rgba(#B4B4B4, 0.1);
+      --blur: 10px;
+      -webkit-backdrop-filter: blur(var(--blur));
+      backdrop-filter: blur(var(--blur));
+      border-radius: $tile-radius;
+      margin-block-end: 0.5em;
+      padding-inline: 1.5em;
+      padding-block: 0.5em;
+    }
     .cassette{
       aspect-ratio: 3/2;
       border-radius: $tile-radius;
@@ -20,17 +32,44 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      background-color: pink;
+      background-color: $cassette-case-color;
+      position: relative;
+      .screw{
+        aspect-ratio: 1/1;
+        background-color: rgba($pure-black, 0.25);
+        width: 0.5em;
+        border-radius: $pill-radius;
+        position: absolute;
+        $inline-spacing: 1em;
+        $block-spacing: 0.75em;
+        &__1{
+          top: $block-spacing;
+          left: $inline-spacing;
+        }
+        &__2{
+          top: $block-spacing;
+          right: $inline-spacing;
+        }
+        &__3{
+          bottom: $block-spacing;
+          left: $inline-spacing;
+        }
+        &__4{
+          bottom: $block-spacing;
+          right: $inline-spacing;
+        }
+      }
       .sticker{
-        // aspect-ratio: 2.5/1;
+        position: relative;
         flex-grow: 1;
         margin-block-end: 0.5em;
         border-radius: $tile-radius;
-        background-color: aqua;
-        position: relative;
+        background-color: black;
+        background-image: url("../img/music/kelly-time.jpg");
+        background-size: cover;
       }
       .reel-window{
-        background-color: pink;
+        background-color: $cassette-case-color;
         border-radius: $pill-radius;
         padding: 0.5em;
         display: inline-flex;
@@ -41,16 +80,27 @@
         width: fit-content;
         margin: auto;
         .reel-left, .reel-right{
-          aspect-ratio: 1/1;
           border-radius: $pill-radius;
           width: 2em;
-          background-color: red;
+          height: 2em;
+          background-color: $cassette-punchouts;
           display: inline-block;
+          @keyframes rotate{
+            to{
+              rotate: 0deg;
+            }
+            from{
+              rotate: 360deg;
+            }
+          }
+          svg{
+            animation: 15s rotate linear infinite;
+          }
         }
         .window{
-          background-color: red;
+          background-color: $cassette-punchouts;
           margin-inline: 0.5em;
-          width: 3em;
+          width: 4em;
           border-radius: 5px;
         }
       }
@@ -59,7 +109,7 @@
         clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
         margin-inline: 2em;
         padding-block-start: 1em;
-        padding-block-end: 0.5em;
+        padding-block-end: 0.25em;
         padding-inline: 1.5em;
         display: flex;
         flex-direction: row;
@@ -69,14 +119,14 @@
             border-radius: $pill-radius;
             aspect-ratio: 1/1;
             width: 1em;
-            background-color: red;
+            background-color: $cassette-punchouts;
             display: inline-block;
           }
           .pill{
             border-radius: $pill-radius;
             aspect-ratio: 2/1;
             width: 0.75em;
-            background-color: red;
+            background-color: $cassette-punchouts;
             display: inline-block;
             vertical-align:top;
           }
