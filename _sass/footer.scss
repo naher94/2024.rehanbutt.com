@@ -11,7 +11,6 @@ footer{
     background-size: cover;
     padding: 1em;
     display: grid;
-    // grid-template-columns: 5fr 2fr 2fr;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 1fr;
 
@@ -44,7 +43,6 @@ footer{
     grid-row: 1 / 2;
     justify-self: end;
     aspect-ratio: 1/1;
-    // max-height: 14em;
     border-radius: $pill-radius;
     padding: 3em;
     background-color: rgba($pure-white, 0.1);
