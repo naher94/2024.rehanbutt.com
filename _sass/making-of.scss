@@ -1,3 +1,5 @@
+$card-spacing: 3em;
+
 .making-of{
   margin-top: 5rem;
   .content-area{
@@ -5,7 +7,7 @@
     background-color: semantic-color(making-of-bg);
     overflow: hidden;
     .text-area{
-      padding: 2em;
+      padding: $card-spacing;
       background-color: semantic-color(making-of-header-bg);
       font-family: $merriweather;
       .divider{
@@ -50,8 +52,8 @@
       }
     }
     .image-area{
-      padding-inline: 2em;
-      padding-block-start: 2em;
+      padding-inline: $card-spacing;
+      padding-block-start: $card-spacing;
       .lightmode-flip{
         @media (prefers-color-scheme: dark) {
           display: none;

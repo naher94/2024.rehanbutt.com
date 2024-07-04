@@ -9157,7 +9157,7 @@ footer .logo #rehan-logo-footer g {
   overflow: hidden;
 }
 .making-of .content-area .text-area {
-  padding: 2em;
+  padding: 3em;
   background-color: var(--color-making-of-header-bg);
   font-family: "Merriweather", serif;
 }
@@ -9202,8 +9202,8 @@ footer .logo #rehan-logo-footer g {
   background-color: #131921;
 }
 .making-of .content-area .image-area {
-  padding-inline: 2em;
-  padding-block-start: 2em;
+  padding-inline: 3em;
+  padding-block-start: 3em;
 }
 @media (prefers-color-scheme: dark) {
   .making-of .content-area .image-area .lightmode-flip {
