@@ -7995,25 +7995,61 @@ footer .logo #rehan-logo-footer g {
   grid-template-rows: repeat(12, 1fr);
   padding: 2em;
 }
-.skills .tag-container .tag {
+.skills .tag-container .pill {
   display: inline;
   border-radius: 500px;
-  background-color: red;
   padding: 0.5em 1.5em;
   width: fit-content;
   height: fit-content;
   font-weight: 900;
   font-size: 1.5em;
+  overflow: hidden;
+  color: white;
+  --blur: 10px;
+  -webkit-backdrop-filter: blur(var(--blur));
+  backdrop-filter: blur(var(--blur));
+  position: relative;
 }
-.skills .tag-container .tag:nth-of-type(1) {
-  grid-column: 5/7;
+.skills .tag-container .pill .gradient {
+  --size: 10em;
+  --speed: 5s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+  width: var(--size);
+  aspect-ratio: 1/1;
+  filter: blur(calc(var(--size) / 5));
+  background-image: linear-gradient(hsl(222, 84%, 60%), hsl(164, 79%, 71%));
+  animation: rotate var(--speed) var(--easing) alternate infinite;
+  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.skills .tag-container .pill .gradient2 {
+  background-image: linear-gradient(#70dd27, #ffcb00);
+  animation-delay: 1s;
+}
+.skills .tag-container .pill .text {
+  position: relative;
+  z-index: 2;
+}
+.skills .tag-container .pill:nth-of-type(1) {
+  grid-column: 5/8;
   grid-row: 2/3;
 }
-.skills .tag-container .tag:nth-of-type(2) {
+.skills .tag-container .pill:nth-of-type(2) {
   grid-column: 1/4;
   grid-row: 4/5;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .lastly {
   margin-top: 10rem;
   margin-bottom: 10rem;
