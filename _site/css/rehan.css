@@ -10,6 +10,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @media print, screen and (min-width: 40em) {
   .reveal.large, .reveal.small, .reveal.tiny, .reveal {
     right: auto;
@@ -7419,7 +7420,11 @@ footer .logo #rehan-logo-footer g {
   }
 }
 
+.music {
+  font-family: "Montserrat", sans-serif;
+}
 .music h2 {
+  font-family: "Montserrat", sans-serif;
   font-size: 5rem;
   line-height: 4rem;
   margin-top: 0.1em;
@@ -7433,6 +7438,14 @@ footer .logo #rehan-logo-footer g {
     font-size: 1.5rem;
   }
 }
+.music .cassette-wrapper a {
+  color: var(--color-text);
+  transition: all 0.2s ease-in-out;
+}
+.music .cassette-wrapper a:hover {
+  scale: 1.05;
+  rotate: 2deg;
+}
 .music .cassette-wrapper .song-details {
   background-color: rgba(180, 180, 180, 0.1);
   --blur: 10px;
@@ -7441,7 +7454,15 @@ footer .logo #rehan-logo-footer g {
   border-radius: 10px;
   margin-block-end: 0.5em;
   padding-inline: 1.5em;
-  padding-block: 0.5em;
+  padding-block: 1em;
+  font-size: 0.8em;
+}
+.music .cassette-wrapper .song-details .song-name {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+.music .cassette-wrapper .song-details .artist-name {
+  font-weight: 500;
 }
 .music .cassette-wrapper .cassette {
   aspect-ratio: 3/2;

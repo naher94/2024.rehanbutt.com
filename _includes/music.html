@@ -5,39 +5,46 @@
       <!-- As of November 28th -->
       <h2>12,861<span class="hrs">mins</span> <span class="description">of music listened to</span></h2>
     </div>
-    <div class="cell grid-x cassette-row">
+    <div class="cell grid-x cassette-row grid-padding-x">
+      {% assign songs_order = site.songs | sort: 'play-count' | reverse %}
+      {%- for song in songs_order -%}
+        {% capture song-card %}
+          <div class="cell song-details grid-x">
+            <div class="cell song-name">{{song.song-name}} {% include_relative img/music/share-arrow.svg %}</div>
+            <div class="cell grid-x align-justify">
+              <div class="cell shrink artist-name">{{song.artist}}</div>
+              <div class="cell shrink">{{song.play-count}} plays</div>
+            </div>
+          </div>
+          <div class="cassette cell">
+            <div class="screw screw__1"></div>
+            <div class="screw screw__2"></div>
+            <div class="screw screw__3"></div>
+            <div class="screw screw__4"></div>
+            <div class="sticker">
+              <div class="reel-window">
+                <div class="reel-left">{% include_relative img/music/reel-teeth.svg %}</div>
+                <div class="window"></div>
+                <div class="reel-right">{% include_relative img/music/reel-teeth.svg %}</div>
+              </div>
+            </div>
+            <div class="bump-out">
+              <div class="left">
+                <div class="circle"></div>
+                <div class="pill"></div>
+              </div>
+              <div class="right">
+                <div class="pill"></div>
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        {% endcapture %}
+
       <div class="cassette-wrapper cell grid-x medium-4">
-        <div class="cell song-details grid-x">
-          <div class="cell">song name</div>
-          <div class="cell grid-x align-justify">
-            <div class="cell shrink">artist</div>
-            <div class="cell shrink">count</div>
-          </div>
-        </div>
-        <div class="cassette cell">
-          <div class="screw screw__1"></div>
-          <div class="screw screw__2"></div>
-          <div class="screw screw__3"></div>
-          <div class="screw screw__4"></div>
-          <div class="sticker">
-            <div class="reel-window">
-              <div class="reel-left">{% include_relative img/music/reel-teeth.svg %}</div>
-              <div class="window"></div>
-              <div class="reel-right">{% include_relative img/music/reel-teeth.svg %}</div>
-            </div>
-          </div>
-          <div class="bump-out">
-            <div class="left">
-              <div class="circle"></div>
-              <div class="pill"></div>
-            </div>
-            <div class="right">
-              <div class="pill"></div>
-              <div class="circle"></div>
-            </div>
-          </div>
-        </div>
+        {%- include external-link.html link=song.link content=song-card css-class="grid-x cell" -%}
       </div>
+      {%- endfor -%}
     </div>
 
   </div>
