@@ -1,0 +1,204 @@
+@keyframes float{
+  0% {
+    transform: rotate(10deg) translateY(0);
+  }
+  50% {
+    transform: rotate(5deg) translateY(-10px);
+  }
+  100% {
+    transform: rotate(10deg) translateY(0);
+  }
+}
+
+.events{
+  margin-top: 2rem;
+  @include breakpoint(small only) {
+    margin-top: 1rem;
+  }
+  .content-area{
+    position: relative;
+    .bubble{
+      aspect-ratio: 1/1;
+      position: absolute;
+      z-index: -1;
+      border-radius: 50%;
+      @media (prefers-color-scheme: dark){
+        filter: brightness(75%);
+      }
+      &__purple{
+        width: 200px;
+        background-color: #9C5AB7;
+        top: 10%;
+        transform: rotate(15deg);
+        animation: float 7s ease-in-out infinite paused;
+        animation-play-state: running;
+        @include breakpoint(small only) {
+          width: 70px;
+        }
+      }
+      &__yellow{
+        width: 160px;
+        background-color: #F2C50F;
+        left: 50%;
+        top: 20%;
+        animation: float 10s ease-in-out infinite paused;
+        animation-play-state: running;
+        @include breakpoint(small only) {
+          width: 50px;
+        }
+      }
+      &__orange{
+        width: 100px;
+        background-color: #E77E22;
+        right: 20%;
+        top: 0;
+        transform: rotate(-10deg);
+        animation: float 7s ease-in-out infinite paused;
+        animation-play-state: running;
+        @include breakpoint(small only) {
+          width: 25px;
+        }
+      }
+      &__red{
+        width: 130px;
+        background-color: #E84C3C;
+        right: 0;
+        top: 40%;
+        transform: rotate(30deg);
+        animation: float 10s ease-in-out infinite paused;
+        animation-play-state: running;
+        @include breakpoint(small only) {
+          width: 60px;
+        }
+      }
+      &__blue{
+        width: 80px;
+        background-color: #3599DC;
+        left: 30%;
+        bottom: 30%;
+        transform: rotate(-5deg);
+        animation: float 10s ease-in-out infinite paused;
+        animation-play-state: running;
+        @include breakpoint(small only) {
+          width: 40px;
+        }
+      }
+      &__green{
+        width: 250px;
+        background-color: #2ECC71;
+        right: 25%;
+        bottom: 0;
+        transform: rotate(-20deg);
+        animation: float 7s ease-in-out infinite paused;
+        animation-play-state: running;
+        @include breakpoint(small only) {
+          width: 100px;
+        }
+      }
+    }
+  }
+  .text-container{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    @include breakpoint(small only) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+  h2{
+    font-family: $lato;
+    font-weight: $lato-black;
+    font-size: 6rem;
+    line-height: 1.2;
+    @include breakpoint(small only) {
+      font-size: 2rem;
+      padding: 0;
+    }
+    span{
+      display: block;
+      &:first-of-type{
+        font-size: .4em;
+      }
+      &:nth-of-type(2){
+        font-size: .7em;
+      }
+    }
+  }
+  p{
+    font-size: 2rem;
+    font-weight: $lato-black;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    color: rgba($navy-black, .70);
+    @include breakpoint(small only) {
+      font-size: 1rem;
+    }
+    @media (prefers-color-scheme: dark){
+      color: rgba($pure-white, .70);
+    }
+  }
+  
+  $animationSpeed: 40s;
+  
+  // Animation
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-2000px)} //7 is the number of logos
+  }
+  .logo-slider {
+    overflow: hidden;
+    position: relative;
+    background-color: initial;
+    @include breakpoint(small only) {
+      padding-bottom: 2rem;
+    }
+    
+    .slide-track {
+      animation: scroll $animationSpeed linear infinite;
+      display: flex;
+      width: 4000px;
+    }
+    .slide{
+      margin: 0 2rem;
+      min-width: 60px;
+      @include breakpoint(small only) {
+        margin: 0 1rem;
+      }
+      img{
+        height: 120px;
+        @include breakpoint(small only) {
+          height: 80px;
+        }
+        @media (prefers-color-scheme: dark) {
+          filter: none;
+        }
+      }
+    }
+  }
+  .logo-container{
+    z-index: 1;
+    position: relative;
+    .gradient-container{
+      z-index: 2;
+      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 75%, rgba(255,255,255,1) 100%);
+      @media (prefers-color-scheme: dark) {
+        background: linear-gradient(90deg, rgba($navy-black-d3,1) 0%, rgba($navy-black-d3,0) 25%, rgba($navy-black-d3,0) 75%, rgba($navy-black-d3,1) 100%);
+      }
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .slide{
+      @media (prefers-color-scheme: dark){
+        filter: brightness(1000%) grayscale(80%);
+      }
+    }
+  }
+}

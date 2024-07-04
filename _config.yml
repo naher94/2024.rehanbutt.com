@@ -1,0 +1,29 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Rehan Butt
+email: me@rehanbutt.com
+year: 2024
+file-suffix: twenty-four
+description: > # this means to ignore newlines until "baseurl:"
+  As the curtain draws to a close on 2023, let's look at the year as it unfolded. I moved to Los Angeles, designed some exciting new filmmaking software, and earned my first film credit! I participated in multiple industry events, deepening existing skills and acquiring some new ones. Launched a design inspiration library and took some amazing photos during my travels.
+
+baseurl: "" # the subpath of your site, e.g. /blog
+mainurl: "https://rehanbutt.com"
+url: "https://2024.rehanbutt.com" # the base hostname & protocol for your site
+keywords: >
+  year in review,2024,yearly recap,devzgn,devzgner,personal review, personal recap,recap 2023,Design,UX,UI,webdev,branding,portfolio,site
+
+# Build settings
+markdown: kramdown
+
+plugins: [jekyll-sitemap]
+
+collections:
+  songs:
+    output: false

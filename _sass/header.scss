@@ -1,0 +1,66 @@
+header{
+  padding: 3rem;
+  font-family: $big-shoulders;
+  font-weight: $big-shoulders-black;
+  overflow: hidden;
+  @include breakpoint(small only) {
+    padding: 1rem;
+  }
+  .number-container{
+    margin-top: -8em; //Shifts the 2023 down
+    @include breakpoint(small only) {
+      margin-top: -4em;
+    }
+    h1{
+      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,  minmax(10px, max-content));
+      font-family: $big-shoulders;
+      font-weight: $big-shoulders-black;
+      $number-font-size: 76vw;
+      font-size: $number-font-size;
+      margin-inline-start: calc($number-font-size * -0.11);
+      @include breakpoint(xxlarge up){
+        font-size: 62em;
+        margin-inline-start: -0.09em; //Shifts the 2023 to the right
+      }
+    }
+    span{
+      color: #BC2649;
+      background: linear-gradient(90deg,rgb(188, 38, 73) 0%, rgb(141, 25, 52) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @media (prefers-color-scheme: dark) {
+        background: linear-gradient(90deg,rgb(188, 38, 73) 0%, rgb(141, 25, 52) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+  .title-area{
+    z-index: 2;
+    color: semantic-color(text);
+  }
+  .subtitle{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    @include breakpoint(small only) {
+      font-size: 1rem;
+    }
+  }
+  .logo{
+    #rehan-logo-header{
+      height: 30px;
+      transition: $sprint;
+      &:hover{
+        transform: scale(1.1);
+      }
+      g{
+        fill:semantic-color(text); //Changes the color of my logo inline
+      }
+      @include breakpoint(small only){
+        height: 22px;
+      }
+    }
+  }
+}

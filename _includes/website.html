@@ -1,0 +1,77 @@
+<section class="website" id="website">
+  <div class="grid-container">
+    <div class="grid-x site-container">
+      <div class="cell grid-x sub-section medium-shrink title-section">
+        <h2>v7 guava {%- include external-link.html link="https://rehanbutt.com" content="rehanbutt.com" css-class="" -%}</h2>
+      </div>
+      <div class="cell grid-x sub-section medium-auto main-content">
+        <div class="left cell medium-8 grid-x">
+          <h4>Photography</h4>
+          <p class="description">Enjoy a new section on my site where I share a few of my favorite photos from my travels. Keep an eye out as more pictures will be added soon.</p>
+          <div class="link-list cell grid-x">
+            {% assign photo-list = "(dubai|Dubai Expo|Spring 2022),(jordan|Jordan|Winter 2022),(assorted-snaps|Assorted Snaps|Winter 2014)" | remove: "(" | remove: ")" | split: ',' %}
+            {% for photo in photo-list %}
+            {% assign each = photo | split: '|' %}
+              <a href="https://rehanbutt.com/photography/{{each[0]}}" rel="noopener" target="_blank" class="cell grid-x align-justify detail-item">
+                <div class="cell shrink name">
+                  {{each[1]}}
+                </div>
+                <div class="cell shrink season">
+                  {{each[2]}}
+                </div>
+                <span class="visually-hidden">Opens a new window</span>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="right cell grid-x">
+          {% assign photo-list = "(dubai|dubai.jpg|Al Wasl Plaza Dome in daylight),(jordan|jordan2022.jpg|The Treasury at Petra),(assorted-snaps|burj-al-arab.jpg|Lobby of the Burj Al Arab)" | remove: "(" | remove: ")" | split: ',' %}
+          {% for photo in photo-list %}
+          {% assign each = photo | split: '|' %}
+          <div class="cell small-4">
+            <div class="image-wrapper">
+              <a href="https://rehanbutt.com/photography/{{each[0]}}" rel="noopener" target="_blank">
+                <img src="/img/{{each[1]}}" alt="{{each[2]}}">
+                <span class="visually-hidden">Opens a new window</span>
+              </a>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="cell sub-section medium-shrink by-numbers">
+        <div class="title">
+          <p>By the Numbers</p>
+        </div>
+        <div class="big-total">
+          <p class="numb">11.3K</p>
+          <p>Total site visits 2023</p>
+        </div>
+        <div class="busy-day">
+          <p>July 30th</p>
+          <p class="busy-label">Busiest Visit Day</p>
+        </div>
+        <div class="country-visits">
+          <p class="country-label">Most page views by country</p>
+          {% assign country-list = "(🇺🇸|United States|7551),(🇮🇳|India|435),(🇨🇳|China|332)" | remove: "(" | remove: ")" | split: ',' %}
+          <!-- Data as of Dec 31st -->
+          {% for country in country-list %}
+          {% assign each = country | split: '|' %}
+          <div class="country-container grid-x">
+            <div class="country-wrapper cell grid-x align-justify">
+              <div class="left-section cell shrink">
+                <p class="flag">{{each[0]}}</p>
+                <p class="country-name">{{each[1]}}</p>
+              </div>
+              <div class="right-section cell shrink">
+                <p class="number">{{each[2]}}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

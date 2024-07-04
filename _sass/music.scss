@@ -1,0 +1,365 @@
+
+@keyframes lighting {
+  0% {
+    background-color: #9fffb4;
+  }
+  20% {
+    background-color: #f09fff;
+  }
+  40% {
+    background-color: #9fedff;
+  }
+  60% {
+    background-color: #f9ff9f;
+  }
+  80% {
+    background-color: #ffa89f;
+  }
+  99% {
+    background-color: #bb9fff;
+  }
+}
+@mixin lighting-glow-shadow($name, $hl, $vl, $blur, $spread){
+  @keyframes #{$name}-lighting-glow-shadow {
+    0% {
+      box-shadow: $hl $vl $blur $spread #9fffb4;
+      background-color: #9fffb4;
+    }
+    20% {
+      box-shadow: $hl $vl $blur $spread #f09fff;
+      background-color: #f09fff;
+    }
+    40% {
+      box-shadow: $hl $vl $blur $spread #9fedff;
+      background-color: #9fedff;
+    }
+    60% {
+      box-shadow: $hl $vl $blur $spread #f9ff9f;
+      background-color: #f9ff9f;
+    }
+    80% {
+      box-shadow: $hl $vl $blur $spread #ffa89f;
+      background-color: #ffa89f;
+    }
+    99% {
+      box-shadow: $hl $vl $blur $spread #bb9fff;
+      background-color: #bb9fff;
+    }
+  }
+}
+
+.music{
+  margin-top: 4rem;
+  @include breakpoint(small only) {
+    margin-top: 2rem;
+  }
+  .music-container{
+    border-radius: $tile-radius-medium;
+    padding: 2rem;
+    @include breakpoint(small only) {
+      padding: 0;
+    }
+  }
+  h2{
+    font-family: $montserrat;
+    font-weight: $montserrat-black;
+    font-size: 5rem;
+    line-height: 4rem;
+    margin-top: 0.1em;
+    @include breakpoint(small only) {
+      font-size: 3rem;
+      line-height: 3rem;
+      margin-top: 0.25em;
+    }
+    .hrs{
+      font-weight: $montserrat-light;
+    }
+    .description{
+      font-size: 3rem;
+      display: block;
+      @include breakpoint(small only) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  h3{
+    font-family: $montserrat;
+    font-weight: $montserrat-bold;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    line-height: 1;
+    @include breakpoint(small only) {
+      text-align: left;
+      margin-top: 0.5em;
+      margin-bottom: 1.5em;
+    }
+  }
+  .jukebox{
+    position: relative;
+    .head{
+      aspect-ratio: 1/1;
+      background-color: #9fffb4; //Matches the 1st color in the animation
+      border-radius: 50%;
+      border: 5px solid semantic-color(jukebox-border);
+      animation: lighting 10s infinite;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (prefers-color-scheme: dark) {
+        @include lighting-glow-shadow(head, 0, 0, 90px, -10px); 
+        animation: head-lighting-glow-shadow 10s infinite;
+      }
+      .empty{
+        aspect-ratio: 1/1;
+        background-color: semantic-color(jukebox-bg);
+        border-radius: 50%;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include breakpoint(small only) {
+          width: 90%;
+        }
+        .record{
+          border-radius: 1000px;
+          background-color: black;
+          aspect-ratio: 1/1;
+          transition: $run;
+          overflow: hidden;
+          border: solid black 60px;
+          animation: spin 30s infinite;
+          animation-timing-function: linear;
+          width: 60%;
+          @include breakpoint(small only) {
+            border: solid black 40px;
+            width: 70%;
+          }
+          @media (prefers-color-scheme: dark) {
+            @include lighting-glow-shadow(record, 0, 0, 50px, -20px); 
+            animation: record-lighting-glow-shadow 10s infinite, spin 30s infinite;
+          }
+        }
+      }
+    }
+    .body{
+      margin-top: -50%;
+      z-index: 2;
+      position: relative;
+      background-color: semantic-color(jukebox-bg);
+      border: 5px solid semantic-color(jukebox-border);
+      border-top-width: 15px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      padding: 1.5em 4em;
+      padding-bottom: 3em;
+      @include breakpoint(small only) {
+        padding: 1em 2em;
+      }
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 10%;
+        height: 95%;
+        background-color: #9fffb4;
+        animation: lighting 10s infinite;
+        animation-fill-mode: forwards;
+        @include breakpoint(small only) {
+          width: 5%;
+        }
+      }
+      
+      &::before {
+        border-bottom-right-radius: 10px;
+        left: 0;
+        @media (prefers-color-scheme: dark) {
+          @include lighting-glow-shadow(before, -20px, 20px, 90px, -10px); 
+          animation: before-lighting-glow-shadow 10s infinite;
+        }
+      }
+      
+      &::after {
+        left: auto;
+        right: 0;
+        border-bottom-left-radius: 10px;
+        @media (prefers-color-scheme: dark) {
+          @include lighting-glow-shadow(after, 20px, 20px, 90px, -10px); 
+          animation: after-lighting-glow-shadow 10s infinite;
+        }
+      }
+    }
+  }
+
+  .song-container{
+    font-size: 0.8em;
+    $album-size: 6em;
+    .album-cover-wrapper{
+      max-width: $album-size;
+      position: relative;
+      .album-cover{
+        aspect-ratio: 1/1;
+        position: relative;
+        z-index: 2;
+      }
+      &::after{
+        content: " ";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        border: solid rgba($navy-black, 0.1) 2px;
+        border-radius: $tile-radius;
+      }
+      .record{
+        border-radius: 1000px;
+        background-color: black;
+        aspect-ratio: 1/1;
+        position: absolute;
+        width: $album-size - 1em;
+        top: 0.5em;
+        left: 5px;
+        z-index: 1;
+        transition: $run;
+        overflow: hidden;
+        border: solid black 1.5em;
+        animation: spin 30s infinite;
+        animation-timing-function: linear;
+        
+      }
+    }
+    @keyframes spin {
+      to {
+        transform: rotate(2154deg);
+      }
+    }
+    .song-tile{
+      padding: 0.5rem 0;
+      &:first-of-type{
+        padding-top: 0;
+      }
+      &:last-of-type{
+        padding-bottom: 0;
+      }
+      a{
+        &:hover{
+          .record{
+            margin-left: $album-size / 2;
+            @media (prefers-color-scheme: dark) {
+              @include lighting-glow-shadow(record-s, 0, 0, 20px, -10px); 
+              animation: record-s-lighting-glow-shadow 10s infinite, spin 30s infinite;
+            }
+          }
+          .text-container{
+            background-color: rgba($navy-black, 0.1);
+            margin-left: 2em;
+            @media (prefers-color-scheme: dark) {
+              background-color: rgba($navy-black-l1, 0.5);
+            }
+          }
+        }
+        img{
+          border-radius: $tile-radius;
+        }
+        .text-container{
+          margin-left: 0.5em;
+          font-family: $montserrat;
+          color: semantic-color(text);
+          transition: $sprint;
+          padding: 0 0.5rem;
+          border-radius: $tile-radius;
+          p{
+            margin: 0;
+            padding: 0;
+            @include breakpoint(medium down) {
+              font-size: 0.8em;
+            }
+            @include breakpoint(small only) {
+              font-size: 1em;
+            }
+          }
+          .title{
+            font-weight: $montserrat-black;
+            i{
+              font-size: 0.75em;
+            }
+          }
+          .artist{
+            font-weight: $montserrat-bold;
+            line-height: 1.2;
+          }
+          .play-count{
+            font-weight: $montserrat-regular;
+          }
+        }
+      }
+    }
+  }
+  .title-wrapper{
+    position: relative;
+  }
+  .musicnotes {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 0px solid #000;
+    }
+    
+    .note-1,
+    .note-2,
+    .note-3,
+    .note-4 {
+      position: absolute;
+      animation: notes 3s infinite linear;
+      font-size: 2em;
+      opacity: 0;
+    }
+    
+    .note-1 {
+      top: 60%;
+      left: 0;
+      animation-delay: 0.5s;
+    }
+    
+    .note-2 {
+      top: 30%;
+      left: 30%;
+      animation-delay: 1s;
+    }
+    
+    .note-3 {
+      top: 70%;
+      left: 60%;
+      animation-delay: 1.5s;
+    }
+    
+    .note-4 {
+      top: 40%;
+      left: 90%;
+      animation-delay: 2s;
+    }
+    
+    @keyframes notes {
+      0% {
+        transform: scale(1) translate(0, 0);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.5) translate(-50%, -50%);
+      }
+      80% {
+        opacity: 0;
+        transform: scale(1.5) translate(-100%, -100%);
+      }
+      100% {
+        transform: scale(1.5) translate(-100%, -100%);
+        opacity: 0;
+      }
+    }
+}

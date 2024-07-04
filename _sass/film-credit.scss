@@ -1,0 +1,71 @@
+.film-credit{
+  margin-top: 14rem;
+  @include breakpoint(small only) {
+    margin-top: 12rem;
+  }
+  .content-area{
+    border-radius: $tile-radius-medium;
+    background: linear-gradient(to bottom right, rgba(22,63,114,1) 0%, rgba(43,127,160,1) 100%);
+    position: relative;
+    padding: 2em;
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(to bottom right, rgba(18, 45, 80,1) 0%, rgba(33, 91, 114,1) 100%);
+    }
+    &:before{
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../img/disney-film-posters.png);
+      opacity: 0.1;
+      background-blend-mode: overlay;
+      background-position: center;
+      background-size: 115%;
+      border-radius: inherit;
+    }
+    @include breakpoint(small only) {
+      padding: 1em;
+    }
+    .poster-container{
+      z-index: 2;
+      padding: 2em;
+      @include breakpoint(small only) {
+        padding: 1em;
+      }
+      .poster{
+        border-radius: $tile-radius-medium;
+        overflow: hidden;
+        box-shadow: $pure-black $recessed-shadow;
+        transform: rotate(-10deg);
+        margin-block-start: -10rem;
+        @include breakpoint(small only) {
+          transform: rotate(0);
+        }
+      }
+    }
+    .text-container{
+      z-index: 3;
+      font-weight: $lato-bold;
+      @include breakpoint(small only) {
+        margin-block-start: 2em;
+      }
+      .wdas-logo{
+        max-width: 15em;
+        filter: none;
+        @include breakpoint(small only) {
+          width: 10em;
+        }
+      }
+      .text-description{
+        padding: 2em;
+        color: $pure-white;
+        @include breakpoint(small only) {
+          padding: 1em;
+        }
+      }
+    }
+  }
+}
