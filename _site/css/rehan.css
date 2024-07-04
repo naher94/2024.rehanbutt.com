@@ -8,7 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900i,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap");
 @media print, screen and (min-width: 40em) {
   .reveal.large, .reveal.small, .reveal.tiny, .reveal {
     right: auto;
@@ -7974,195 +7974,44 @@ footer .logo #rehan-logo-footer g {
   }
 }
 
-.leveled-up {
-  overflow: hidden;
-  margin-top: 2rem;
-  padding: 2em;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .leveled-up {
-    margin-top: 1rem;
-  }
-}
-@keyframes bob {
-  0% {
-    transform: rotate(2deg) translateY(0);
-  }
-  50% {
-    transform: rotate(-2deg) translateY(-20px);
-  }
-  100% {
-    transform: rotate(2deg) translateY(0);
-  }
-}
-.leveled-up .content-area {
+.skills .text-hero {
   position: relative;
 }
-@keyframes scroll2 {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-800px);
-  }
-}
-.leveled-up .cloud-wrapper {
-  position: absolute;
+.skills svg {
   width: 100%;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 100;
+  fill: var(--color-text);
 }
-.leveled-up .cloud-wrapper2 {
-  position: absolute;
-  bottom: 10%;
-  width: 100%;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .leveled-up .cloud-wrapper2 {
-    bottom: 25%;
-  }
-}
-.leveled-up .cloud-wrapper2 .cloud-container .slide-track {
-  animation: scroll2 50s linear infinite;
-  width: 800px;
-}
-.leveled-up .cloud-wrapper2 .cloud-container .slide {
-  min-width: 120px;
-  margin: 0 8rem;
-}
-.leveled-up .cloud-wrapper2 .cloud-container .slide svg {
-  height: 120px;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .leveled-up .cloud-wrapper2 .cloud-container .slide svg {
-    height: 80px;
-  }
-}
-.leveled-up .cloud-container {
-  overflow: hidden;
-  position: relative;
-  background-color: initial;
-  margin-top: 4em;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .leveled-up .cloud-container {
-    margin-top: 8em;
-  }
-}
-.leveled-up .cloud-container .slide-track {
-  animation: scroll2 20s linear infinite;
-  display: flex;
-  width: 1600px;
-}
-.leveled-up .cloud-container .slide {
-  margin: 0 4rem;
-  min-width: 60px;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .leveled-up .cloud-container .slide {
-    margin: 0 1rem;
-  }
-}
-.leveled-up .cloud-container .slide svg {
-  height: 200px;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .leveled-up .cloud-container .slide svg {
-    height: 80px;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .leveled-up .cloud-container .slide svg linearGradient stop[offset="0"] {
-    stop-color: #41545B;
-  }
-  .leveled-up .cloud-container .slide svg linearGradient stop[offset="1"] {
-    stop-color: #2B3341;
-  }
-}
-.leveled-up .gradient-container {
-  z-index: 2;
-  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 75%, #ffffff 100%);
+.skills .tag-container {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  padding: 2em;
 }
-@media (prefers-color-scheme: dark) {
-  .leveled-up .gradient-container {
-    background: linear-gradient(90deg, #161d27 0%, rgba(22, 29, 39, 0) 25%, rgba(22, 29, 39, 0) 75%, #161d27 100%);
-  }
-}
-.leveled-up .bundle-container {
-  transform-origin: top center;
-  animation: bob 7s ease-in-out infinite paused;
-  animation-play-state: running;
-  z-index: 3;
-}
-@media (prefers-color-scheme: dark) {
-  .leveled-up .bundle-container svg[class=balloon-bundle] g path[stroke="#1F2937"] {
-    stroke: #FFFFFF;
-  }
-  .leveled-up .bundle-container svg[class=balloon-bundle] g path[fill="#FA6400"] {
-    fill: #D85906;
-  }
-  .leveled-up .bundle-container svg[class=balloon-bundle] g path[fill="#F7B500"] {
-    fill: #D59E06;
-  }
-  .leveled-up .bundle-container svg[class=balloon-bundle] g path[fill="#B620E0"] {
-    fill: #8E1FB2;
-  }
-  .leveled-up .bundle-container svg[class=balloon-bundle] g path[fill="#E02020"] {
-    fill: #AE1F22;
-  }
-  .leveled-up .bundle-container svg[class=balloon-bundle] g path[fill="#32C5FF"] {
-    fill: #2B9BC9;
-  }
-  .leveled-up .bundle-container svg[class=balloon-bundle] g path[fill="#44D7B6"] {
-    fill: #39A892;
-  }
-  .leveled-up .bundle-container svg[class=balloon-bundle] g path[fill="#0091FF"] {
-    fill: #0674C9;
-  }
-  .leveled-up .bundle-container svg[class=balloon-bundle] g path[fill="#6DD400"] {
-    fill: #60B806;
-  }
-  .leveled-up .bundle-container svg[class=balloon-bundle] g path[fill="#FA0098"] {
-    fill: #C1077C;
-  }
-}
-.leveled-up .text-container p {
-  text-align: left;
-  font-size: 1.5em;
-  line-height: 1.2;
-  margin: 0;
-  padding: 0;
-  font-weight: 700;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .leveled-up .text-container p {
-    font-size: 1.25em;
-  }
-}
-.leveled-up .text-container {
-  text-align: center;
-}
-.leveled-up .text-container h2 {
-  margin-top: 1rem;
-  font-family: "Big Shoulders Display", cursive;
+.skills .tag-container .tag {
+  display: inline;
+  border-radius: 500px;
+  background-color: red;
+  padding: 0.5em 1.5em;
+  width: fit-content;
+  height: fit-content;
   font-weight: 900;
-  font-size: 10em;
-  text-transform: uppercase;
-  line-height: 0.8;
+  font-size: 1.5em;
 }
-@media print, screen and (max-width: 39.99875em) {
-  .leveled-up .text-container h2 {
-    font-size: 7em;
-  }
+.skills .tag-container .tag:nth-of-type(1) {
+  grid-column: 5/7;
+  grid-row: 2/3;
 }
-.leveled-up .text-container h2 span {
-  font-size: 0.25em;
-  display: block;
-  letter-spacing: 0.09em;
-  margin-bottom: 0.15em;
+.skills .tag-container .tag:nth-of-type(2) {
+  grid-column: 1/4;
+  grid-row: 4/5;
 }
 
 .lastly {
