@@ -27,6 +27,32 @@
         margin-block-end: 0.5em;
         border-radius: $tile-radius;
         background-color: aqua;
+        position: relative;
+      }
+      .reel-window{
+        background-color: pink;
+        border-radius: $pill-radius;
+        padding: 0.5em;
+        display: inline-flex;
+        position: absolute;
+        bottom: 2em;
+        left: 0;
+        right: 0;
+        width: fit-content;
+        margin: auto;
+        .reel-left, .reel-right{
+          aspect-ratio: 1/1;
+          border-radius: $pill-radius;
+          width: 2em;
+          background-color: red;
+          display: inline-block;
+        }
+        .window{
+          background-color: red;
+          margin-inline: 0.5em;
+          width: 3em;
+          border-radius: 5px;
+        }
       }
       .bump-out{
         background-color: rgba($pure-black, 0.05);

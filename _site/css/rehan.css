@@ -7448,6 +7448,32 @@ footer .logo #rehan-logo-footer g {
   margin-block-end: 0.5em;
   border-radius: 10px;
   background-color: aqua;
+  position: relative;
+}
+.music .cassette-wrapper .cassette .reel-window {
+  background-color: pink;
+  border-radius: 500px;
+  padding: 0.5em;
+  display: inline-flex;
+  position: absolute;
+  bottom: 2em;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  margin: auto;
+}
+.music .cassette-wrapper .cassette .reel-window .reel-left, .music .cassette-wrapper .cassette .reel-window .reel-right {
+  aspect-ratio: 1/1;
+  border-radius: 500px;
+  width: 2em;
+  background-color: red;
+  display: inline-block;
+}
+.music .cassette-wrapper .cassette .reel-window .window {
+  background-color: red;
+  margin-inline: 0.5em;
+  width: 3em;
+  border-radius: 5px;
 }
 .music .cassette-wrapper .cassette .bump-out {
   background-color: rgba(0, 0, 0, 0.05);
