@@ -7902,6 +7902,7 @@ footer .logo #rehan-logo-footer g {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
+  align-items: center;
   gap: 0.5em;
   padding: 3em 2em;
 }
