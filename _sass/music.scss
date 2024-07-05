@@ -2,26 +2,56 @@ $cassette-case-color: pink;
 $cassette-punchouts: white; //should be page-bg
 .music{
   font-family: $montserrat;
-  h2{
-    font-family: $montserrat;
-    font-size: 5rem;
-    line-height: 4rem;
-    margin-top: 0.1em;
-    .description{
-      font-size: 3rem;
-      display: block;
-      @include breakpoint(small only) {
-        font-size: 1.5rem;
+  .title-wrapper{
+    margin-block: 2em;
+    h2{
+      font-family: $montserrat;
+      font-size: 5rem;
+      line-height: 4rem;
+      margin-top: 0.1em;
+      .description{
+        font-size: 3rem;
+        display: block;
+        @include breakpoint(small only) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  .cassette-row{
+    .cassette-wrapper{
+      &:nth-of-type(odd){
+        rotate: -2deg;
+        .cassette{
+          rotate: 180deg;
+        }
+      }
+      &:nth-of-type(even){
+        rotate: 3deg;
+        margin-block-end: 1em;
       }
     }
   }
   .cassette-wrapper{
+    &:nth-of-type(odd){
+      a{
+        &:hover{
+          rotate: -2deg;
+        }
+      }
+    }
+    &:nth-of-type(even){
+      a{
+        &:hover{
+          rotate: 2deg;
+        }
+      }
+    }
     a{
       color: semantic-color(text);
       transition: $sprint;
       &:hover{
         scale: 1.05;
-        rotate: 2deg;
       }
     }
     .song-details{

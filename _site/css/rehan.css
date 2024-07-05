@@ -7423,20 +7423,39 @@ footer .logo #rehan-logo-footer g {
 .music {
   font-family: "Montserrat", sans-serif;
 }
-.music h2 {
+.music .title-wrapper {
+  margin-block: 2em;
+}
+.music .title-wrapper h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 5rem;
   line-height: 4rem;
   margin-top: 0.1em;
 }
-.music h2 .description {
+.music .title-wrapper h2 .description {
   font-size: 3rem;
   display: block;
 }
 @media print, screen and (max-width: 39.99875em) {
-  .music h2 .description {
+  .music .title-wrapper h2 .description {
     font-size: 1.5rem;
   }
+}
+.music .cassette-row .cassette-wrapper:nth-of-type(odd) {
+  rotate: -2deg;
+}
+.music .cassette-row .cassette-wrapper:nth-of-type(odd) .cassette {
+  rotate: 180deg;
+}
+.music .cassette-row .cassette-wrapper:nth-of-type(even) {
+  rotate: 3deg;
+  margin-block-end: 1em;
+}
+.music .cassette-wrapper:nth-of-type(odd) a:hover {
+  rotate: -2deg;
+}
+.music .cassette-wrapper:nth-of-type(even) a:hover {
+  rotate: 2deg;
 }
 .music .cassette-wrapper a {
   color: var(--color-text);
@@ -7444,7 +7463,6 @@ footer .logo #rehan-logo-footer g {
 }
 .music .cassette-wrapper a:hover {
   scale: 1.05;
-  rotate: 2deg;
 }
 .music .cassette-wrapper .song-details {
   background-color: rgba(180, 180, 180, 0.1);
