@@ -16,7 +16,7 @@
               <div class="cell shrink">{{song.play-count}} plays</div>
             </div>
           </div>
-          <div class="cassette cell">
+          <div class="cassette cell {{song.song-name | replace: ' ', '-' | downcase}}">
             <div class="screw screw__1"></div>
             <div class="screw screw__2"></div>
             <div class="screw screw__3"></div>
@@ -24,7 +24,10 @@
             <div class="sticker">
               <div class="reel-window">
                 <div class="reel-left">{% include_relative img/music/reel-teeth.svg %}</div>
-                <div class="window"></div>
+                <div class="window">
+                  <div class="spool1"></div>
+                  <div class="spool2"></div>
+                </div>
                 <div class="reel-right">{% include_relative img/music/reel-teeth.svg %}</div>
               </div>
             </div>
@@ -57,7 +60,7 @@
               <div class="cell shrink">{{song.play-count}} plays</div>
             </div>
           </div>
-          <div class="cassette cell">
+          <div class="cassette cell {{song.song-name | replace: ' ', '-' | downcase}}">
             <div class="screw screw__1"></div>
             <div class="screw screw__2"></div>
             <div class="screw screw__3"></div>
@@ -65,7 +68,10 @@
             <div class="sticker">
               <div class="reel-window">
                 <div class="reel-left">{% include_relative img/music/reel-teeth.svg %}</div>
-                <div class="window"></div>
+                <div class="window">
+                  <div class="spool1"></div>
+                  <div class="spool2"></div>
+                </div>
                 <div class="reel-right">{% include_relative img/music/reel-teeth.svg %}</div>
               </div>
             </div>

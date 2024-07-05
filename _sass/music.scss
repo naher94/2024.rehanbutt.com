@@ -6,9 +6,13 @@ $cassette-punchouts: white; //should be page-bg
     margin-block: 2em;
     h2{
       font-family: $montserrat;
+      font-weight: $montserrat-black;
       font-size: 5rem;
       line-height: 4rem;
       margin-top: 0.1em;
+      .hrs{
+        font-weight: $montserrat-light;
+      }
       .description{
         font-size: 3rem;
         display: block;
@@ -24,6 +28,7 @@ $cassette-punchouts: white; //should be page-bg
         rotate: -2deg;
         .cassette{
           rotate: 180deg;
+          // TODO rotate image 180deg
         }
       }
       &:nth-of-type(even){
@@ -144,6 +149,7 @@ $cassette-punchouts: white; //should be page-bg
           }
           svg{
             animation: 15s rotate linear infinite;
+            animation-direction: alternate;
           }
         }
         .window{
@@ -151,6 +157,46 @@ $cassette-punchouts: white; //should be page-bg
           margin-inline: 0.5em;
           width: 4em;
           border-radius: 5px;
+          position: relative;
+          overflow: hidden;
+          .spool1, .spool2{
+            aspect-ratio: 1/1;
+            border-radius: $pill-radius;
+            position: absolute;
+            // background-color: rgba(brown, 0.5);
+            background-color: #45220C;
+            border: 3px solid #261306;
+            width: 6em;
+          }
+          @keyframes spool1-scale{
+            from{
+              scale: 1;
+            }
+            to{
+              scale: 0.75;
+            }
+          }
+          @keyframes spool2-scale{
+            from{
+              scale: 0.75;
+            }
+            to{
+              scale: 1;
+            }
+          }
+          .spool1{
+            top: -100%;
+            left: -115%;
+            animation: 15s spool1-scale linear infinite;
+            animation-direction: alternate;
+          }
+          .spool2{
+            top: -100%;
+            right: -115%;
+            scale: 0.75;
+            animation: 15s spool2-scale linear infinite;
+            animation-direction: alternate;
+          }
         }
       }
       .bump-out{
@@ -189,6 +235,20 @@ $cassette-punchouts: white; //should be page-bg
           .circle{
             margin-inline-start: 0.25em;
           }
+        }
+      }
+      &.whoops{
+        $cassette-case-color: cadetblue;
+        background-color: $cassette-case-color;
+        .reel-window{
+          background-color: $cassette-case-color;
+        }
+      }
+      &.minute{
+        $cassette-case-color: rgb(205, 190, 82);
+        background-color: $cassette-case-color;
+        .reel-window{
+          background-color: $cassette-case-color;
         }
       }
     }

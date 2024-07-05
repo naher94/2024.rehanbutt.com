@@ -7428,9 +7428,13 @@ footer .logo #rehan-logo-footer g {
 }
 .music .title-wrapper h2 {
   font-family: "Montserrat", sans-serif;
+  font-weight: 900;
   font-size: 5rem;
   line-height: 4rem;
   margin-top: 0.1em;
+}
+.music .title-wrapper h2 .hrs {
+  font-weight: 300;
 }
 .music .title-wrapper h2 .description {
   font-size: 3rem;
@@ -7554,12 +7558,52 @@ footer .logo #rehan-logo-footer g {
 }
 .music .cassette-wrapper .cassette .reel-window .reel-left svg, .music .cassette-wrapper .cassette .reel-window .reel-right svg {
   animation: 15s rotate linear infinite;
+  animation-direction: alternate;
 }
 .music .cassette-wrapper .cassette .reel-window .window {
   background-color: white;
   margin-inline: 0.5em;
   width: 4em;
   border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.music .cassette-wrapper .cassette .reel-window .window .spool1, .music .cassette-wrapper .cassette .reel-window .window .spool2 {
+  aspect-ratio: 1/1;
+  border-radius: 500px;
+  position: absolute;
+  background-color: #45220C;
+  border: 3px solid #261306;
+  width: 6em;
+}
+@keyframes spool1-scale {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 0.75;
+  }
+}
+@keyframes spool2-scale {
+  from {
+    scale: 0.75;
+  }
+  to {
+    scale: 1;
+  }
+}
+.music .cassette-wrapper .cassette .reel-window .window .spool1 {
+  top: -100%;
+  left: -115%;
+  animation: 15s spool1-scale linear infinite;
+  animation-direction: alternate;
+}
+.music .cassette-wrapper .cassette .reel-window .window .spool2 {
+  top: -100%;
+  right: -115%;
+  scale: 0.75;
+  animation: 15s spool2-scale linear infinite;
+  animation-direction: alternate;
 }
 .music .cassette-wrapper .cassette .bump-out {
   background-color: rgba(0, 0, 0, 0.05);
@@ -7592,6 +7636,18 @@ footer .logo #rehan-logo-footer g {
 }
 .music .cassette-wrapper .cassette .bump-out .right .circle {
   margin-inline-start: 0.25em;
+}
+.music .cassette-wrapper .cassette.whoops {
+  background-color: cadetblue;
+}
+.music .cassette-wrapper .cassette.whoops .reel-window {
+  background-color: cadetblue;
+}
+.music .cassette-wrapper .cassette.minute {
+  background-color: rgb(205, 190, 82);
+}
+.music .cassette-wrapper .cassette.minute .reel-window {
+  background-color: rgb(205, 190, 82);
 }
 
 .skills .text-hero {
