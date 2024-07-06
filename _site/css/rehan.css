@@ -11,6 +11,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @media print, screen and (min-width: 40em) {
   .reveal.large, .reveal.small, .reveal.tiny, .reveal {
     right: auto;
@@ -7276,6 +7277,7 @@ footer .logo #rehan-logo-footer g {
   border-radius: 20px;
   box-shadow: 0px 0px 30px -20px rgba(0, 0, 0, 0.75);
   position: relative;
+  font-family: "Big Shoulders Display", cursive;
   margin-inline: 1em;
 }
 .events .logo-slider .e-badge .lanyard {
@@ -7312,6 +7314,43 @@ footer .logo #rehan-logo-footer g {
   background-color: #FFF000;
   padding-inline: 1em;
   padding-block-end: 1em;
+}
+.events .logo-slider .e-badge__config svg {
+  width: 100%;
+}
+.events .logo-slider .e-badge__config .type-label {
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-block: 0.25em;
+}
+.events .logo-slider .e-badge__disney-ux-summit {
+  background-color: #ffffff;
+}
+.events .logo-slider .e-badge__disney-ux-summit .main-content {
+  padding-inline: 1em;
+}
+.events .logo-slider .e-badge__disney-ux-summit .location-banner {
+  color: #ffffff;
+  background: linear-gradient(90deg, #FFE915, #FF171D);
+  border-radius: 0 0 20px 20px;
+  padding-block: 0.75em;
+  font-family: "Poppins", sans-serif;
+}
+.events .logo-slider .e-badge__disney-ux-summit .location-banner span {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.events .logo-slider .e-badge__disney-ux-summit .location-banner span.city {
+  font-weight: 800;
+  font-size: 1.25em;
+}
+.events .logo-slider .e-badge__disney-ux-summit .location-banner span.state {
+  font-size: 0.8em;
 }
 .events .logo-container {
   z-index: 1;

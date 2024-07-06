@@ -8,7 +8,7 @@
       <div class="logo-container logo-slider">
         <div class="slide-track">
           {% for event in events_order %}
-            <div class="e-badge e-badge__{{event.event-name | replace: ' ', '-' | downcase}}">
+            <div class="grid-x align-bottom e-badge e-badge__{{event.event-name | replace: ' ', '-' | downcase}}">
               <div class="cutout"></div>
               <div class="lanyard"></div>
               {{event.content}}
