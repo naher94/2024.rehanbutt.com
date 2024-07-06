@@ -11,7 +11,8 @@ end-date: 2024-1-8
   </div>
   <div class="description grid-x cell align-justify">
     <div class="cell shrink">{{page.location}}</div>
-    <div class="cell shrink">{{page.start-date}}</div>
+    <!-- <div class="cell shrink">{{page.start-date}}</div> -->
+    <div class="cell shrink">July 28 - Aug 1</div>
   </div>
   <div class="cell type-label">full conference</div>
 </div>

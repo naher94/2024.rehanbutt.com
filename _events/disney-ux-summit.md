@@ -15,7 +15,7 @@ end-date: 2024-10-5
     <div class="cell type-label">Speaker</div>
     <div class="cell grid-x align-justify detailing">
       <div class="cell shrink">{{page.location}}</div>
-      <div class="cell shrink">May 9-10</div>
+      <div class="cell shrink">May 9 - 10</div>
     </div>
   </div>
   <div class="cell location-banner">
