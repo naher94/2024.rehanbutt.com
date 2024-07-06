@@ -9,6 +9,7 @@ end-date: 2024-16-5
   <div class="cell logo-wrapper medium-8">
     {% include events/uxdx.svg %}
   </div>
+  <div class="cell type-label">attendee</div>
   <div class="description grid-x cell align-justify">
     <div class="cell shrink">{{page.location}}</div>
     <div class="cell shrink">{{page.start-date}}</div>
