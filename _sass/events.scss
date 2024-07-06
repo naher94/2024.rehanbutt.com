@@ -1,15 +1,5 @@
-@keyframes float{
-  0% {
-    transform: rotate(10deg) translateY(0);
-  }
-  50% {
-    transform: rotate(5deg) translateY(-10px);
-  }
-  100% {
-    transform: rotate(10deg) translateY(0);
-  }
-}
-
+$card-bg: pink; //make semantic
+$badge-punchouts: $card-bg; //should be card-bg
 .events{
   margin-top: 2rem;
   @include breakpoint(small only) {
@@ -17,96 +7,15 @@
   }
   .content-area{
     position: relative;
-    .bubble{
-      aspect-ratio: 1/1;
-      position: absolute;
-      z-index: -1;
-      border-radius: 50%;
-      @media (prefers-color-scheme: dark){
-        filter: brightness(75%);
-      }
-      &__purple{
-        width: 200px;
-        background-color: #9C5AB7;
-        top: 10%;
-        transform: rotate(15deg);
-        animation: float 7s ease-in-out infinite paused;
-        animation-play-state: running;
-        @include breakpoint(small only) {
-          width: 70px;
-        }
-      }
-      &__yellow{
-        width: 160px;
-        background-color: #F2C50F;
-        left: 50%;
-        top: 20%;
-        animation: float 10s ease-in-out infinite paused;
-        animation-play-state: running;
-        @include breakpoint(small only) {
-          width: 50px;
-        }
-      }
-      &__orange{
-        width: 100px;
-        background-color: #E77E22;
-        right: 20%;
-        top: 0;
-        transform: rotate(-10deg);
-        animation: float 7s ease-in-out infinite paused;
-        animation-play-state: running;
-        @include breakpoint(small only) {
-          width: 25px;
-        }
-      }
-      &__red{
-        width: 130px;
-        background-color: #E84C3C;
-        right: 0;
-        top: 40%;
-        transform: rotate(30deg);
-        animation: float 10s ease-in-out infinite paused;
-        animation-play-state: running;
-        @include breakpoint(small only) {
-          width: 60px;
-        }
-      }
-      &__blue{
-        width: 80px;
-        background-color: #3599DC;
-        left: 30%;
-        bottom: 30%;
-        transform: rotate(-5deg);
-        animation: float 10s ease-in-out infinite paused;
-        animation-play-state: running;
-        @include breakpoint(small only) {
-          width: 40px;
-        }
-      }
-      &__green{
-        width: 250px;
-        background-color: #2ECC71;
-        right: 25%;
-        bottom: 0;
-        transform: rotate(-20deg);
-        animation: float 7s ease-in-out infinite paused;
-        animation-play-state: running;
-        @include breakpoint(small only) {
-          width: 100px;
-        }
-      }
-    }
+    background-color: $card-bg;
+    border-radius: $tile-radius-big;
   }
   .text-container{
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-inline: 3em;
+    padding-block: 3em;
     @include breakpoint(small only) {
-      padding-left: 1rem;
-      padding-right: 1rem;
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
+      padding-inline: 1em;
+      padding-block: 1em;
     }
   }
   h2{
@@ -159,46 +68,57 @@
     }
     
     .slide-track {
-      animation: scroll $animationSpeed linear infinite;
+      // animation: scroll $animationSpeed linear infinite;
       display: flex;
       width: 4000px;
+      margin-top: 2em;
     }
-    .slide{
-      margin: 0 2rem;
-      min-width: 60px;
-      @include breakpoint(small only) {
-        margin: 0 1rem;
+    .badge{
+      background: red;
+      max-width: 28em;
+      aspect-ratio: 250/375;
+      padding: 1em;
+      padding-top: 5em;
+      border-radius: $tile-radius-medium;
+      box-shadow: 0px 0px 30px -20px rgba($pure-black,0.75);
+      position: relative;
+      .lanyard{
+        position: absolute;
+        height: 8em;
+        width: 25%;
+        top: -5em;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background: $pure-black;
+        background-image: url(/img/events/vertical_cloth.png);
+        // TODO add texture file here
+        border-radius: 6px;
+        box-shadow: 0px -5px 5px rgba($pure-black,0.75);
       }
-      img{
-        height: 120px;
-        @include breakpoint(small only) {
-          height: 80px;
-        }
-        @media (prefers-color-scheme: dark) {
-          filter: none;
-        }
+      .cutout{
+        background: $badge-punchouts;
+        height: 1.5em;
+        position: absolute;
+        width: 30%;
+        top: 2em;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: $pill-radius;
+        box-shadow: inset 0px 0px 30px -20px rgba($pure-black,0.75);
+      }
+      margin-inline: 2em;
+      @include breakpoint(small only) {
+        margin-inline: 1em;
+      }
+      &__config{
+        background-color: blue;
       }
     }
   }
   .logo-container{
     z-index: 1;
     position: relative;
-    .gradient-container{
-      z-index: 2;
-      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 75%, rgba(255,255,255,1) 100%);
-      @media (prefers-color-scheme: dark) {
-        background: linear-gradient(90deg, rgba($navy-black-d3,1) 0%, rgba($navy-black-d3,0) 25%, rgba($navy-black-d3,0) 75%, rgba($navy-black-d3,1) 100%);
-      }
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-    .slide{
-      @media (prefers-color-scheme: dark){
-        filter: brightness(1000%) grayscale(80%);
-      }
-    }
   }
 }

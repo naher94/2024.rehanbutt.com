@@ -1,36 +1,27 @@
 <section class="events" id="events">
   <div class="grid-container">
     <div class="content-area">
-      <div class="bubble bubble__purple"></div>
-      <div class="bubble bubble__yellow"></div>
-      <div class="bubble bubble__orange"></div>
-      <div class="bubble bubble__red"></div>
-      <div class="bubble bubble__blue"></div>
-      <div class="bubble bubble__green"></div>
+      {% assign array-list = "(uxdx.svg|UXDX Logo),(config.svg|Config Logo),(siggraph.svg|Siggraph Logo),(leadership-design.svg|Leadership by Design Logo),(chicago-camps.svg|Chicago Camps Logo)" | remove: "(" | remove: ")" | split: ',' %}
+
+      {% assign events_order = site.events | sort: 'start-date' %}
+      <div class="logo-container logo-slider">
+        <div class="slide-track">
+          {% for event in events_order %}
+            <div class="badge badge__{{event.event-name | replace: ' ', '-' | downcase}}">
+              <div class="cutout"></div>
+              <div class="lanyard"></div>
+              {{event.content}}
+            </div>
+          {% endfor %}
+          <!-- TODO run loop twice for infinite scroll -->
+        </div>
+      </div>
       <div class="grid-x text-container">
         <div class="cell">
           <h2><span>Knowledge.</span><span>Knowledge.</span>Knowledge.</h2>
         </div>
         <div class="cell medium-8">
           <p>Attended several industry events this year, soaking up of new things along the way.</p>
-        </div>
-      </div>
-      {% assign array-list = "(uxdx.svg|UXDX Logo),(config.svg|Config Logo),(siggraph.svg|Siggraph Logo),(leadership-design.svg|Leadership by Design Logo),(chicago-camps.svg|Chicago Camps Logo)" | remove: "(" | remove: ")" | split: ',' %}
-      <div class="logo-container logo-slider">
-        <div class="gradient-container"></div>
-        <div class="slide-track">
-          {% for item in array-list %}
-            {% assign each = item | split: '|' %}
-            <div class="slide">
-              <img class="ces" src="/img/events/{{each[0]}}" alt="{{each[1]}}">
-            </div>
-          {% endfor %}
-          {% for item in array-list %}
-            {% assign each = item | split: '|' %}
-            <div class="slide">
-              <img class="ces" src="/img/events/{{each[0]}}" alt="{{each[1]}}">
-            </div>
-          {% endfor %}
         </div>
       </div>
     </div>

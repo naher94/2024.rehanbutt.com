@@ -27,3 +27,5 @@ plugins: [jekyll-sitemap]
 collections:
   songs:
     output: false
+  events:
+    output: false
