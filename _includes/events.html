@@ -1,7 +1,6 @@
 <section class="events" id="events">
   <div class="grid-container">
     <div class="content-area">
-      <!-- TODO fix date sorting is not working as intended -->
       {% assign events_order = site.events | sort: 'date' %}
       <div class="logo-container logo-slider">
         <div class="slide-track">
@@ -12,14 +11,20 @@
               {{event.content}}
             </div>
           {% endfor %}
-          <!-- TODO run loop twice for infinite scroll -->
+          {% for event in events_order %}
+            <div class="grid-x align-bottom e-badge e-badge__{{event.event-name | replace: ' ', '-' | downcase}}">
+              <div class="cutout"></div>
+              <div class="lanyard"></div>
+              {{event.content}}
+            </div>
+          {% endfor %}
         </div>
       </div>
-      <div class="grid-x text-container">
-        <div class="cell">
+      <div class="grid-x text-container align-justify align-bottom">
+        <div class="cell shrink">
           <h2><span>Knowledge.</span><span>Knowledge.</span>Knowledge.</h2>
         </div>
-        <div class="cell medium-8">
+        <div class="cell medium-6 right-section">
           <p>Attended several industry events this year, soaking up of new things along the way.</p>
         </div>
       </div>
