@@ -7,11 +7,15 @@ end-date: 2024-10-5
 ---
 
 <div class="grid-x cell">
-  <div class="main-content cell grid-x">
-    Disney UX SUMMIT
-    <div class="cell grid-x align-justify">
+  <div class="main-content cell grid-x align-center">
+    <div class="cell logo-wrapper small-8">
+      <!-- TODO replace with accurate logo -->
+      {% include events/ux-summit.svg %}
+    </div>
+    <div class="cell type-label">Speaker</div>
+    <div class="cell grid-x align-justify detailing">
       <div class="cell shrink">{{page.location}}</div>
-      <div class="cell shrink">{{page.start-date}}</div>
+      <div class="cell shrink">May 9-10</div>
     </div>
   </div>
   <div class="cell location-banner">

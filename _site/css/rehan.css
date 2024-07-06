@@ -7335,6 +7335,19 @@ footer .logo #rehan-logo-footer g {
 .events .logo-slider .e-badge__disney-ux-summit .main-content {
   padding-inline: 1em;
 }
+.events .logo-slider .e-badge__disney-ux-summit .main-content .logo-wrapper {
+  margin-block-end: 1.5em;
+}
+.events .logo-slider .e-badge__disney-ux-summit .main-content .type-label {
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-block: 0.25em;
+  margin-block-end: 0.5em;
+}
+.events .logo-slider .e-badge__disney-ux-summit .main-content .detailing {
+  margin-block-end: 0.5em;
+}
 .events .logo-slider .e-badge__disney-ux-summit .location-banner {
   color: #ffffff;
   background: linear-gradient(90deg, #FFE915, #FF171D);

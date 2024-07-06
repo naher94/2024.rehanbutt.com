@@ -3,6 +3,7 @@ event-name: Config
 location: San Francisco, CA
 start-date: 2024-26-6
 end-date: 2024-27-6
+published: false
 ---
 <!-- TODO add these classes to parent: align-bottom grid-x -->
 <div class="grid-x cell">
