@@ -1,5 +1,5 @@
 $cassette-case-color: pink;
-$cassette-punchouts: white; //should be page-bg
+$cassette-punchouts: semantic-color(page-bg); //should be page-bg
 .music{
   font-family: $montserrat;
   .title-wrapper{
@@ -28,7 +28,6 @@ $cassette-punchouts: white; //should be page-bg
         rotate: -2deg;
         .cassette{
           rotate: 180deg;
-          // TODO rotate image 180deg
         }
       }
       &:nth-of-type(even){
@@ -150,6 +149,13 @@ $cassette-punchouts: white; //should be page-bg
           svg{
             animation: 15s rotate linear infinite;
             animation-direction: alternate;
+            @media (prefers-color-scheme: dark){
+              g{
+                g{
+                  fill: #5c5c5c;
+                }
+              }
+            }
           }
         }
         .window{
@@ -163,7 +169,6 @@ $cassette-punchouts: white; //should be page-bg
             aspect-ratio: 1/1;
             border-radius: $pill-radius;
             position: absolute;
-            // background-color: rgba(brown, 0.5);
             background-color: #45220C;
             border: 3px solid #261306;
             width: 6em;
@@ -243,12 +248,18 @@ $cassette-punchouts: white; //should be page-bg
         .reel-window{
           background-color: $cassette-case-color;
         }
+        .sticker{
+          background-image: url("../img/music/whoops.jpg");
+        }
       }
       &.minute{
-        $cassette-case-color: rgb(205, 190, 82);
+        $cassette-case-color: rgb(249, 138, 255);
         background-color: $cassette-case-color;
         .reel-window{
           background-color: $cassette-case-color;
+        }
+        .sticker{
+          background-image: url("../img/music/minute.jpg");
         }
       }
     }
