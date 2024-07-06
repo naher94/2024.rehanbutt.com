@@ -75,7 +75,7 @@ $badge-punchouts: $card-bg; //should be card-bg
       margin-top: 2em;
     }
     .e-badge{
-      background: red;
+      background: $pure-white;
       width: 13em;
       aspect-ratio: 250/375;
       padding-block-start: 2.5em;
@@ -219,6 +219,20 @@ $badge-punchouts: $card-bg; //should be card-bg
           text-transform: uppercase;
           padding-block: 0.25em;
           margin-block-end: 0.5em;
+        }
+      }
+      &__siggraph{
+        padding-inline: 1em;
+        padding-block-end: 1em;
+        .type-label{
+          background-color: #388922;
+          color: $pure-white;
+          text-align: center;
+          border-radius: $tile-radius;
+          font-weight: $big-shoulders-black;
+          text-transform: uppercase;
+          padding-block: 0.25em;
+          // margin-block-end: 0.5em;
         }
       }
     }

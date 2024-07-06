@@ -7270,7 +7270,7 @@ footer .logo #rehan-logo-footer g {
   margin-top: 2em;
 }
 .events .logo-slider .e-badge {
-  background: red;
+  background: #ffffff;
   width: 13em;
   aspect-ratio: 250/375;
   padding-block-start: 2.5em;
@@ -7416,6 +7416,19 @@ footer .logo #rehan-logo-footer g {
   text-transform: uppercase;
   padding-block: 0.25em;
   margin-block-end: 0.5em;
+}
+.events .logo-slider .e-badge__siggraph {
+  padding-inline: 1em;
+  padding-block-end: 1em;
+}
+.events .logo-slider .e-badge__siggraph .type-label {
+  background-color: #388922;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-block: 0.25em;
 }
 .events .logo-container {
   z-index: 1;
