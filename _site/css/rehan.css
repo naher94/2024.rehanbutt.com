@@ -7183,17 +7183,6 @@ footer .logo #rehan-logo-footer g {
   }
 }
 
-@keyframes float {
-  0% {
-    transform: rotate(10deg) translateY(0);
-  }
-  50% {
-    transform: rotate(5deg) translateY(-10px);
-  }
-  100% {
-    transform: rotate(10deg) translateY(0);
-  }
-}
 .events {
   margin-top: 2rem;
 }
@@ -7204,112 +7193,17 @@ footer .logo #rehan-logo-footer g {
 }
 .events .content-area {
   position: relative;
-}
-.events .content-area .bubble {
-  aspect-ratio: 1/1;
-  position: absolute;
-  z-index: -1;
-  border-radius: 50%;
-}
-@media (prefers-color-scheme: dark) {
-  .events .content-area .bubble {
-    filter: brightness(75%);
-  }
-}
-.events .content-area .bubble__purple {
-  width: 200px;
-  background-color: #9C5AB7;
-  top: 10%;
-  transform: rotate(15deg);
-  animation: float 7s ease-in-out infinite paused;
-  animation-play-state: running;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .events .content-area .bubble__purple {
-    width: 70px;
-  }
-}
-.events .content-area .bubble__yellow {
-  width: 160px;
-  background-color: #F2C50F;
-  left: 50%;
-  top: 20%;
-  animation: float 10s ease-in-out infinite paused;
-  animation-play-state: running;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .events .content-area .bubble__yellow {
-    width: 50px;
-  }
-}
-.events .content-area .bubble__orange {
-  width: 100px;
-  background-color: #E77E22;
-  right: 20%;
-  top: 0;
-  transform: rotate(-10deg);
-  animation: float 7s ease-in-out infinite paused;
-  animation-play-state: running;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .events .content-area .bubble__orange {
-    width: 25px;
-  }
-}
-.events .content-area .bubble__red {
-  width: 130px;
-  background-color: #E84C3C;
-  right: 0;
-  top: 40%;
-  transform: rotate(30deg);
-  animation: float 10s ease-in-out infinite paused;
-  animation-play-state: running;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .events .content-area .bubble__red {
-    width: 60px;
-  }
-}
-.events .content-area .bubble__blue {
-  width: 80px;
-  background-color: #3599DC;
-  left: 30%;
-  bottom: 30%;
-  transform: rotate(-5deg);
-  animation: float 10s ease-in-out infinite paused;
-  animation-play-state: running;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .events .content-area .bubble__blue {
-    width: 40px;
-  }
-}
-.events .content-area .bubble__green {
-  width: 250px;
-  background-color: #2ECC71;
-  right: 25%;
-  bottom: 0;
-  transform: rotate(-20deg);
-  animation: float 7s ease-in-out infinite paused;
-  animation-play-state: running;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .events .content-area .bubble__green {
-    width: 100px;
-  }
+  background-color: pink;
+  border-radius: 30px;
 }
 .events .text-container {
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-inline: 3em;
+  padding-block: 3em;
 }
 @media print, screen and (max-width: 39.99875em) {
   .events .text-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-inline: 1em;
+    padding-block: 1em;
   }
 }
 .events h2 {
@@ -7370,54 +7264,57 @@ footer .logo #rehan-logo-footer g {
   }
 }
 .events .logo-slider .slide-track {
-  animation: scroll 40s linear infinite;
   display: flex;
   width: 4000px;
+  margin-top: 2em;
 }
-.events .logo-slider .slide {
-  margin: 0 2rem;
-  min-width: 60px;
+.events .logo-slider .badge {
+  background: red;
+  max-width: 28em;
+  aspect-ratio: 250/375;
+  padding: 1em;
+  padding-top: 5em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px -20px rgba(0, 0, 0, 0.75);
+  position: relative;
+  margin-inline: 2em;
+}
+.events .logo-slider .badge .lanyard {
+  position: absolute;
+  height: 8em;
+  width: 25%;
+  top: -5em;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #000000;
+  background-image: url(/img/events/vertical_cloth.png);
+  border-radius: 6px;
+  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.75);
+}
+.events .logo-slider .badge .cutout {
+  background: pink;
+  height: 1.5em;
+  position: absolute;
+  width: 30%;
+  top: 2em;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 500px;
+  box-shadow: inset 0px 0px 30px -20px rgba(0, 0, 0, 0.75);
 }
 @media print, screen and (max-width: 39.99875em) {
-  .events .logo-slider .slide {
-    margin: 0 1rem;
+  .events .logo-slider .badge {
+    margin-inline: 1em;
   }
 }
-.events .logo-slider .slide img {
-  height: 120px;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .events .logo-slider .slide img {
-    height: 80px;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .events .logo-slider .slide img {
-    filter: none;
-  }
+.events .logo-slider .badge__config {
+  background-color: blue;
 }
 .events .logo-container {
   z-index: 1;
   position: relative;
-}
-.events .logo-container .gradient-container {
-  z-index: 2;
-  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 75%, rgb(255, 255, 255) 100%);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-@media (prefers-color-scheme: dark) {
-  .events .logo-container .gradient-container {
-    background: linear-gradient(90deg, #161d27 0%, rgba(22, 29, 39, 0) 25%, rgba(22, 29, 39, 0) 75%, #161d27 100%);
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .events .logo-container .slide {
-    filter: brightness(1000%) grayscale(80%);
-  }
 }
 
 .music {
@@ -7545,7 +7442,7 @@ footer .logo #rehan-logo-footer g {
   border-radius: 500px;
   width: 2em;
   height: 2em;
-  background-color: white;
+  background-color: var(--color-page-bg);
   display: inline-block;
 }
 @keyframes rotate {
@@ -7560,8 +7457,13 @@ footer .logo #rehan-logo-footer g {
   animation: 15s rotate linear infinite;
   animation-direction: alternate;
 }
+@media (prefers-color-scheme: dark) {
+  .music .cassette-wrapper .cassette .reel-window .reel-left svg g g, .music .cassette-wrapper .cassette .reel-window .reel-right svg g g {
+    fill: #5c5c5c;
+  }
+}
 .music .cassette-wrapper .cassette .reel-window .window {
-  background-color: white;
+  background-color: var(--color-page-bg);
   margin-inline: 0.5em;
   width: 4em;
   border-radius: 5px;
@@ -7620,14 +7522,14 @@ footer .logo #rehan-logo-footer g {
   border-radius: 500px;
   aspect-ratio: 1/1;
   width: 1em;
-  background-color: white;
+  background-color: var(--color-page-bg);
   display: inline-block;
 }
 .music .cassette-wrapper .cassette .bump-out .left .pill, .music .cassette-wrapper .cassette .bump-out .right .pill {
   border-radius: 500px;
   aspect-ratio: 2/1;
   width: 0.75em;
-  background-color: white;
+  background-color: var(--color-page-bg);
   display: inline-block;
   vertical-align: top;
 }
@@ -7643,11 +7545,17 @@ footer .logo #rehan-logo-footer g {
 .music .cassette-wrapper .cassette.whoops .reel-window {
   background-color: cadetblue;
 }
+.music .cassette-wrapper .cassette.whoops .sticker {
+  background-image: url("../img/music/whoops.jpg");
+}
 .music .cassette-wrapper .cassette.minute {
-  background-color: rgb(205, 190, 82);
+  background-color: rgb(249, 138, 255);
 }
 .music .cassette-wrapper .cassette.minute .reel-window {
-  background-color: rgb(205, 190, 82);
+  background-color: rgb(249, 138, 255);
+}
+.music .cassette-wrapper .cassette.minute .sticker {
+  background-image: url("../img/music/minute.jpg");
 }
 
 .skills .text-hero {
@@ -8194,94 +8102,6 @@ footer .logo #rehan-logo-footer g {
 .travel .content-area .data-area .airport-row .short-code, .travel .content-area .data-area .airport-row .location-subrow {
   padding-top: 0.25em;
   padding-bottom: 0.25em;
-}
-
-.film-credit {
-  margin-top: 14rem;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .film-credit {
-    margin-top: 12rem;
-  }
-}
-.film-credit .content-area {
-  border-radius: 20px;
-  background: linear-gradient(to bottom right, rgb(22, 63, 114) 0%, rgb(43, 127, 160) 100%);
-  position: relative;
-  padding: 2em;
-}
-@media (prefers-color-scheme: dark) {
-  .film-credit .content-area {
-    background: linear-gradient(to bottom right, rgb(18, 45, 80) 0%, rgb(33, 91, 114) 100%);
-  }
-}
-.film-credit .content-area:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: url(../img/disney-film-posters.png);
-  opacity: 0.1;
-  background-blend-mode: overlay;
-  background-position: center;
-  background-size: 115%;
-  border-radius: inherit;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .film-credit .content-area {
-    padding: 1em;
-  }
-}
-.film-credit .content-area .poster-container {
-  z-index: 2;
-  padding: 2em;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .film-credit .content-area .poster-container {
-    padding: 1em;
-  }
-}
-.film-credit .content-area .poster-container .poster {
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: #000000 0px 10px 33px -10px;
-  transform: rotate(-10deg);
-  margin-block-start: -10rem;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .film-credit .content-area .poster-container .poster {
-    transform: rotate(0);
-  }
-}
-.film-credit .content-area .text-container {
-  z-index: 3;
-  font-weight: 700;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .film-credit .content-area .text-container {
-    margin-block-start: 2em;
-  }
-}
-.film-credit .content-area .text-container .wdas-logo {
-  max-width: 15em;
-  filter: none;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .film-credit .content-area .text-container .wdas-logo {
-    width: 10em;
-  }
-}
-.film-credit .content-area .text-container .text-description {
-  padding: 2em;
-  color: #ffffff;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .film-credit .content-area .text-container .text-description {
-    padding: 1em;
-  }
 }
 
 .movies {
