@@ -1,10 +1,8 @@
 <section class="events" id="events">
   <div class="grid-container">
     <div class="content-area">
-      {% assign array-list = "(uxdx.svg|UXDX Logo),(config.svg|Config Logo),(siggraph.svg|Siggraph Logo),(leadership-design.svg|Leadership by Design Logo),(chicago-camps.svg|Chicago Camps Logo)" | remove: "(" | remove: ")" | split: ',' %}
-
       <!-- TODO fix date sorting is not working as intended -->
-      {% assign events_order = site.events | sort: 'start-date' %}
+      {% assign events_order = site.events | sort: 'date' %}
       <div class="logo-container logo-slider">
         <div class="slide-track">
           {% for event in events_order %}

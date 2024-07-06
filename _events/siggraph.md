@@ -1,8 +1,9 @@
 ---
 event-name: Siggraph
 location: Denver, CO
-start-date: 2024-28-7
-end-date: 2024-1-8
+date: 2024-7-28
+start-date: 2024-7-28
+end-date: 2024-8-1
 ---
 
 <div class="grid-x cell">

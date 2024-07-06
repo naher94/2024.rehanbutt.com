@@ -1,9 +1,9 @@
 ---
 event-name: UXDX
-location: New York City, NY 
-start-date: 2024-16-5
-end-date: 2024-16-5
-published: false
+location: New York City, NY
+date: 2024-5-16
+start-date: 2024-5-16
+end-date: 2024-5-16
 ---
 
 <div class="grid-x cell align-center">

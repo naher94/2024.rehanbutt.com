@@ -9,6 +9,7 @@ $badge-punchouts: $card-bg; //should be card-bg
     position: relative;
     background-color: $card-bg;
     border-radius: $tile-radius-big;
+    overflow: hidden;
   }
   .text-container{
     padding-inline: 3em;
@@ -68,7 +69,7 @@ $badge-punchouts: $card-bg; //should be card-bg
     }
     
     .slide-track {
-      // animation: scroll $animationSpeed linear infinite;
+      animation: scroll $animationSpeed linear infinite;
       // TODO turn back on when done testing
       display: flex;
       width: 4000px;
@@ -223,7 +224,6 @@ $badge-punchouts: $card-bg; //should be card-bg
       }
       &__siggraph{
         padding-inline: 1em;
-        // padding-block-end: 1em;
         .description{
           margin-block-end: 0.5em;
         }
@@ -235,7 +235,6 @@ $badge-punchouts: $card-bg; //should be card-bg
           font-weight: $big-shoulders-black;
           text-transform: uppercase;
           padding-block: 0.25em;
-          // margin-block-end: 0.5em;
         }
       }
     }

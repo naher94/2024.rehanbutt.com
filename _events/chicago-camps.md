@@ -1,9 +1,9 @@
 ---
 event-name: Chicago Camps
 location: Online, USA
-date: 2024-10-2
-start-date: 2024-10-2
-end-date: 2024-10-2
+date: 2024-2-10
+start-date: 2024-2-10
+end-date: 2024-2-10
 ---
 
 <div class="grid-x cell">

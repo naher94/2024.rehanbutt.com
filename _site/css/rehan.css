@@ -7196,6 +7196,7 @@ footer .logo #rehan-logo-footer g {
   position: relative;
   background-color: pink;
   border-radius: 30px;
+  overflow: hidden;
 }
 .events .text-container {
   padding-inline: 3em;
@@ -7265,6 +7266,7 @@ footer .logo #rehan-logo-footer g {
   }
 }
 .events .logo-slider .slide-track {
+  animation: scroll 40s linear infinite;
   display: flex;
   width: 4000px;
   margin-top: 2em;

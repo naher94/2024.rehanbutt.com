@@ -1,10 +1,9 @@
 ---
 event-name: Information Architecture Conference
 location: Seattle, WA
-date: 2024-11-4
-start-date: 2024-11-4
-end-date: 2024-13-4
-published: false
+date: 2024-4-11
+start-date: 2024-4-11
+end-date: 2024-4-13
 ---
 
 <div class="grid-x cell">

@@ -1,8 +1,9 @@
 ---
 event-name: Config
 location: San Francisco, CA
-start-date: 2024-26-6
-end-date: 2024-27-6
+date: 2024-6-26
+start-date: 2024-6-26
+end-date: 2024-6-27
 ---
 <div class="grid-x cell">
   <div class="detailing cell grid-x align-justify">
