@@ -7268,22 +7268,21 @@ footer .logo #rehan-logo-footer g {
   width: 4000px;
   margin-top: 2em;
 }
-.events .logo-slider .badge {
+.events .logo-slider .e-badge {
   background: red;
-  max-width: 28em;
+  width: 13em;
   aspect-ratio: 250/375;
-  padding: 1em;
-  padding-top: 5em;
+  padding-block-start: 2.5em;
   border-radius: 20px;
   box-shadow: 0px 0px 30px -20px rgba(0, 0, 0, 0.75);
   position: relative;
-  margin-inline: 2em;
+  margin-inline: 1em;
 }
-.events .logo-slider .badge .lanyard {
+.events .logo-slider .e-badge .lanyard {
   position: absolute;
   height: 8em;
   width: 25%;
-  top: -5em;
+  top: -6.25em;
   left: 0;
   right: 0;
   margin: auto;
@@ -7292,12 +7291,12 @@ footer .logo #rehan-logo-footer g {
   border-radius: 6px;
   box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.75);
 }
-.events .logo-slider .badge .cutout {
+.events .logo-slider .e-badge .cutout {
   background: pink;
-  height: 1.5em;
+  height: 1em;
   position: absolute;
   width: 30%;
-  top: 2em;
+  top: 1em;
   left: 0;
   right: 0;
   margin: auto;
@@ -7305,12 +7304,14 @@ footer .logo #rehan-logo-footer g {
   box-shadow: inset 0px 0px 30px -20px rgba(0, 0, 0, 0.75);
 }
 @media print, screen and (max-width: 39.99875em) {
-  .events .logo-slider .badge {
-    margin-inline: 1em;
+  .events .logo-slider .e-badge {
+    margin-inline: 0.5em;
   }
 }
-.events .logo-slider .badge__config {
-  background-color: blue;
+.events .logo-slider .e-badge__config {
+  background-color: #FFF000;
+  padding-inline: 1em;
+  padding-block-end: 1em;
 }
 .events .logo-container {
   z-index: 1;

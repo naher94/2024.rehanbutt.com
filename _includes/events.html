@@ -3,11 +3,12 @@
     <div class="content-area">
       {% assign array-list = "(uxdx.svg|UXDX Logo),(config.svg|Config Logo),(siggraph.svg|Siggraph Logo),(leadership-design.svg|Leadership by Design Logo),(chicago-camps.svg|Chicago Camps Logo)" | remove: "(" | remove: ")" | split: ',' %}
 
+      <!-- TODO fix date sorting is not working as intended -->
       {% assign events_order = site.events | sort: 'start-date' %}
       <div class="logo-container logo-slider">
         <div class="slide-track">
           {% for event in events_order %}
-            <div class="badge badge__{{event.event-name | replace: ' ', '-' | downcase}}">
+            <div class="e-badge e-badge__{{event.event-name | replace: ' ', '-' | downcase}}">
               <div class="cutout"></div>
               <div class="lanyard"></div>
               {{event.content}}
