@@ -1,0 +1,28 @@
+<svg width="100%" height="100%" viewBox="0 0 268 166" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-908,-1263)">
+        <g id="chicago-camps" transform="matrix(0.85247,0,0,0.811986,133.647,237.173)">
+            <rect x="908.363" y="1263.36" width="313.559" height="203.698" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="908.363" y="1263.36" width="313.559" height="203.698"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(1.17306,0,0,1.23155,-184.968,-311.677)">
+                    <g transform="matrix(1,0,0,1,700.316,720.719)">
+                        <text x="227.277px" y="635.754px" style="font-family:'BigShouldersDisplay-Bold', 'Big Shoulders Display';font-weight:700;font-size:96px;">C<tspan x="269.325px 313.005px 334.509px 376.557px 418.317px 461.229px " y="635.754px 635.754px 635.754px 635.754px 635.754px 635.754px ">HICAGO</tspan></text>
+                        <g transform="matrix(96,0,0,96,458.445,722.754)">
+                        </g>
+                        <text x="227.277px" y="722.754px" style="font-family:'BigShouldersDisplay-Bold', 'Big Shoulders Display';font-weight:700;font-size:96px;">C<tspan x="269.325px 311.085px 375.597px 416.397px " y="722.754px 722.754px 722.754px 722.754px ">AMPS</tspan></text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,945.947,210.355)">
+                        <g id="logo" transform="matrix(0.914673,0,0,0.914673,-114.137,1157.15)">
+                            <path d="M366.151,0L401.247,0L401.247,16.11L366.151,16.11L366.151,0ZM366.151,67.89L401.247,67.89L401.247,84L366.151,84L366.151,67.89Z" style="fill:rgb(65,182,230);fill-rule:nonzero;"/>
+                        </g>
+                        <g id="logo1" serif:id="logo" transform="matrix(0.914673,0,0,0.914673,-114.137,1157.15)">
+                            <path d="M379.747,48.348L364.976,52.644L376.082,42L364.976,31.356L379.747,35.652L383.411,20.712L387.076,35.652L401.847,31.356L390.741,42L401.847,52.644L387.076,48.348L383.411,63.288L379.747,48.348Z" style="fill:rgb(228,0,43);fill-rule:nonzero;"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

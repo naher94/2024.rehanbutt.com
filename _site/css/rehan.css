@@ -7315,7 +7315,10 @@ footer .logo #rehan-logo-footer g {
   padding-inline: 1em;
   padding-block-end: 1em;
 }
-.events .logo-slider .e-badge__config svg {
+.events .logo-slider .e-badge__config .logo-wrapper {
+  margin-block: 0.5em;
+}
+.events .logo-slider .e-badge__config .logo-wrapper svg {
   width: 100%;
 }
 .events .logo-slider .e-badge__config .type-label {
@@ -7351,6 +7354,45 @@ footer .logo #rehan-logo-footer g {
 }
 .events .logo-slider .e-badge__disney-ux-summit .location-banner span.state {
   font-size: 0.8em;
+}
+.events .logo-slider .e-badge__information-architecture-conference {
+  padding-inline: 1em;
+  padding-block-end: 1em;
+  background: linear-gradient(#E81C28, #FF0195);
+}
+.events .logo-slider .e-badge__information-architecture-conference .tagline {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 0.65em;
+  line-height: 1.2;
+  margin-block-start: 1em;
+  margin-block-end: 0.75em;
+}
+.events .logo-slider .e-badge__information-architecture-conference .logo-wrapper svg {
+  width: 100%;
+}
+.events .logo-slider .e-badge__chicago-camps {
+  background-color: #ffffff;
+  background: linear-gradient(#41B6E6, #ffffff);
+  padding-inline: 1em;
+  padding-block-end: 1em;
+}
+.events .logo-slider .e-badge__chicago-camps .description {
+  font-weight: 900;
+  text-align: center;
+}
+.events .logo-slider .e-badge__uxdx {
+  background: linear-gradient(to bottom right in oklch, rgb(67, 56, 202), rgb(249, 115, 22));
+  color: #ffffff;
+  padding-inline: 1em;
+  padding-block-end: 1em;
+  font-weight: 700;
+}
+.events .logo-slider .e-badge__uxdx .logo-wrapper {
+  margin-block-end: 4em;
+}
+.events .logo-slider .e-badge__uxdx .logo-wrapper svg {
+  fill: #ffffff;
 }
 .events .logo-container {
   z-index: 1;

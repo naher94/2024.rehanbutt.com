@@ -1,6 +1,7 @@
 ---
 event-name: Disney UX Summit
-location: Anaheim, CA 
+location: Anaheim, CA
+date: 2024-9-5
 start-date: 2024-9-5
 end-date: 2024-10-5
 ---
