@@ -8604,7 +8604,7 @@ footer .logo #rehan-logo-footer g {
 .website .browser-chrome .content-area {
   background-color: white;
   border-radius: 10px;
-  padding: 2em;
+  padding: 1em;
 }
 .website .browser-chrome .content-area .easter-egg-container {
   scale: 1.15;
@@ -8714,134 +8714,24 @@ footer .logo #rehan-logo-footer g {
   font-weight: 900;
   font-size: 2em;
 }
-.website .site-container {
-  background-color: #331E65;
-  border-radius: 20px;
-  padding: 1em;
+.website .browser-chrome .content-area .text-content {
+  margin-block-end: 1em;
+}
+.website .browser-chrome .content-area .text-content p {
+  font-size: 1.25em;
+  line-height: 1.4;
 }
 .website .site-container .sub-section {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: solid 1px rgba(255, 255, 255, 0.25);
+  background-color: #E9E9E9;
+  border: solid 1px rgba(31, 41, 55, 0.25);
   border-radius: 10px;
   padding: 1em;
 }
-.website .site-container .title-section h2 {
-  font-size: 1em;
-  writing-mode: vertical-rl;
-  rotate: 180deg;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .website .site-container .title-section h2 {
-    writing-mode: unset;
-    rotate: 0deg;
-    margin-block-end: 0;
-    width: 100%;
-  }
-}
-.website .site-container .title-section h2 {
-  text-transform: uppercase;
-}
-.website .site-container .title-section h2 a {
-  text-transform: lowercase;
-  color: #ffffff;
-  float: right;
-}
-.website .site-container .main-content {
-  margin-left: 1em;
-  margin-right: 1em;
-  overflow: hidden;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .website .site-container .main-content {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-}
-.website .site-container .main-content h4 {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-size: 3em;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .website .site-container .main-content h4 {
-    padding-left: 0.5rem;
-  }
-}
-.website .site-container .main-content .description {
-  padding-right: 0.5em;
-  line-height: 1.2;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .website .site-container .main-content .description {
-    padding-left: 0.5rem;
-    padding-right: 0;
-  }
-}
-.website .site-container .main-content .link-list {
-  margin-top: 1em;
-  margin-left: -0.5em;
-}
-.website .site-container .main-content .link-list a.detail-item {
-  color: #ffffff;
-  padding: 0.25em 0.5em;
-  border-radius: 10px;
-  transition: all 0.3s ease-in-out;
-}
-.website .site-container .main-content .link-list a.detail-item:hover {
-  background-color: rgba(0, 0, 0, 0.25);
-}
-.website .site-container .main-content .link-list a.detail-item .name {
-  font-weight: 700;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .website .site-container .main-content .link-list {
-    margin-left: 0;
-  }
-}
-.website .site-container .main-content .right {
-  margin-top: 4em;
-  margin-bottom: 2em;
-}
-.website .site-container .main-content .right .cell:nth-of-type(1) {
-  z-index: 2;
-}
-.website .site-container .main-content .right .cell:nth-of-type(2) {
-  z-index: 1;
-}
-.website .site-container .main-content .right .cell:nth-of-type(odd) .image-wrapper {
-  rotate: 5deg;
-}
-.website .site-container .main-content .right .cell:nth-of-type(odd) .image-wrapper:hover {
-  rotate: 3deg;
-}
-.website .site-container .main-content .right .cell:nth-of-type(even) .image-wrapper {
-  rotate: -10deg;
-}
-.website .site-container .main-content .right .cell:nth-of-type(even) .image-wrapper:hover {
-  rotate: -8deg;
-}
-.website .site-container .main-content .right .image-wrapper {
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
-  scale: 1.25;
-  transition: all 0.3s ease-in-out;
-}
-.website .site-container .main-content .right .image-wrapper:hover {
-  scale: 1.3;
-}
-@media print, screen and (max-width: 39.99875em) {
-  .website .site-container .main-content .right .image-wrapper {
-    scale: 1.5;
-  }
-  .website .site-container .main-content .right .image-wrapper:hover {
-    scale: 1.7;
-  }
+.website .site-container .by-numbers {
+  margin-inline-end: 1em;
 }
 .website .site-container .by-numbers .title {
-  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+  border-bottom: solid 1px rgba(31, 41, 55, 0.25);
   padding-bottom: 0.5em;
 }
 .website .site-container .by-numbers .title p {
@@ -8849,7 +8739,7 @@ footer .logo #rehan-logo-footer g {
   font-size: 1.2em;
 }
 .website .site-container .by-numbers .big-total {
-  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+  border-bottom: solid 1px rgba(31, 41, 55, 0.25);
   padding: 0.5em 0;
 }
 .website .site-container .by-numbers .big-total .numb {
@@ -8859,7 +8749,7 @@ footer .logo #rehan-logo-footer g {
   margin-bottom: -0.25em;
 }
 .website .site-container .by-numbers .busy-day {
-  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+  border-bottom: solid 1px rgba(31, 41, 55, 0.25);
   padding: 0.5em 0;
 }
 .website .site-container .by-numbers .busy-day .busy-label {
