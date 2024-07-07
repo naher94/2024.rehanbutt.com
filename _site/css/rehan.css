@@ -6833,6 +6833,29 @@ html.is-reveal-open body {
     transform: scale(1, 1);
   }
 }
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  } /* The following four values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(12deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(9deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -8583,12 +8606,21 @@ footer .logo #rehan-logo-footer g {
   border-radius: 10px;
   padding: 2em;
 }
+.website .browser-chrome .content-area .easter-egg-container {
+  scale: 1.15;
+  margin-block-start: 1em;
+  margin-block-end: 3em;
+}
 .website .browser-chrome .content-area .easter-egg-container .small-order-7 {
   order: 7;
 }
 .website .browser-chrome .content-area .easter-egg-container .egg-container {
   position: relative;
   transform-origin: bottom center;
+  transition: all 0.2s ease-in-out;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container:hover {
+  animation: wave-animation 2s;
 }
 .website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(1) .easter-egg-graphic {
   width: 12em;

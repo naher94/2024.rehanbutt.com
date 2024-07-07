@@ -56,12 +56,21 @@ $element-border: 1px solid rgba($pure-black, 0.1);
       border-radius: $tile-radius;
       padding: 2em;
       .easter-egg-container{
+        //Needed for the bleed over
+        scale: 1.15;
+        margin-block-start: 1em;
+        margin-block-end: 3em;
+        //Needed for the bleed over
         .small-order-7{
           order: 7;
         }
         .egg-container{
           position: relative;
           transform-origin: bottom center;
+          transition: $sprint;
+          &:hover{
+            animation: wave-animation 2s;
+          }
           $egg-size: 12em;
           &:nth-of-type(1){
             .easter-egg-graphic{
