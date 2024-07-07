@@ -8591,15 +8591,19 @@ footer .logo #rehan-logo-footer g {
 }
 .website .browser-chrome .content-area .easter-egg-container .egg-container {
   position: relative;
+  transform-origin: bottom center;
 }
-.website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(2), .website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(3) {
-  scale: 0.9;
+.website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(1) .easter-egg-graphic {
+  width: 12em;
 }
-.website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(4), .website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(5) {
-  scale: 0.8;
+.website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(2) .easter-egg-graphic, .website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(3) .easter-egg-graphic {
+  width: 10.8em;
 }
-.website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(6), .website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(7) {
-  scale: 0.7;
+.website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(4) .easter-egg-graphic, .website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(5) .easter-egg-graphic {
+  width: 9.6em;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(6) .easter-egg-graphic, .website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(7) .easter-egg-graphic {
+  width: 8.4em;
 }
 .website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(1) {
   margin-inline: -3em;
@@ -8611,16 +8615,26 @@ footer .logo #rehan-logo-footer g {
   margin-inline-end: -3em;
 }
 .website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(2) {
-  margin-inline-start: -4em;
+  margin-inline-start: -3em;
+  rotate: -7deg;
 }
 .website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(3) {
-  margin-inline-end: -4em;
+  margin-inline-end: -3em;
+  rotate: 7deg;
 }
 .website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(4) {
-  margin-inline-start: -5em;
+  margin-inline-start: -3em;
+  rotate: -14deg;
 }
 .website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(5) {
-  margin-inline-end: -5em;
+  margin-inline-end: -3em;
+  rotate: 14deg;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(6) {
+  rotate: -21deg;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(7) {
+  rotate: 21deg;
 }
 .website .browser-chrome .content-area .easter-egg-container .egg-container [class$=-svg] {
   position: absolute;

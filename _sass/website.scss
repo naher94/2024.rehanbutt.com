@@ -62,16 +62,33 @@ $element-border: 1px solid rgba($pure-black, 0.1);
         }
         .egg-container{
           position: relative;
+          transform-origin: bottom center;
+          $egg-size: 12em;
+          &:nth-of-type(1){
+            .easter-egg-graphic{
+              width: 12em;
+            }
+          }
           &:nth-of-type(2), &:nth-of-type(3){
-            scale: 0.9;
+            .easter-egg-graphic{
+              // scale: 0.9;
+              width: $egg-size * 0.9;
+            }
           }
           &:nth-of-type(4), &:nth-of-type(5){
-            scale: 0.8;
+            .easter-egg-graphic{
+              // scale: 0.8;
+              width: $egg-size * 0.8;
+            }
           }
           &:nth-of-type(6), &:nth-of-type(7){
-            scale: 0.7;
+            .easter-egg-graphic{
+              // scale: 0.7;
+              width: $egg-size * 0.7;
+            }
           }
           $overlay-offset: -3em;
+          $rotate-offset: 7deg;
           &:nth-of-type(1){
             margin-inline: $overlay-offset;
           }
@@ -82,16 +99,37 @@ $element-border: 1px solid rgba($pure-black, 0.1);
             margin-inline-end: $overlay-offset;
           }
           &:nth-of-type(2){
-            margin-inline-start: -4em;
+            // margin-inline-start: -3.25em;
+            margin-inline-start: $overlay-offset;
+            rotate: -1*$rotate-offset;
+            // rotate: -5deg;
           }
           &:nth-of-type(3){
-            margin-inline-end: -4em;
+            // margin-inline-end: -3.25em;
+            margin-inline-end: $overlay-offset;
+            rotate: 1*$rotate-offset;
+            // rotate: 5deg;
           }
           &:nth-of-type(4){
-            margin-inline-start: -5em;
+            // margin-inline-start: -3.5em;
+            margin-inline-start: $overlay-offset;
+            rotate: -2*$rotate-offset;
+            // rotate: -10deg;
           }
           &:nth-of-type(5){
-            margin-inline-end: -5em;
+            // margin-inline-end: -3.5em;
+            margin-inline-end: $overlay-offset;
+            rotate: 2*$rotate-offset;
+            // rotate: 10deg;
+          }
+          &:nth-of-type(6){
+            // rotate: -15deg;
+            rotate: -3*$rotate-offset;
+
+          }
+          &:nth-of-type(7){
+            // rotate: 15deg;
+            rotate: 3*$rotate-offset;
           }
           [class$='-svg']{
             position: absolute;
