@@ -1,9 +1,142 @@
+$element-border: 1px solid rgba($pure-black, 0.1);
 .website{
-  color: $pure-white;
   margin-top: 2rem;
   p{
     padding: 0;
     margin: 0;
+  }
+  .browser-chrome{
+    background-color: #E9E9E9; //TODO make semantic
+    border-radius: $tile-radius-big;
+    padding: 1em;
+    border: $element-border;
+    .top-bar{
+      padding: 0;
+      margin-block-end: 1em;
+    }
+    .control-container{
+      margin-inline-end: 1em;
+      .close, .minimize, .expand{
+        aspect-ratio: 1/1;
+        width: 1em;
+        border-radius: $pill-radius;
+        border: $element-border;
+      }
+      .close{
+        background-color: #FF3B30;
+      }
+      .minimize{
+        background-color: #FFCC00;
+      }
+      .expand{
+        background-color: #34C759;
+      }
+      div{
+        &:not(:last-of-type){
+          margin-inline-end: 0.5em;
+        }
+      }
+    }
+    .address-bar{
+      background-color: white; //TODO make semantic
+      border: $element-border;
+      border-radius: $pill-radius;
+      padding-block: 0.25em;
+      padding-inline: 1em;
+      a{
+        color: semantic-color(text);
+      }
+    }
+    .content-area{
+      background-color: white; //TODO make semantic
+      border-radius: $tile-radius;
+      padding: 2em;
+      .easter-egg-container{
+        .small-order-7{
+          order: 7;
+        }
+        .egg-container{
+          position: relative;
+          &:nth-of-type(2), &:nth-of-type(3){
+            scale: 0.9;
+          }
+          &:nth-of-type(4), &:nth-of-type(5){
+            scale: 0.8;
+          }
+          &:nth-of-type(6), &:nth-of-type(7){
+            scale: 0.7;
+          }
+          $overlay-offset: -4em;
+          &:nth-of-type(1){
+            margin-inline: $overlay-offset;
+          }
+          &:nth-of-type(even){
+            margin-inline-start: $overlay-offset;
+          }
+          &:nth-of-type(odd){
+            margin-inline-end: $overlay-offset;
+          
+          }
+          [class$='-svg']{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+          &.main-egg{
+            .keyhole-svg{
+              path{
+                fill: white;
+              }
+            }
+          }
+          &.car-horn{
+            .easter-egg-graphic{
+              path{
+                fill: #FF4752;
+              }
+            }
+          }
+          &.code-snoop{
+            .easter-egg-graphic{
+              path{
+                fill: #B649EF;
+              }
+            }
+          }
+          &.paddington{
+            .easter-egg-graphic{
+              path{
+                fill: #FFB615;
+              }
+            }
+          }
+          &.konami{
+            .easter-egg-graphic{
+              path{
+                fill: #48E43B;
+              }
+            }
+          }
+          &.peace{
+            .easter-egg-graphic{
+              path{
+                fill: #6E89FF;
+              }
+            }
+          }
+          &.check-list{
+            .easter-egg-graphic{
+              path{
+                fill: #F4E800;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .site-container{
     background-color: #331E65;

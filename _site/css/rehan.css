@@ -8527,12 +8527,110 @@ footer .logo #rehan-logo-footer g {
 }
 
 .website {
-  color: #ffffff;
   margin-top: 2rem;
 }
 .website p {
   padding: 0;
   margin: 0;
+}
+.website .browser-chrome {
+  background-color: #E9E9E9;
+  border-radius: 30px;
+  padding: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.website .browser-chrome .top-bar {
+  padding: 0;
+  margin-block-end: 1em;
+}
+.website .browser-chrome .control-container {
+  margin-inline-end: 1em;
+}
+.website .browser-chrome .control-container .close, .website .browser-chrome .control-container .minimize, .website .browser-chrome .control-container .expand {
+  aspect-ratio: 1/1;
+  width: 1em;
+  border-radius: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.website .browser-chrome .control-container .close {
+  background-color: #FF3B30;
+}
+.website .browser-chrome .control-container .minimize {
+  background-color: #FFCC00;
+}
+.website .browser-chrome .control-container .expand {
+  background-color: #34C759;
+}
+.website .browser-chrome .control-container div:not(:last-of-type) {
+  margin-inline-end: 0.5em;
+}
+.website .browser-chrome .address-bar {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 500px;
+  padding-block: 0.25em;
+  padding-inline: 1em;
+}
+.website .browser-chrome .address-bar a {
+  color: var(--color-text);
+}
+.website .browser-chrome .content-area {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2em;
+}
+.website .browser-chrome .content-area .easter-egg-container .small-order-7 {
+  order: 7;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container {
+  position: relative;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(2), .website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(3) {
+  scale: 0.9;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(4), .website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(5) {
+  scale: 0.8;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(6), .website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(7) {
+  scale: 0.7;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(1) {
+  margin-inline: -4em;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(even) {
+  margin-inline-start: -4em;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container:nth-of-type(odd) {
+  margin-inline-end: -4em;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container [class$=-svg] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container.main-egg .keyhole-svg path {
+  fill: white;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container.car-horn .easter-egg-graphic path {
+  fill: #FF4752;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container.code-snoop .easter-egg-graphic path {
+  fill: #B649EF;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container.paddington .easter-egg-graphic path {
+  fill: #FFB615;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container.konami .easter-egg-graphic path {
+  fill: #48E43B;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container.peace .easter-egg-graphic path {
+  fill: #6E89FF;
+}
+.website .browser-chrome .content-area .easter-egg-container .egg-container.check-list .easter-egg-graphic path {
+  fill: #F4E800;
 }
 .website .site-container {
   background-color: #331E65;
