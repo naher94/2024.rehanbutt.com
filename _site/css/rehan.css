@@ -7211,6 +7211,28 @@ footer .logo #rehan-logo-footer g {
 .events .text-container .right-section {
   text-align: right;
 }
+.events .text-container .right-section a {
+  display: inline-block;
+}
+.events .text-container .right-section a:hover .collection-cta {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.events .text-container .right-section .collection-cta {
+  padding-inline: 0.75em;
+  padding-block: 0.25em;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  color: #000000;
+  font-weight: 700;
+  width: fit-content;
+  margin-block-end: 0.5em;
+  font-size: 0.8em;
+  transition: all 0.2s ease-in-out;
+}
+.events .text-container .right-section .collection-cta svg {
+  margin-inline-start: 0.25em;
+  height: 0.8em;
+}
 .events h2 {
   font-family: "Lato", sans-serif;
   font-weight: 900;
