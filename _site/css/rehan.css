@@ -8666,6 +8666,11 @@ footer .logo #rehan-logo-footer g {
 .website .browser-chrome .content-area .easter-egg-container .egg-container.check-list .easter-egg-graphic path {
   fill: #F4E800;
 }
+.website .browser-chrome .content-area h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 2em;
+}
 .website .site-container {
   background-color: #331E65;
   border-radius: 20px;

@@ -157,6 +157,11 @@ $element-border: 1px solid rgba($pure-black, 0.1);
           }
         }
       }
+      h2{
+        font-family: $lato;
+        font-weight: $lato-black;
+        font-size: 2em;
+      }
     }
   }
   .site-container{
