@@ -56,7 +56,6 @@ $element-border: 1px solid rgba($pure-black, 0.1);
       border-radius: $tile-radius;
       padding: 2em;
       .easter-egg-container{
-        background-color: pink;
         .small-order-7{
           order: 7;
         }
@@ -71,19 +70,16 @@ $element-border: 1px solid rgba($pure-black, 0.1);
           }
           &:nth-of-type(2), &:nth-of-type(3){
             .easter-egg-graphic{
-              // scale: 0.9;
               width: $egg-size * 0.9;
             }
           }
           &:nth-of-type(4), &:nth-of-type(5){
             .easter-egg-graphic{
-              // scale: 0.8;
               width: $egg-size * 0.8;
             }
           }
           &:nth-of-type(6), &:nth-of-type(7){
             .easter-egg-graphic{
-              // scale: 0.7;
               width: $egg-size * 0.7;
             }
           }
