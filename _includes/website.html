@@ -7,15 +7,24 @@
           <div class="minimize cell shrink"></div>
           <div class="expand cell shrink"></div>
         </div>
-        <div class="address-bar cell auto">
-          lock icon
-          {%- include external-link.html link="https://rehanbutt.com/" content="rehanbutt.com" css-class="" -%}
-          honeydew
-          refresh icon
+        <div class="address-bar cell grid-x auto">
+          <div class="address-left grid-x cell auto align-middle">
+            <div class="cell shrink grid-x">
+              {% include_relative img/website/lock.svg %}
+            </div>
+            <div class="cell shrink">
+              {%- include external-link.html link="https://rehanbutt.com/" content="rehanbutt.com" css-class="" -%}
+            </div>
+          </div>
+          <div class="address-right cell shrink align-middle grid-x">
+            honeydew
+            {% include_relative img/website/refresh.svg %}
+          </div>
         </div>
       </div>
       <div class="content-area grid-x cell">
-        <div class="easter-egg-container grid-x cell align-center">
+        <!-- TODO check why align-bottom is not working -->
+        <div class="easter-egg-container grid-x cell align-center align-bottom">
           <div class="egg-container main-egg cell shrink small-order-4">
             {% include_relative img/website/egg.svg %}
             {% include_relative img/website/keyhole.svg %}

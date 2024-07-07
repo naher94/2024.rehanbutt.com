@@ -42,9 +42,13 @@ $element-border: 1px solid rgba($pure-black, 0.1);
       border: $element-border;
       border-radius: $pill-radius;
       padding-block: 0.25em;
-      padding-inline: 1em;
+      padding-inline: 0.5em;
       a{
         color: semantic-color(text);
+        margin-inline-start: 0.25em;
+      }
+      svg{
+        width: 1.5em;
       }
     }
     .content-area{
@@ -52,6 +56,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
       border-radius: $tile-radius;
       padding: 2em;
       .easter-egg-container{
+        background-color: pink;
         .small-order-7{
           order: 7;
         }
@@ -66,7 +71,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
           &:nth-of-type(6), &:nth-of-type(7){
             scale: 0.7;
           }
-          $overlay-offset: -4em;
+          $overlay-offset: -3em;
           &:nth-of-type(1){
             margin-inline: $overlay-offset;
           }
@@ -75,7 +80,18 @@ $element-border: 1px solid rgba($pure-black, 0.1);
           }
           &:nth-of-type(odd){
             margin-inline-end: $overlay-offset;
-          
+          }
+          &:nth-of-type(2){
+            margin-inline-start: -4em;
+          }
+          &:nth-of-type(3){
+            margin-inline-end: -4em;
+          }
+          &:nth-of-type(4){
+            margin-inline-start: -5em;
+          }
+          &:nth-of-type(5){
+            margin-inline-end: -5em;
           }
           [class$='-svg']{
             position: absolute;
@@ -86,6 +102,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
             margin: auto;
           }
           &.main-egg{
+            z-index: 4;
             .keyhole-svg{
               path{
                 fill: white;
@@ -93,6 +110,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
             }
           }
           &.car-horn{
+            z-index: 3;
             .easter-egg-graphic{
               path{
                 fill: #FF4752;
@@ -100,6 +118,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
             }
           }
           &.code-snoop{
+            z-index: 3;
             .easter-egg-graphic{
               path{
                 fill: #B649EF;
@@ -107,6 +126,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
             }
           }
           &.paddington{
+            z-index: 2;
             .easter-egg-graphic{
               path{
                 fill: #FFB615;
@@ -114,6 +134,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
             }
           }
           &.konami{
+            z-index: 2;
             .easter-egg-graphic{
               path{
                 fill: #48E43B;
