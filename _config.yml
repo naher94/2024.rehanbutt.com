@@ -28,3 +28,5 @@ collections:
     output: false
   events:
     output: false
+  fave-things:
+    output: false
