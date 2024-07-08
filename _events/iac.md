@@ -9,7 +9,7 @@ end-date: 2024-4-13
 <div class="grid-x cell">
   <div class="detailing cell grid-x align-justify">
     <div class="cell shrink">{{page.location}}</div>
-    <div class="cell shrink">{{page.start-date}}</div>
+    <div class="cell shrink">April 11 - 13</div>
   </div>
   <div class="cell tagline">
     IA in the Age of AI: Designing Intelligent Information Landscapes

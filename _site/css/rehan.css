@@ -7193,7 +7193,7 @@ footer .logo #rehan-logo-footer g {
 }
 .events .content-area {
   position: relative;
-  background-color: pink;
+  background-color: #F1F1F1;
   border-radius: 30px;
   overflow: hidden;
 }
@@ -7316,7 +7316,7 @@ footer .logo #rehan-logo-footer g {
   box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.75);
 }
 .events .logo-slider .e-badge .cutout {
-  background: pink;
+  background: #F1F1F1;
   height: 1em;
   position: absolute;
   width: 30%;
