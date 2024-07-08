@@ -7045,7 +7045,7 @@ p a:hover::after, li a:hover::after, h3 a:hover::after {
 
 header {
   padding: 3rem;
-  font-family: "Big Shoulders Display", cursive;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   overflow: hidden;
 }
@@ -7054,54 +7054,30 @@ header {
     padding: 1rem;
   }
 }
-header .number-container {
-  margin-top: -8em;
-}
-@media print, screen and (max-width: 39.99875em) {
-  header .number-container {
-    margin-top: -4em;
-  }
-}
-header .number-container h1 {
-  justify-content: space-between;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10px, max-content));
-  font-family: "Big Shoulders Display", cursive;
-  font-weight: 900;
-  font-size: 76vw;
-  margin-inline-start: -8.36vw;
-}
-@media screen and (min-width: 90em) {
-  header .number-container h1 {
-    font-size: 62em;
-    margin-inline-start: -0.09em;
-  }
-}
-header .number-container span {
-  color: #BC2649;
-  background: linear-gradient(90deg, rgb(188, 38, 73) 0%, rgb(141, 25, 52) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-@media (prefers-color-scheme: dark) {
-  header .number-container span {
-    background: linear-gradient(90deg, rgb(188, 38, 73) 0%, rgb(141, 25, 52) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
 header .title-area {
   z-index: 2;
   color: var(--color-text);
 }
 header .subtitle {
   text-transform: uppercase;
+  font-weight: 700;
   font-size: 1.5rem;
 }
 @media print, screen and (max-width: 39.99875em) {
   header .subtitle {
     font-size: 1rem;
   }
+}
+header .roman-numeral h1 {
+  transition: all 0.5s ease-in-out;
+  padding-left: 1em;
+  letter-spacing: 1em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 5em;
+}
+header .roman-numeral h1:hover {
+  text-shadow: -0.35em 0.125em 30px #32C5FF, 0.15em 0.35em 30px #FFE032, 0.3em -0.125em 30px #FF32F7;
 }
 header .logo #rehan-logo-header {
   height: 30px;
