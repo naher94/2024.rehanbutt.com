@@ -1,11 +1,12 @@
 .favorite-things{
   margin-block-start: 5em;
-  .content-wrapper{
+  .fave-content-wrapper{
     position: relative;
   }
   .header-wrapper{
     position: absolute;
     height: 100%;
+    background-color: rgba(blue,0.25);
     h2{
       font-family: $fraunces;
       margin-bottom: 0;
@@ -35,11 +36,31 @@
   .hovered{
     animation-play-state: paused !important;
   }
-  .tooltip{
+  .description-tooltip{
     position: absolute;
-    top: 0;
-    width: 10em;
-    display: none;
+    padding: 0.75em;
+    margin-block-start: 0.5em;
+    border-radius: $tile-radius-medium;
+    background: rgba($pure-white,0.5);
+    visibility: hidden;
+    width: 150%;
+    margin-inline-start: -25%;
+    --blur: 10px;
+    -webkit-backdrop-filter: blur(var(--blur));
+    backdrop-filter: blur(var(--blur));
+    box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.75);
+    span{
+      font-family: $fraunces;
+      font-weight: $fraunces-bold;
+      margin-block-end: 0.25em;
+      line-height: 1.2;
+    }
+    p{
+      margin: 0;
+      padding: 0;
+      line-height: 1.2;
+      font-size: 1rem;
+    }
   }
   .circle {
     width: 10em;
@@ -50,13 +71,12 @@
     position: relative;
     background-color: orange;
     &:hover{
-      .tooltip{
-        display: block;			
+      .description-tooltip{
+        visibility: visible;
       }
     }
     .image-wrapper{
       width: inherit;
-      // aspect-ratio: 1/1;
       border-radius: $pill-radius;
       overflow: hidden;
     }

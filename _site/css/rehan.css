@@ -8845,12 +8845,13 @@ footer .logo #rehan-logo-footer g {
 .favorite-things {
   margin-block-start: 5em;
 }
-.favorite-things .content-wrapper {
+.favorite-things .fave-content-wrapper {
   position: relative;
 }
 .favorite-things .header-wrapper {
   position: absolute;
   height: 100%;
+  background-color: rgba(0, 0, 255, 0.25);
 }
 .favorite-things .header-wrapper h2 {
   font-family: "Fraunces", serif;
@@ -8880,11 +8881,31 @@ footer .logo #rehan-logo-footer g {
 .favorite-things .hovered {
   animation-play-state: paused !important;
 }
-.favorite-things .tooltip {
+.favorite-things .description-tooltip {
   position: absolute;
-  top: 0;
-  width: 10em;
-  display: none;
+  padding: 0.75em;
+  margin-block-start: 0.5em;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  visibility: hidden;
+  width: 150%;
+  margin-inline-start: -25%;
+  --blur: 10px;
+  -webkit-backdrop-filter: blur(var(--blur));
+  backdrop-filter: blur(var(--blur));
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
+}
+.favorite-things .description-tooltip span {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  margin-block-end: 0.25em;
+  line-height: 1.2;
+}
+.favorite-things .description-tooltip p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-size: 1rem;
 }
 .favorite-things .circle {
   width: 10em;
@@ -8895,8 +8916,8 @@ footer .logo #rehan-logo-footer g {
   position: relative;
   background-color: orange;
 }
-.favorite-things .circle:hover .tooltip {
-  display: block;
+.favorite-things .circle:hover .description-tooltip {
+  visibility: visible;
 }
 .favorite-things .circle .image-wrapper {
   width: inherit;
