@@ -8845,12 +8845,37 @@ footer .logo #rehan-logo-footer g {
 .favorite-things {
   margin-block-start: 5em;
 }
-.favorite-things h2 {
+.favorite-things .content-wrapper {
+  position: relative;
+}
+.favorite-things .header-wrapper {
+  position: absolute;
+  height: 100%;
+}
+.favorite-things .header-wrapper h2 {
   font-family: "Fraunces", serif;
   margin-bottom: 0;
+  text-align: center;
+  width: 50%;
+  line-height: 0.8;
 }
-.favorite-things h2 span {
+.favorite-things .header-wrapper h2 span {
+  display: block;
+}
+.favorite-things .header-wrapper h2 span.year-number {
+  margin-inline-start: 0.75em;
   letter-spacing: 0.75em;
+  font-size: 0.8em;
+}
+.favorite-things .header-wrapper h2 span.main-title {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+.favorite-things .wheel {
+  background-color: pink;
+  aspect-ratio: 1/1;
+  width: 100%;
 }
 .favorite-things .hovered {
   animation-play-state: paused !important;
@@ -8862,16 +8887,21 @@ footer .logo #rehan-logo-footer g {
   display: none;
 }
 .favorite-things .circle {
-  width: 70px;
+  width: 10em;
   aspect-ratio: 1/1;
-  border-radius: 50%;
-  offset-path: circle(30% at 50% 50%);
+  border-radius: 500px;
+  offset-path: circle(35% at 50% 50%);
   offset-rotate: 0deg;
   position: relative;
   background-color: orange;
 }
 .favorite-things .circle:hover .tooltip {
   display: block;
+}
+.favorite-things .circle .image-wrapper {
+  width: inherit;
+  border-radius: 500px;
+  overflow: hidden;
 }
 .favorite-things .circle-1 {
   background: #814AB1;
@@ -8900,7 +8930,7 @@ footer .logo #rehan-logo-footer g {
   }
 }
 .favorite-things .circle-1 {
-  animation: load-1 20s linear infinite;
+  animation: load-1 40s linear infinite;
   offset-distance: 12.5%;
 }
 @keyframes load-2 {
@@ -8912,7 +8942,7 @@ footer .logo #rehan-logo-footer g {
   }
 }
 .favorite-things .circle-2 {
-  animation: load-2 20s linear infinite;
+  animation: load-2 40s linear infinite;
   offset-distance: 25%;
 }
 @keyframes load-3 {
@@ -8924,7 +8954,7 @@ footer .logo #rehan-logo-footer g {
   }
 }
 .favorite-things .circle-3 {
-  animation: load-3 20s linear infinite;
+  animation: load-3 40s linear infinite;
   offset-distance: 37.5%;
 }
 @keyframes load-4 {
@@ -8936,7 +8966,7 @@ footer .logo #rehan-logo-footer g {
   }
 }
 .favorite-things .circle-4 {
-  animation: load-4 20s linear infinite;
+  animation: load-4 40s linear infinite;
   offset-distance: 50%;
 }
 @keyframes load-5 {
@@ -8948,7 +8978,7 @@ footer .logo #rehan-logo-footer g {
   }
 }
 .favorite-things .circle-5 {
-  animation: load-5 20s linear infinite;
+  animation: load-5 40s linear infinite;
   offset-distance: 62.5%;
 }
 @keyframes load-6 {
@@ -8960,7 +8990,7 @@ footer .logo #rehan-logo-footer g {
   }
 }
 .favorite-things .circle-6 {
-  animation: load-6 20s linear infinite;
+  animation: load-6 40s linear infinite;
   offset-distance: 75%;
 }
 @keyframes load-7 {
@@ -8972,7 +9002,7 @@ footer .logo #rehan-logo-footer g {
   }
 }
 .favorite-things .circle-7 {
-  animation: load-7 20s linear infinite;
+  animation: load-7 40s linear infinite;
   offset-distance: 87.5%;
 }
 @keyframes load-8 {
@@ -8984,10 +9014,36 @@ footer .logo #rehan-logo-footer g {
   }
 }
 .favorite-things .circle-8 {
-  animation: load-8 20s linear infinite;
+  animation: load-8 40s linear infinite;
   offset-distance: 100%;
 }
 
+.shimmer {
+  text-align: center;
+  display: inline-block;
+  color: white;
+  background: #000000 -webkit-gradient(linear, 100% 0, 0 0, from(#000000), color-stop(0.5, #626262), to(#000000));
+  background-position: -4em top;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation-name: shimmer;
+  -webkit-animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-background-size: 4em 100%;
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: -4em top;
+  }
+  70% {
+    background-position: 12.5em top;
+  }
+  100% {
+    background-position: 12.5em top;
+  }
+}
 .no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
