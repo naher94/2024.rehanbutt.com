@@ -8846,179 +8846,146 @@ footer .logo #rehan-logo-footer g {
   margin-block-start: 5em;
 }
 .favorite-things h2 {
+  font-family: "Fraunces", serif;
   margin-bottom: 0;
 }
-.favorite-things h3 {
-  font-size: 1.25em;
-  margin-bottom: -1em;
+.favorite-things h2 span {
   letter-spacing: 0.75em;
 }
-.favorite-things .row-pill {
-  border-radius: 500px;
+.favorite-things .hovered {
+  animation-play-state: paused !important;
 }
-@media print, screen and (min-width: 40em) {
-  .favorite-things .row-pill.first-pill {
-    background: linear-gradient(90deg, rgb(253, 187, 45) 0%, rgb(34, 193, 195) 100%);
-    padding: 10px;
-  }
+.favorite-things .tooltip {
+  position: absolute;
+  top: 0;
+  width: 10em;
+  display: none;
 }
-@media print and (prefers-color-scheme: dark), screen and (min-width: 40em) and (prefers-color-scheme: dark) {
-  .favorite-things .row-pill.first-pill {
-    background: linear-gradient(90deg, rgb(184, 136, 34) 0%, rgb(26, 139, 141) 100%);
-  }
-}
-@media print, screen and (max-width: 39.99875em) {
-  .favorite-things .row-pill.first-pill .child-pill {
-    background: linear-gradient(90deg, rgb(253, 187, 45) 0%, rgb(34, 193, 195) 100%);
-    padding: 5px;
-    border-radius: 500px;
-  }
-  .favorite-things .row-pill.first-pill .child-pill:first-of-type {
-    margin-bottom: 5px;
-  }
-}
-@media print, screen and (max-width: 39.99875em) {
-  .favorite-things .row-pill h2 {
-    padding: 0;
-  }
-  .favorite-things .row-pill h3 {
-    padding-inline-start: 0.15em;
-  }
-}
-.favorite-things .row-pill.second-pill .fake-border {
-  background-color: var(--color-page-bg);
-  border-radius: 500px;
-}
-@media print, screen and (min-width: 40em) {
-  .favorite-things .row-pill.second-pill {
-    background: linear-gradient(270deg, rgb(253, 187, 45) 0%, rgb(34, 193, 195) 100%);
-    padding: 10px;
-  }
-}
-@media print and (prefers-color-scheme: dark), screen and (min-width: 40em) and (prefers-color-scheme: dark) {
-  .favorite-things .row-pill.second-pill {
-    background: linear-gradient(270deg, rgb(184, 136, 34) 0%, rgb(26, 139, 141) 100%);
-  }
-}
-@media print, screen and (max-width: 39.99875em) {
-  .favorite-things .row-pill.second-pill .child-pill {
-    background: linear-gradient(270deg, rgb(253, 187, 45) 0%, rgb(34, 193, 195) 100%);
-    padding: 5px;
-    border-radius: 500px;
-  }
-  .favorite-things .row-pill.second-pill .child-pill:first-of-type {
-    margin-bottom: 5px;
-  }
-  .favorite-things .row-pill.second-pill .text-pill {
-    text-align: right;
-    background-color: #ffffff;
-  }
-}
-.favorite-things .row-pill.second-pill .child-pill .text-pill {
-  background-color: var(--color-page-bg);
-}
-.favorite-things .row-pill.first-pill .child-pill .text-pill {
-  background-color: rgba(255, 255, 255, 0.75);
-}
-@media (prefers-color-scheme: dark) {
-  .favorite-things .row-pill.first-pill .child-pill .text-pill {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-}
-.favorite-things .row-pill .text-pill {
-  border-radius: 500px;
-  padding: 1em 3em;
-}
-.favorite-things .row-pill .thing-wrapper1 .thing-container:nth-of-type(1) .thing-link .thing-container {
-  background-color: #FAF8DF;
-}
-.favorite-things .row-pill .thing-wrapper1 .thing-container:nth-of-type(1) .thing-link .thing-container:hover {
-  background-color: #ece587;
-}
-@media (prefers-color-scheme: dark) {
-  .favorite-things .row-pill .thing-wrapper1 .thing-container:nth-of-type(1) .thing-link .thing-container {
-    background-color: #CFCB9C;
-  }
-  .favorite-things .row-pill .thing-wrapper1 .thing-container:nth-of-type(1) .thing-link .thing-container:hover {
-    background-color: #aea757;
-  }
-}
-.favorite-things .row-pill .thing-wrapper1 .thing-container:nth-of-type(2) .thing-link .thing-container {
-  background-color: #DBF8F5;
-}
-.favorite-things .row-pill .thing-wrapper1 .thing-container:nth-of-type(2) .thing-link .thing-container:hover {
-  background-color: #86e7dd;
-}
-@media (prefers-color-scheme: dark) {
-  .favorite-things .row-pill .thing-wrapper1 .thing-container:nth-of-type(2) .thing-link .thing-container {
-    background-color: #99D2CC;
-  }
-  .favorite-things .row-pill .thing-wrapper1 .thing-container:nth-of-type(2) .thing-link .thing-container:hover {
-    background-color: #52b3a9;
-  }
-}
-.favorite-things .row-pill .thing-wrapper2 .thing-link:nth-of-type(1) .thing-container {
-  background-color: #F5E6FF;
-}
-.favorite-things .row-pill .thing-wrapper2 .thing-link:nth-of-type(1) .thing-container:hover {
-  background-color: #cc80ff;
-}
-@media (prefers-color-scheme: dark) {
-  .favorite-things .row-pill .thing-wrapper2 .thing-link:nth-of-type(1) .thing-container {
-    background-color: #7D658D;
-  }
-  .favorite-things .row-pill .thing-wrapper2 .thing-link:nth-of-type(1) .thing-container:hover {
-    background-color: #483a52;
-  }
-}
-.favorite-things .row-pill .thing-wrapper2 .thing-link:nth-of-type(2) .thing-container {
-  background-color: #FADFDF;
-}
-.favorite-things .row-pill .thing-wrapper2 .thing-link:nth-of-type(2) .thing-container:hover {
-  background-color: #ec8787;
-}
-@media (prefers-color-scheme: dark) {
-  .favorite-things .row-pill .thing-wrapper2 .thing-link:nth-of-type(2) .thing-container {
-    background-color: #986161;
-  }
-  .favorite-things .row-pill .thing-wrapper2 .thing-link:nth-of-type(2) .thing-container:hover {
-    background-color: #5a3939;
-  }
-}
-.favorite-things .row-pill .thing-wrapper2 .thing-link:nth-of-type(3) .thing-container {
-  background-color: #ECFADF;
-}
-.favorite-things .row-pill .thing-wrapper2 .thing-link:nth-of-type(3) .thing-container:hover {
-  background-color: #b8ec87;
-}
-@media (prefers-color-scheme: dark) {
-  .favorite-things .row-pill .thing-wrapper2 .thing-link:nth-of-type(3) .thing-container {
-    background-color: #779161;
-  }
-  .favorite-things .row-pill .thing-wrapper2 .thing-link:nth-of-type(3) .thing-container:hover {
-    background-color: #455438;
-  }
-}
-.favorite-things .row-pill .thing-container {
-  border-radius: 500px;
+.favorite-things .circle {
+  width: 70px;
   aspect-ratio: 1/1;
-  overflow: hidden;
-  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+  offset-path: circle(30% at 50% 50%);
+  offset-rotate: 0deg;
+  position: relative;
+  background-color: orange;
 }
-@media print, screen and (min-width: 40em) {
-  .favorite-things .row-pill .thing-container {
-    width: 180px;
+.favorite-things .circle:hover .tooltip {
+  display: block;
+}
+.favorite-things .circle-1 {
+  background: #814AB1;
+}
+.favorite-things .circle-2 {
+  background: #4CBDC9;
+}
+.favorite-things .circle-3 {
+  background: #FFCE24;
+}
+.favorite-things .circle-4 {
+  background: #FF2D74;
+}
+.favorite-things .circle-5 {
+  background: #814AB1;
+}
+.favorite-things .circle-6 {
+  background: #4CBDC9;
+}
+@keyframes load-1 {
+  from {
+    offset-distance: 12.5%;
+  }
+  to {
+    offset-distance: 112.5%;
   }
 }
-.favorite-things .text-row {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  font-size: 1.25em;
-  font-weight: 700;
+.favorite-things .circle-1 {
+  animation: load-1 20s linear infinite;
+  offset-distance: 12.5%;
 }
-.favorite-things .text-row p {
-  padding: 0;
-  margin: 0;
+@keyframes load-2 {
+  from {
+    offset-distance: 25%;
+  }
+  to {
+    offset-distance: 125%;
+  }
+}
+.favorite-things .circle-2 {
+  animation: load-2 20s linear infinite;
+  offset-distance: 25%;
+}
+@keyframes load-3 {
+  from {
+    offset-distance: 37.5%;
+  }
+  to {
+    offset-distance: 137.5%;
+  }
+}
+.favorite-things .circle-3 {
+  animation: load-3 20s linear infinite;
+  offset-distance: 37.5%;
+}
+@keyframes load-4 {
+  from {
+    offset-distance: 50%;
+  }
+  to {
+    offset-distance: 150%;
+  }
+}
+.favorite-things .circle-4 {
+  animation: load-4 20s linear infinite;
+  offset-distance: 50%;
+}
+@keyframes load-5 {
+  from {
+    offset-distance: 62.5%;
+  }
+  to {
+    offset-distance: 162.5%;
+  }
+}
+.favorite-things .circle-5 {
+  animation: load-5 20s linear infinite;
+  offset-distance: 62.5%;
+}
+@keyframes load-6 {
+  from {
+    offset-distance: 75%;
+  }
+  to {
+    offset-distance: 175%;
+  }
+}
+.favorite-things .circle-6 {
+  animation: load-6 20s linear infinite;
+  offset-distance: 75%;
+}
+@keyframes load-7 {
+  from {
+    offset-distance: 87.5%;
+  }
+  to {
+    offset-distance: 187.5%;
+  }
+}
+.favorite-things .circle-7 {
+  animation: load-7 20s linear infinite;
+  offset-distance: 87.5%;
+}
+@keyframes load-8 {
+  from {
+    offset-distance: 100%;
+  }
+  to {
+    offset-distance: 200%;
+  }
+}
+.favorite-things .circle-8 {
+  animation: load-8 20s linear infinite;
+  offset-distance: 100%;
 }
 
 .no-select {

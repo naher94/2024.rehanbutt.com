@@ -1,174 +1,59 @@
-$things-gradient: linear-gradient(90deg, rgba(253,187,45,1) 0%, rgba(34,193,195,1) 100%);
-$things-gradient-dark: linear-gradient(90deg, rgb(184, 136, 34) 0%, rgb(26, 139, 141) 100%);
-$things-gradient-flip: linear-gradient(270deg, rgba(253,187,45,1) 0%, rgba(34,193,195,1) 100%);
-$things-gradient-dark-flip: linear-gradient(270deg, rgb(184, 136, 34) 0%, rgb(26, 139, 141) 100%);
 .favorite-things{
   margin-block-start: 5em;
-  h2, h3{
-  }
   h2{
+    font-family: $fraunces;
     margin-bottom: 0;
+    span{
+      letter-spacing: 0.75em;
+    }
   }
-  h3{
-    font-size: 1.25em;
-    margin-bottom: -1em;
-    letter-spacing: 0.75em;
+  .hovered{
+    animation-play-state: paused !important;
   }
-  .row-pill{
-    border-radius: $pill-radius;
-
-    @include breakpoint(medium) {
-      &.first-pill{
-        background: $things-gradient;
-        padding: 10px;
-        @media (prefers-color-scheme: dark) {
-          background: $things-gradient-dark;
-        }
-      }
-    }
-    @include breakpoint(small only) {
-      &.first-pill{
-        .child-pill{
-          background: $things-gradient;
-          padding: 5px;
-          border-radius: $pill-radius;
-          &:first-of-type{
-            margin-bottom: 5px;
-          }
-        }
-      }
-    }
-
-    @include breakpoint(small only){
-      h2{
-        padding: 0;
-      }
-      h3{
-        padding-inline-start: 0.15em;
-      }
-    }
-    
-    &.second-pill{
-      .fake-border{
-        background-color: semantic-color(page-bg);
-        border-radius: $pill-radius;
-      }
-    }
-
-    @include breakpoint(medium) { //TODO should this be medium or large??
-      &.second-pill{
-        background: $things-gradient-flip;
-        padding: 10px;
-        @media (prefers-color-scheme: dark) {
-          background: $things-gradient-dark-flip;
-        }
-      }
-    }
-    @include breakpoint(small only) {
-      &.second-pill{
-        .child-pill{
-          background: $things-gradient-flip;
-          padding: 5px;
-          border-radius: $pill-radius;
-          &:first-of-type{
-            margin-bottom: 5px;
-          }
-        }
-        .text-pill{
-          text-align: right;
-          background-color: $pure-white;
-        }
-      }
-    }
-    &.second-pill{
-      .child-pill{
-        .text-pill{
-          background-color: semantic-color(page-bg);
-        }
-      }
-    }
-    &.first-pill{
-      .child-pill{
-        .text-pill{
-          background-color: rgba($pure-white, 0.75);
-          @media (prefers-color-scheme: dark) {
-            background-color: rgba($pure-black, 0.5);
-          }
-        }
-      }
-    }
-    .text-pill{
-      border-radius: $pill-radius;
-      padding: 1em 3em;
-    }
-    @mixin thing-color-hover($color){
-      .thing-container{
-        background-color: $color;
-        &:hover{
-          background-color: darken($color, 20%);
-        }
-      }
-    }
-    .thing-wrapper1{
-      .thing-container{
-        &:nth-of-type(1){
-          .thing-link{
-            @include thing-color-hover(#FAF8DF);
-            @media (prefers-color-scheme: dark) {
-              @include thing-color-hover(#CFCB9C);
-            }
-          }
-        }
-        &:nth-of-type(2){
-          .thing-link{
-            @include thing-color-hover(#DBF8F5);
-            @media (prefers-color-scheme: dark) {
-              @include thing-color-hover(#99D2CC);
-            }
-          }
-        }
-      }
-    }
-    .thing-wrapper2{
-      .thing-link{
-        &:nth-of-type(1){
-          @include thing-color-hover(#F5E6FF);
-          @media (prefers-color-scheme: dark) {
-            @include thing-color-hover(#7D658D);
-          }
-        }
-        &:nth-of-type(2){
-          @include thing-color-hover(#FADFDF);
-          @media (prefers-color-scheme: dark) {
-            @include thing-color-hover(#986161);
-          }
-        }
-        &:nth-of-type(3){
-          @include thing-color-hover(#ECFADF);
-          @media (prefers-color-scheme: dark) {
-            @include thing-color-hover(#779161);
-          }
-        }
-      }
-    }
-    .thing-container{
-      border-radius: $pill-radius;
-      aspect-ratio: 1/1;
-      overflow: hidden;
-      transition: $sprint;
-      @include breakpoint(medium){
-        width: 180px; //TODO this is hacky
+  .tooltip{
+    position: absolute;
+    top: 0;
+    width: 10em;
+    display: none;
+  }
+  .circle {
+    width: 70px; //TODO with image size
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    offset-path: circle(30% at 50% 50%);
+    offset-rotate: 0deg;
+    position: relative;
+    background-color: orange;
+    &:hover{
+      .tooltip{
+        display: block;			
       }
     }
   }
-  .text-row{
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    font-size: 1.25em;
-    font-weight: $lato-bold;
-    p{
-      padding: 0;
-      margin: 0;
+  
+  $anim-time: 20s;
+  $numb: 8; //The number of circles/elements we have
+  .circle-1 { background: #814AB1; }
+  .circle-2 { background: #4CBDC9; }
+  .circle-3 { background: #FFCE24; }
+  .circle-4 { background: #FF2D74; }
+  .circle-5 { background: #814AB1; }
+  .circle-6 { background: #4CBDC9; }
+  
+  //Starts each circle with an offset
+  @for $i from 1 through $numb {
+    $offset: percentage(($i - 1) / $numb);
+    @keyframes load-#{$i} {
+      from {
+        offset-distance: 100% / $numb * $i;
+      }
+      to {
+        offset-distance: 100% / $numb * $i + 100%;
+      }
+    }
+    .circle-#{$i} {
+      animation: load-#{$i} $anim-time linear infinite;
+      offset-distance: 100% / $numb * $i;
     }
   }
 }
