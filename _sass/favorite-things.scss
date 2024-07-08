@@ -6,7 +6,6 @@
   .header-wrapper{
     position: absolute;
     height: 100%;
-    background-color: rgba(blue,0.25);
     h2{
       font-family: $fraunces;
       margin-bottom: 0;
@@ -28,10 +27,10 @@
       }
     }
   }
-  .wheel{ //TODO remove these after setup
-    background-color: pink;
+  .wheel{
+    background-color: pink; //TODO remove this
     aspect-ratio: 1/1;
-    width: 100%;
+    // height of this element assumes all the circles are vertically laid out
   }
   .hovered{
     animation-play-state: paused !important;
@@ -49,6 +48,7 @@
     -webkit-backdrop-filter: blur(var(--blur));
     backdrop-filter: blur(var(--blur));
     box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.75);
+    z-index: 1000; //TODO figure out why this is not working
     span{
       font-family: $fraunces;
       font-weight: $fraunces-bold;
@@ -108,14 +108,11 @@
     }
   }
 }
-
 .shimmer {
   text-align: center;
   display: inline-block;
   color:white;
-  
-  background: #000000 -webkit-gradient(linear, 100% 0, 0 0, from(#000000), color-stop(0.5, #626262), to(#000000));
-  
+  background: #000000 -webkit-gradient(linear, 100% 0, 0 0, from(#000000), color-stop(0.5, #626262), to(#000000));//TODO make semantic
   background-position: -4em top;
   background-repeat: no-repeat;
   -webkit-background-clip: text;
@@ -124,17 +121,9 @@
   -webkit-animation-duration: 8s;
   -webkit-animation-iteration-count: infinite;
   -webkit-background-size: 4em 100%;
-  
 }
-
-@-webkit-keyframes shimmer {
-    0% {
-      background-position: -4em top;
-    }
-    70% {
-      background-position: 12.5em top;
-    }
-    100% {
-      background-position: 12.5em top;
-    }
+@keyframes shimmer {
+  0% { background-position: -4em top; }
+  70% { background-position: 12.5em top; }
+  100% { background-position: 12.5em top; }
 }

@@ -8851,7 +8851,6 @@ footer .logo #rehan-logo-footer g {
 .favorite-things .header-wrapper {
   position: absolute;
   height: 100%;
-  background-color: rgba(0, 0, 255, 0.25);
 }
 .favorite-things .header-wrapper h2 {
   font-family: "Fraunces", serif;
@@ -8876,7 +8875,6 @@ footer .logo #rehan-logo-footer g {
 .favorite-things .wheel {
   background-color: pink;
   aspect-ratio: 1/1;
-  width: 100%;
 }
 .favorite-things .hovered {
   animation-play-state: paused !important;
@@ -8894,6 +8892,7 @@ footer .logo #rehan-logo-footer g {
   -webkit-backdrop-filter: blur(var(--blur));
   backdrop-filter: blur(var(--blur));
   box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
+  z-index: 1000;
 }
 .favorite-things .description-tooltip span {
   font-family: "Fraunces", serif;
@@ -9054,7 +9053,7 @@ footer .logo #rehan-logo-footer g {
   -webkit-background-size: 4em 100%;
 }
 
-@-webkit-keyframes shimmer {
+@keyframes shimmer {
   0% {
     background-position: -4em top;
   }
