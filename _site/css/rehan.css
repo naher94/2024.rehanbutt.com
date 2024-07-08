@@ -8577,6 +8577,10 @@ footer .logo #rehan-logo-footer g {
 .website .browser-chrome .address-bar svg {
   width: 1.5em;
 }
+.website .browser-chrome .address-bar .address-right .refresh-svg:hover {
+  rotate: 360deg;
+  transition: all 0.3s ease-in-out;
+}
 .website .browser-chrome .content-area {
   background-color: white;
   border-radius: 10px;

@@ -50,6 +50,14 @@ $element-border: 1px solid rgba($pure-black, 0.1);
       svg{
         width: 1.5em;
       }
+      .address-right{
+        .refresh-svg{
+          &:hover{
+            rotate: 360deg;
+            transition: $run;
+          }
+        }
+      }
     }
     .content-area{
       background-color: white; //TODO make semantic
