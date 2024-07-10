@@ -12,7 +12,7 @@
             </div>
           {% endfor %}
           {% for event in events_order %}
-            <div class="grid-x align-bottom e-badge e-badge__{{event.event-name | replace: ' ', '-' | downcase}}">
+            <div class="grid-x align-bottom e-badge e-badge__{{event.event-name | replace: ' ', '-' | downcase}}" aria-hidden="true">
               <div class="cutout"></div>
               <div class="lanyard"></div>
               {{event.content}}
