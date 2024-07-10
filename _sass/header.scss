@@ -1,5 +1,5 @@
 header{
-  padding: 3rem;
+  padding-block: 3rem;
   font-family: $montserrat;
   font-weight: $big-shoulders-black;
   overflow: hidden;
@@ -9,6 +9,7 @@ header{
   .title-area{
     z-index: 2;
     color: semantic-color(text);
+    margin-block-end: 2em;
   }
   .subtitle{
     text-transform: uppercase;
@@ -18,7 +19,61 @@ header{
       font-size: 1rem;
     }
   }
+
+  /* Marquee styles */
+  .marquee {
+    --gap: 1rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    text-transform: uppercase;
+    font-size: 10em;
+    letter-spacing: 0.5em;
+    line-height: 1;
+    opacity: 50%;
+    .marquee__content {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-around;
+      gap: var(--gap);
+      min-width: 100%;
+      animation: scroll 120s linear infinite;
+      filter: blur(5px);
+      .outline-wrapper{
+        position: relative;
+      }
+      .outline{
+        -webkit-text-stroke-width: 10px;
+        -webkit-text-stroke-color: $navy-black;
+      }
+      .overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: white;
+      }
+    }
+    &.marquee__reserve{
+      .marquee__content{
+        animation-direction: reverse;
+      }
+    }
+  }
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
   .roman-numeral{
+    margin-block: -3em;
+    z-index: 2;
+    position: relative;
     h1{
       $blur-radius: 30px;
       $kern-factor: 1em;
@@ -28,8 +83,12 @@ header{
       font-family: $montserrat;
       font-weight: $big-shoulders-black;
       font-size: 5em;
+      margin-bottom: 0;
+      text-shadow: -0.35em 0.125em $blur-radius #32C5FF, 0.15em 0.35em $blur-radius #FFE032,  0.3em -0.125em $blur-radius #FF32F7;
       &:hover{
-        text-shadow: -0.35em 0.125em $blur-radius #32C5FF, 0.15em 0.35em $blur-radius #FFE032,  0.3em -0.125em $blur-radius #FF32F7;
+        // text-shadow: -0.35em 0.125em $blur-radius*1.25 #32C5FF, 0.15em 0.35em $blur-radius*1.25 #FFE032,  0.3em -0.125em $blur-radius*1.25 #FF32F7;
+        text-shadow: -0.35em 0.125em $blur-radius #FF32F7, 0.15em 0.35em $blur-radius #32C5FF,  0.3em -0.125em $blur-radius #FFE032;
+
       }
     }
   }

@@ -7044,10 +7044,11 @@ p a:hover::after, li a:hover::after, h3 a:hover::after {
 }
 
 header {
-  padding: 3rem;
+  padding-block: 3rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   overflow: hidden;
+  /* Marquee styles */
 }
 @media print, screen and (max-width: 39.99875em) {
   header {
@@ -7057,6 +7058,7 @@ header {
 header .title-area {
   z-index: 2;
   color: var(--color-text);
+  margin-block-end: 2em;
 }
 header .subtitle {
   text-transform: uppercase;
@@ -7068,6 +7070,57 @@ header .subtitle {
     font-size: 1rem;
   }
 }
+header .marquee {
+  --gap: 1rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  text-transform: uppercase;
+  font-size: 10em;
+  letter-spacing: 0.5em;
+  line-height: 1;
+  opacity: 50%;
+}
+header .marquee .marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+  animation: scroll 120s linear infinite;
+  filter: blur(5px);
+}
+header .marquee .marquee__content .outline-wrapper {
+  position: relative;
+}
+header .marquee .marquee__content .outline {
+  -webkit-text-stroke-width: 10px;
+  -webkit-text-stroke-color: #1f2937;
+}
+header .marquee .marquee__content .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: white;
+}
+header .marquee.marquee__reserve .marquee__content {
+  animation-direction: reverse;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+header .roman-numeral {
+  margin-block: -3em;
+  z-index: 2;
+  position: relative;
+}
 header .roman-numeral h1 {
   transition: all 0.5s ease-in-out;
   padding-left: 1em;
@@ -7075,9 +7128,11 @@ header .roman-numeral h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: 5em;
+  margin-bottom: 0;
+  text-shadow: -0.35em 0.125em 30px #32C5FF, 0.15em 0.35em 30px #FFE032, 0.3em -0.125em 30px #FF32F7;
 }
 header .roman-numeral h1:hover {
-  text-shadow: -0.35em 0.125em 30px #32C5FF, 0.15em 0.35em 30px #FFE032, 0.3em -0.125em 30px #FF32F7;
+  text-shadow: -0.35em 0.125em 30px #FF32F7, 0.15em 0.35em 30px #32C5FF, 0.3em -0.125em 30px #FFE032;
 }
 header .logo #rehan-logo-header {
   height: 30px;
