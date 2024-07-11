@@ -86,7 +86,6 @@ header{
       margin-bottom: 0;
       text-shadow: -0.35em 0.125em $blur-radius #32C5FF, 0.15em 0.35em $blur-radius #FFE032,  0.3em -0.125em $blur-radius #FF32F7;
       &:hover{
-        // text-shadow: -0.35em 0.125em $blur-radius*1.25 #32C5FF, 0.15em 0.35em $blur-radius*1.25 #FFE032,  0.3em -0.125em $blur-radius*1.25 #FF32F7;
         text-shadow: -0.35em 0.125em $blur-radius #FF32F7, 0.15em 0.35em $blur-radius #32C5FF,  0.3em -0.125em $blur-radius #FFE032;
 
       }
