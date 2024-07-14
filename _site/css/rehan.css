@@ -8035,6 +8035,9 @@ footer .logo #rehan-logo-footer g {
   width: 2.5em;
   box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
 }
+.lastly .share-area .share-item svg {
+  width: 100%;
+}
 
 .travel {
   margin-top: 2rem;
