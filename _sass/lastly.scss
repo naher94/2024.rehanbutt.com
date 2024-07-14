@@ -6,90 +6,146 @@
     margin-bottom: 3rem;
     font-size: 0.5em;
   }
-  .title-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    h2{
-      font-family: $big-shoulders;
-      font-weight: $big-shoulders-black;
-      font-size: 5em;
-      @include breakpoint(small only) {
-        font-size: 10em;
+  .post-it-wrapper{
+    .post-it{
+      padding: 1.5em;
+      aspect-ratio: 1/1;
+      background-color: #FFE371;
+      box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+      transform: scale(0.8, 0.8) rotate(-5deg);
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1; //TODO this is not working
+        transform: rotate(-6deg);
+        height: 20%;
+        width: 47%;
+        bottom: 30px;
+        left: 12px;
+        box-shadow: 0 2.1rem 2rem rgba(0, 0, 0, 0.4);
+      }
+      h2{
+        font-family: $fraunces;
+        font-size: 2.1em;
+        font-weight: $fraunces-bold;
+      }
+      p{
+        font-family: $caveat;
+        padding: 0;
+        margin: 0;
+        font-size: 1.25em;
         line-height: 1.2;
       }
     }
   }
-  .card{
-    border-radius: $tile-radius-medium;
-    background-color: #AD1457;
-    @media (prefers-color-scheme: dark) {
-      background-color: #880E4F;
+  .polaroid-wrapper{
+    .caption{
+      font-family: $caveat;
+      padding: 0;
+      margin: 0;
+      font-size: 1.25em;
+      line-height: 1.2;
+      margin-block-start: 1rem;
     }
-
-    color: $pure-white;
-    padding: 2em;
-    border: none;
-    margin-bottom: 0;
-    @include breakpoint(small only) {
-      padding: 3em;
+    .polaroid {
+      background: #FFFEF9;
+      padding: 1rem;
+      box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        transform: rotate(6deg);
+      }
+    }
+    &.pw1{
+      transform: scale(0.8, 0.8) rotate(5deg);
+      .polaroid{
+        &:before {
+          transform: rotate(6deg);
+          height: 20%;
+          width: 47%;
+          bottom: 30px;
+          right: 12px;
+          box-shadow: 0 2.1rem 2rem rgba(0, 0, 0, 0.4);
+        }
+        &:after{
+          content: "";
+          position: absolute;
+          z-index: -1;
+          height: 20%;
+          width: 70%;
+          right: 30px;
+          top: -10px;
+          background-color: #9BF9FE;
+          transform: rotate(-4deg);
+          box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+  
+  // .item:nth-of-type(even) {
+  //   transform: scale(0.8, 0.8) rotate(-5deg);
+  //   .polaroid:before {
+  //     transform: rotate(-6deg);
+  //     height: 20%;
+  //     width: 47%;
+  //     bottom: 30px;
+  //     left: 12px;
+  //     box-shadow: 0 2.1rem 2rem rgba(0, 0, 0, 0.4);
+  //   }
+  // }
+  .share-area{
+    background-color: #FFA6F5;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+    padding-block: 0.5em;
+    // padding-inline-start: 1em;
+    .words{
+      padding-inline: 1em;
+      padding-block: 0.5em;
+      font-size: 1.25em;
+      p{
+        line-height: 1.2;
+      }
+      .enjoyed{
+        font-weight: $lato-black;
+      }
     }
     p{
       margin: 0;
       padding: 0;
-      font-size: 1.2rem;
     }
-    .share-area{
-      margin-block-start: 2em;
-      .words{
-        margin-inline-end: 1em;
-        .enjoyed{
-          font-weight: $lato-black;
-        }
-      }
-      .icon-wrapper{
-        @include breakpoint(small only) {
-          margin-top: 2em;
-        }
-      }
-      .link-wrapper{
-        aspect-ratio: 1/1;
-        max-width: 3em;
-        @include breakpoint(small only) {
-          max-width: 8em;
-        }
-      }
-      a{
-        color: $pure-white;
+    .link-wrapper{
+      transition: $sprint;
+      &:nth-of-type(1){
+        rotate: -6deg;
         &:hover{
-          .share-item{
-            background-color: rgba($navy-black, 0.10);
-            @media (prefers-color-scheme: dark) {
-              background-color: rgba($navy-black, 0.20);
-            }
-          }
+          rotate: -12deg;
+        }
+      }
+      &:nth-of-type(2){
+        rotate: 3deg;
+        &:hover{
+          rotate: 9deg;
         }
         .share-item{
-          aspect-ratio: 1/1;
-          padding: 0.5em;
-          max-width: 3em;
-          border-radius: $pill-radius;
-          text-align: center;
-          transition: $sprint;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          i{
-            font-size: 1.3em;
-          }
-          @include breakpoint(small only) {
-            max-width: 8em;
-            i{
-              font-size: 4em;
-            }
-          }
+          margin-inline-start: 0.5em; //TODO offset rotation not great
         }
       }
+    }
+    .share-item{
+      aspect-ratio: 1/1;
+      background-color: #FFE371;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25em;
+      padding: 0.25em;
+      color: $pure-black;
+      width: 2.5em;
+      box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
     }
   }
 }
