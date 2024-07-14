@@ -58,6 +58,9 @@
         z-index: -1;
         transform: rotate(6deg);
       }
+      .paperclip-svg{
+        position: absolute;
+      }
     }
     &.pw1{
       transform: scale(0.8, 0.8) rotate(5deg);
@@ -82,6 +85,11 @@
           transform: rotate(-4deg);
           box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
         }
+      }
+      .paperclip-svg{
+        top: -1.75em;
+        right: 6em;
+        rotate: 4deg;
       }
     }
   }
@@ -119,10 +127,19 @@
     }
     .link-wrapper{
       transition: $sprint;
+      .paperclip-svg{
+        position: absolute;
+        width: 0.75em;
+      }
       &:nth-of-type(1){
         rotate: -6deg;
         &:hover{
           rotate: -12deg;
+        }
+        .paperclip-svg{
+          rotate: 180deg;
+          bottom: -1.75em;
+          left: 0.5em;
         }
       }
       &:nth-of-type(2){
@@ -132,6 +149,10 @@
         }
         .share-item{
           margin-inline-start: 0.5em; //TODO offset rotation not great
+        }
+        .paperclip-svg{
+          top: -1.75em;
+          left: 1em;
         }
       }
     }

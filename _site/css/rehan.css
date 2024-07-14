@@ -7928,6 +7928,9 @@ footer .logo #rehan-logo-footer g {
   z-index: -1;
   transform: rotate(6deg);
 }
+.lastly .polaroid-wrapper .polaroid .paperclip-svg {
+  position: absolute;
+}
 .lastly .polaroid-wrapper.pw1 {
   transform: scale(0.8, 0.8) rotate(5deg);
 }
@@ -7950,6 +7953,11 @@ footer .logo #rehan-logo-footer g {
   background-color: #9BF9FE;
   transform: rotate(-4deg);
   box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+.lastly .polaroid-wrapper.pw1 .paperclip-svg {
+  top: -1.75em;
+  right: 6em;
+  rotate: 4deg;
 }
 .lastly .share-area {
   background-color: #FFA6F5;
@@ -7974,11 +7982,20 @@ footer .logo #rehan-logo-footer g {
 .lastly .share-area .link-wrapper {
   transition: all 0.2s ease-in-out;
 }
+.lastly .share-area .link-wrapper .paperclip-svg {
+  position: absolute;
+  width: 0.75em;
+}
 .lastly .share-area .link-wrapper:nth-of-type(1) {
   rotate: -6deg;
 }
 .lastly .share-area .link-wrapper:nth-of-type(1):hover {
   rotate: -12deg;
+}
+.lastly .share-area .link-wrapper:nth-of-type(1) .paperclip-svg {
+  rotate: 180deg;
+  bottom: -1.75em;
+  left: 0.5em;
 }
 .lastly .share-area .link-wrapper:nth-of-type(2) {
   rotate: 3deg;
@@ -7988,6 +8005,10 @@ footer .logo #rehan-logo-footer g {
 }
 .lastly .share-area .link-wrapper:nth-of-type(2) .share-item {
   margin-inline-start: 0.5em;
+}
+.lastly .share-area .link-wrapper:nth-of-type(2) .paperclip-svg {
+  top: -1.75em;
+  left: 1em;
 }
 .lastly .share-area .share-item {
   aspect-ratio: 1/1;
