@@ -5,6 +5,9 @@
       <!-- TODO update the number -->
       <h2 class="cell shrink">12,861<span class="hrs">mins</span> <span class="description">of music listened to</span></h2>
     </div>
+    <div class="tape-svg-wrapper">
+      {%- include_relative img/music/tape.svg -%}
+    </div>
     <div class="cell grid-x cassette-row grid-padding-x medium-order-1 align-center">
       {% assign songs_order = site.songs | sort: 'play-count' | reverse %}
       {%- for song in songs_order limit:2 -%}
