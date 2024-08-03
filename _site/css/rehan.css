@@ -7514,6 +7514,11 @@ footer .logo #rehan-logo-footer g {
 .events .logo-slider .e-badge__siggraph .pedestal img {
   margin-top: -20%;
 }
+.events .logo-slider .e-badge__awwwards {
+  padding-inline: 1em;
+  padding-block-end: 1em;
+  background-color: #E3E8ED;
+}
 .events .logo-container {
   z-index: 1;
   position: relative;

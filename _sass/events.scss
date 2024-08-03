@@ -266,6 +266,11 @@ $badge-punchouts: $card-bg; //should be card-bg
           }
         }
       }
+      &__awwwards{
+        padding-inline: 1em;
+        padding-block-end: 1em;
+        background-color: #E3E8ED;
+      }
     }
   }
   .logo-container{
