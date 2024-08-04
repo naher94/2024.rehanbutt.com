@@ -8122,6 +8122,10 @@ footer .logo #rehan-logo-footer g {
   background: linear-gradient(#22a47b, #004a49);
   color: #ffffff;
 }
+.travel .boarding-card.nyc-dc {
+  background: linear-gradient(#eedb04, #d5ab06);
+  color: #1f2937;
+}
 
 .movies {
   margin-top: 30rem;
