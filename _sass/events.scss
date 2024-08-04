@@ -93,7 +93,7 @@ $badge-punchouts: $card-bg; //should be card-bg
     }
     
     .slide-track {
-      animation: scroll $animationSpeed linear infinite; //TODO
+      // animation: scroll $animationSpeed linear infinite; //TODO
       display: flex;
       width: 4000px;
       margin-top: 2em;
@@ -267,9 +267,41 @@ $badge-punchouts: $card-bg; //should be card-bg
         }
       }
       &__awwwards{
-        padding-inline: 1em;
-        padding-block-end: 1em;
         background-color: #E3E8ED;
+        color: #3A4EFF;
+        border: 2px solid rgba($pure-black, 0.15);
+        position: relative;
+        .cutout{
+          border: 2px solid rgba($pure-black, 0.15);
+          z-index: 2;
+        }
+        .lanyard{
+          z-index: 3;
+        }
+        .main-content{
+          padding-inline: 1em;
+          padding-block-end: 1em;
+        }
+        .detailing{
+          margin-bottom: 0.5em;
+        }
+        .gap-lines{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          padding-inline: 1em;
+          justify-content: space-between;
+          display: flex;
+          z-index: 1;
+          .gap{
+            border-left: 2px solid rgba($pure-black, 0.15);
+            border-right: 2px solid rgba($pure-black, 0.15);
+            height: 100%;
+            width: 0.5em;
+            display: flex;
+            box-sizing: content-box;
+          }
+        }
       }
     }
   }

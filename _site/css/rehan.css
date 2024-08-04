@@ -7342,7 +7342,6 @@ footer .logo #rehan-logo-footer g {
   }
 }
 .events .logo-slider .slide-track {
-  animation: scroll 40s linear infinite;
   display: flex;
   width: 4000px;
   margin-top: 2em;
@@ -7515,9 +7514,41 @@ footer .logo #rehan-logo-footer g {
   margin-top: -20%;
 }
 .events .logo-slider .e-badge__awwwards {
+  background-color: #E3E8ED;
+  color: #3A4EFF;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.events .logo-slider .e-badge__awwwards .cutout {
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+.events .logo-slider .e-badge__awwwards .lanyard {
+  z-index: 3;
+}
+.events .logo-slider .e-badge__awwwards .main-content {
   padding-inline: 1em;
   padding-block-end: 1em;
-  background-color: #E3E8ED;
+}
+.events .logo-slider .e-badge__awwwards .detailing {
+  margin-bottom: 0.5em;
+}
+.events .logo-slider .e-badge__awwwards .gap-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-inline: 1em;
+  justify-content: space-between;
+  display: flex;
+  z-index: 1;
+}
+.events .logo-slider .e-badge__awwwards .gap-lines .gap {
+  border-left: 2px solid rgba(0, 0, 0, 0.15);
+  border-right: 2px solid rgba(0, 0, 0, 0.15);
+  height: 100%;
+  width: 0.5em;
+  display: flex;
+  box-sizing: content-box;
 }
 .events .logo-container {
   z-index: 1;
