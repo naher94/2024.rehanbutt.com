@@ -93,7 +93,7 @@ $badge-punchouts: $card-bg; //should be card-bg
     }
     
     .slide-track {
-      // animation: scroll $animationSpeed linear infinite; //TODO
+      animation: scroll $animationSpeed linear infinite; //TODO
       display: flex;
       width: 4000px;
       margin-top: 2em;

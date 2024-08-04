@@ -4,7 +4,6 @@ location: Seattle, WA
 date: 2024-4-11
 start-date: 2024-4-11
 end-date: 2024-4-13
-published: false
 ---
 
 <div class="grid-x cell">
