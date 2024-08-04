@@ -7,7 +7,8 @@
         </div>
         {% assign travel_order = site.travel | sort: 'date' %}
         {%- for trip in travel_order -%}
-        <div class="boarding-card cell grid-x align-justify" style="background:{{trip.bg-color}};">
+        {%- assign class-travel = {{trip.start-location-short}} | append: "-" | append: {{trip.end-location-short}} | downcase -%}
+        <div class="boarding-card cell grid-x align-justify {{class-travel}}" style="background:{{trip.bg-color}};">
           <div class="content-area cell grid-x align-middle">
             <div class="departure cell small-5">
               <span>{{trip.start-location-short}}</span>

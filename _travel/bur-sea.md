@@ -5,5 +5,4 @@ start-location-short: BUR
 end-location: Seattle
 end-location-short: SEA
 transit-type: plane
-bg-color: linear-gradient(#2273A4,#00274A)
 ---

@@ -5,5 +5,4 @@ start-location-short: sfo
 end-location: Burbank
 end-location-short: bur
 transit-type: plane
-bg-color: blue
 ---

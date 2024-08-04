@@ -55,5 +55,15 @@
     span{
       display: block;
     }
+    .icon-wrapper{
+      svg{
+        fill: currentColor;
+      }
+    }
+    // Per card styling
+    &.bur-sea{
+      background: linear-gradient(#2273A4,#00274A);
+      color: $pure-white;
+    }
   }
 }

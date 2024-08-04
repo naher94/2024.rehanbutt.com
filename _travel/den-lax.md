@@ -5,5 +5,4 @@ start-location-short: den
 end-location: Los Angeles
 end-location-short: lax
 transit-type: plane
-bg-color: blue
 ---

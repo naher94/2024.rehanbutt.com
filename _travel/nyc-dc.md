@@ -5,5 +5,4 @@ start-location-short: NYC
 end-location: Washington DC
 end-location-short: DC
 transit-type: train
-bg-color: red
 ---

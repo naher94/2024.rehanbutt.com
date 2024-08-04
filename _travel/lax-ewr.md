@@ -5,5 +5,4 @@ start-location-short: LAX
 end-location: Newark
 end-location-short: ewr
 transit-type: plane
-bg-color: blue
 ---

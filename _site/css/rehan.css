@@ -8104,6 +8104,13 @@ footer .logo #rehan-logo-footer g {
 .travel .boarding-card span {
   display: block;
 }
+.travel .boarding-card .icon-wrapper svg {
+  fill: currentColor;
+}
+.travel .boarding-card.bur-sea {
+  background: linear-gradient(#2273A4, #00274A);
+  color: #ffffff;
+}
 
 .movies {
   margin-top: 30rem;
