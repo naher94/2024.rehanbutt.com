@@ -20,9 +20,20 @@
     -webkit-mask-repeat: no-repeat;
     border-radius: 15px;
     padding: 1em;
+    transition: $sprint;
+    &:hover{
+      transform: translateY(-1em);
+    }
+    .content-area{
+      height: fit-content;
+    }
     &:not(:first-of-type){
       margin-top: -19em;
       background-color: rgb(128, 128, 250);
+    }
+    .icon-wrapper{
+      height: fit-content;
+      aspect-ratio: 1/1;
     }
     .departure, .arrival{
       span{

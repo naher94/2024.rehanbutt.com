@@ -8072,10 +8072,21 @@ footer .logo #rehan-logo-footer g {
   -webkit-mask-repeat: no-repeat;
   border-radius: 15px;
   padding: 1em;
+  transition: all 0.2s ease-in-out;
+}
+.travel .boarding-card:hover {
+  transform: translateY(-1em);
+}
+.travel .boarding-card .content-area {
+  height: fit-content;
 }
 .travel .boarding-card:not(:first-of-type) {
   margin-top: -19em;
   background-color: rgb(128, 128, 250);
+}
+.travel .boarding-card .icon-wrapper {
+  height: fit-content;
+  aspect-ratio: 1/1;
 }
 .travel .boarding-card .departure span:first-of-type, .travel .boarding-card .arrival span:first-of-type {
   font-weight: 700;

@@ -1,9 +1,9 @@
 ---
-date: 2024-5-17
-start-location: New York City
-start-location-short: NYC
-end-location: Washington DC
-end-location-short: DC
+date: 2024-11-24
+start-location: Washington DC
+start-location-short: DC
+end-location: New York City
+end-location-short: NYC
 transit-type: train
-bg-color: red
+bg-color: blue
 ---

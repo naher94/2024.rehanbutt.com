@@ -8,23 +8,25 @@
         {% assign travel_order = site.travel | sort: 'date' %}
         {%- for trip in travel_order -%}
         <div class="boarding-card cell grid-x align-justify" style="background:{{trip.bg-color}};">
-          <div class="departure cell small-5">
-            <span>{{trip.start-location-short}}</span>
-            <span>{{trip.start-location}}</span>
-          </div>
-          <div class="cell small-2">
-            {%- case trip.transit-type -%}
-              {%- when "car" -%}
-                {%- include_relative img/travel/car.svg -%}
-              {%- when "train" -%}
-                {%- include_relative img/travel/train.svg -%}
-              {%- when "plane" -%}
-                {%- include_relative img/travel/plane.svg -%}
-            {%- endcase -%}
-          </div>
-          <div class="arrival cell small-5">
-            <span>{{trip.end-location-short}}</span>
-            <span>{{trip.end-location}}</span>
+          <div class="content-area cell grid-x align-middle">
+            <div class="departure cell small-5">
+              <span>{{trip.start-location-short}}</span>
+              <span>{{trip.start-location}}</span>
+            </div>
+            <div class="cell small-2 icon-wrapper">
+              {%- case trip.transit-type -%}
+                {%- when "car" -%}
+                  {%- include_relative img/travel/car.svg -%}
+                {%- when "train" -%}
+                  {%- include_relative img/travel/train.svg -%}
+                {%- when "plane" -%}
+                  {%- include_relative img/travel/plane.svg -%}
+              {%- endcase -%}
+            </div>
+            <div class="arrival cell small-5">
+              <span>{{trip.end-location-short}}</span>
+              <span>{{trip.end-location}}</span>
+            </div>
           </div>
         </div>
         {%- endfor -%}
