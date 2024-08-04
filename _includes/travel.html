@@ -2,13 +2,13 @@
   <div class="grid-container">
     <div class="grid-x grid-padding-x">
       <div class="grid-x cell medium-4 small-12 column">
-        <div class="boarding-card cell">
+        <div class="boarding-card title-card cell">
           <h2>Travel Log</h2>
         </div>
         {% assign travel_order = site.travel | sort: 'date' %}
-        {%- for trip in travel_order -%}
+        {%- for trip in travel_order limit: 9 -%}
         {%- assign class-travel = {{trip.start-location-short}} | append: "-" | append: {{trip.end-location-short}} | downcase -%}
-        <div class="boarding-card cell grid-x align-justify {{class-travel}}" style="background:{{trip.bg-color}};">
+        <div class="boarding-card cell grid-x align-justify {{class-travel}}">
           <div class="content-area cell grid-x align-middle">
             <div class="departure cell small-5">
               <span>{{trip.start-location-short}}</span>
@@ -34,9 +34,31 @@
       </div>
 
       <div class="grid-x cell medium-4 small-12 column">
-        <div class="boarding-card cell">
-          column 2
+        {%- for trip in travel_order offset: continue -%}
+        {%- assign class-travel = {{trip.start-location-short}} | append: "-" | append: {{trip.end-location-short}} | downcase -%}
+        <div class="boarding-card cell grid-x align-justify {{class-travel}}">
+          <div class="content-area cell grid-x align-middle">
+            <div class="departure cell small-5">
+              <span>{{trip.start-location-short}}</span>
+              <span>{{trip.start-location}}</span>
+            </div>
+            <div class="cell small-2 icon-wrapper">
+              {%- case trip.transit-type -%}
+                {%- when "car" -%}
+                  {%- include_relative img/travel/car.svg -%}
+                {%- when "train" -%}
+                  {%- include_relative img/travel/train.svg -%}
+                {%- when "plane" -%}
+                  {%- include_relative img/travel/plane.svg -%}
+              {%- endcase -%}
+            </div>
+            <div class="arrival cell small-5">
+              <span>{{trip.end-location-short}}</span>
+              <span>{{trip.end-location}}</span>
+            </div>
+          </div>
         </div>
+        {%- endfor -%}
       </div>
       
       <div class="grid-x cell medium-4 small-12 column">

@@ -13,7 +13,8 @@
   }
   .boarding-card{
     background-color: pink;
-    aspect-ratio:.75;
+    // aspect-ratio:.75;
+    aspect-ratio: 3/2;
     -webkit-mask-image: radial-gradient(circle 30px at 50% -2% ,#0000 98%,#000);
     //-2 value to shift the circle up and down
     -webkit-mask-size: 100% 100%;
@@ -28,8 +29,12 @@
       height: fit-content;
     }
     &:not(:first-of-type){
-      margin-top: -19em;
-      background-color: rgb(128, 128, 250);
+      // margin-top: -19em;
+      margin-top: -7em;
+      background: linear-gradient(#c421c1,#46004a);
+    }
+    &:last-of-type{
+      border-bottom: 5px solid rgba($pure-black, 0.1);
     }
     .icon-wrapper{
       height: fit-content;
@@ -61,8 +66,17 @@
       }
     }
     // Per card styling
+    //TODO decide what the color logic is
     &.bur-sea{
       background: linear-gradient(#2273A4,#00274A);
+      color: $pure-white;
+    }
+    &.sea-bur{
+      background: linear-gradient(#2273A4,#00274A);
+      color: $pure-white;
+    }
+    &.lax-ewr{
+      background: linear-gradient(#22a47b,#004a49);
       color: $pure-white;
     }
   }
