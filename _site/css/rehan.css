@@ -8081,6 +8081,7 @@ footer .logo #rehan-logo-footer g {
   font-weight: 700;
   font-size: 2em;
   line-height: 1.2;
+  text-transform: uppercase;
 }
 .travel .boarding-card .departure span:last-of-type, .travel .boarding-card .arrival span:last-of-type {
   font-size: 0.75em;

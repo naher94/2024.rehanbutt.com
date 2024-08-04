@@ -5,33 +5,37 @@
         <div class="boarding-card cell">
           <h2>Travel Log</h2>
         </div>
-        <div class="boarding-card cell grid-x align-justify">
+        {% assign travel_order = site.travel | sort: 'date' %}
+        {%- for trip in travel_order -%}
+        <div class="boarding-card cell grid-x align-justify" style="background:{{trip.bg-color}};">
           <div class="departure cell small-5">
-            <span>DC</span>
-            <span>Washington DC</span>
+            <span>{{trip.start-location-short}}</span>
+            <span>{{trip.start-location}}</span>
           </div>
-          <div>ICON</div>
+          <div class="cell small-2">
+            {%- case trip.transit-type -%}
+              {%- when "car" -%}
+                {%- include_relative img/travel/car.svg -%}
+              {%- when "train" -%}
+                {%- include_relative img/travel/train.svg -%}
+              {%- when "plane" -%}
+                {%- include_relative img/travel/plane.svg -%}
+            {%- endcase -%}
+          </div>
           <div class="arrival cell small-5">
-            <span>NYC</span>
-            <span>New York City</span>
+            <span>{{trip.end-location-short}}</span>
+            <span>{{trip.end-location}}</span>
           </div>
         </div>
-        <div class="boarding-card cell grid-x align-justify">
-          <div class="departure">
-            <span>DC</span>
-            <span>Washington DC</span>
-          </div>
-          <div class="arrival">
-            <span>NYC</span>
-            <span>New York City</span>
-          </div>
-        </div>
+        {%- endfor -%}
       </div>
+
       <div class="grid-x cell medium-4 small-12 column">
         <div class="boarding-card cell">
           column 2
         </div>
       </div>
+      
       <div class="grid-x cell medium-4 small-12 column">
         <div class="boarding-card cell">
           column 3

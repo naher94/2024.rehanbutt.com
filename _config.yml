@@ -30,3 +30,5 @@ collections:
     output: false
   fave-things:
     output: false
+  travel:
+    output: false
