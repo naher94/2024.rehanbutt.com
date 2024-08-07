@@ -7286,7 +7286,8 @@ footer .logo #rehan-logo-footer g {
 }
 .events .text-container .right-section .collection-cta svg {
   margin-inline-start: 0.25em;
-  height: 0.8em;
+  height: 1.5em;
+  display: flex;
 }
 .events h2 {
   font-family: "Lato", sans-serif;

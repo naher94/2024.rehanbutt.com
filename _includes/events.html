@@ -26,9 +26,13 @@
         </div>
         <div class="cell medium-6 right-section">
           {% capture collection-cta-content %}
-          <div class="collection-cta">
-            Explore my conference recommendations
-            {% include_relative img/events/arrow-right.svg %}
+          <div class="collection-cta grid-x cell shrink align-middle">
+            <div class="cell shrink">
+              Explore my conference recommendations
+            </div>
+            <div class="cell shrink">
+              {% include_relative img/events/arrow-right.svg %}
+            </div>
           </div>
           {% endcapture %}
           {%- include external-link.html link="https://rehanbutt.com/resources" content=collection-cta-content css-class="" -%}

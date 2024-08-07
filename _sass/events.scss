@@ -24,7 +24,7 @@ $badge-punchouts: $card-bg; //should be card-bg
         display: inline-block;
         &:hover{
           .collection-cta{
-          background-color: rgba(#000000, 0.1);
+            background-color: rgba(#000000, 0.1);
           }
         }
       }
@@ -41,7 +41,8 @@ $badge-punchouts: $card-bg; //should be card-bg
         transition: $sprint;
         svg{
           margin-inline-start: 0.25em;
-          height: 0.8em;
+          height: 1.5em;
+          display: flex;
         }
       }
     }
