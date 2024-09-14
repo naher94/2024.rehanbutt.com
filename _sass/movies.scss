@@ -7,14 +7,14 @@
   .content-area{
     border-radius: $tile-radius-medium;
     background-color: semantic-color(movie-card-bg);
+    background-color: rebeccapurple;
     font-family: $big-shoulders;
-    padding: 2em;
     position: relative;
     @include breakpoint(small only) {
       padding: 1em;
     }
     .overhang{
-      margin-block-start: -20em;
+      margin-block-start: -14em;
     }
     .title-container{
       @include breakpoint(small only) {
@@ -22,38 +22,13 @@
       }
       h2{
         font-family: $big-shoulders;
-        font-weight: $big-shoulders-light;
+        font-weight: $big-shoulders-black;
         text-transform: uppercase;
-        text-align: center;
-        margin-bottom: 0;
-        line-height: 1;
-        font-size: 1.5em;
-        letter-spacing: 0.5em;
+        text-align: right;
+        font-size: 3em;
         @include breakpoint(small only) {
           padding: 0;
-          font-weight: $big-shoulders-regular;
-        }
-      }
-      .title2{
-        text-align: center;
-        h3{
-          font-size: 6em;
-          font-family: $big-shoulders;
           font-weight: $big-shoulders-black;
-          position: relative;
-          display: inline-block;
-          text-transform: uppercase;
-          line-height: 1;
-          span{
-            font-weight: $big-shoulders-regular;
-            transform: rotate(90deg);
-            font-size: .5em;
-            letter-spacing: 0.1em;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: -1em;
-          }
         }
       }
     }
@@ -67,35 +42,24 @@
         @include breakpoint(small only) {
           margin-inline-end: -2.5em;
         }
-        .number{
-          z-index: 2;
-        }
         &:nth-of-type(1){
           z-index: 4;
           .poster{
-            max-width: 16em;
+            max-width: 15em;
+            rotate: -10deg;
+            transform-origin: top right;
           }
         }
-        &:nth-of-type(2), &:nth-of-type(3){
+        &:nth-of-type(2){
           z-index: 3;
           .poster{
             max-width: 12em;
-            .number{
-              font-size: 0.75em;
-              @include breakpoint(small only) {
-                font-size: 1em;
-              }
-            }
+            rotate: -5deg;
+            transform-origin: top right;
           }
         }
-        &:nth-of-type(4), &:nth-of-type(5){
-          max-width: 8em;
-          .number{
-            font-size: 0.5em;
-            @include breakpoint(small only) {
-              font-size: 1em;
-            }
-          }
+        &:nth-of-type(3){
+          max-width: 9em;
         }
       }
       .poster-container{
@@ -106,25 +70,6 @@
       }
       .poster{
         position: relative;
-        .number{
-          color: semantic-color(text-inverted);
-          margin-block-start: -1.5em;
-          aspect-ratio: 1/1;
-          background-color: semantic-color(movie-number-badge-bg);
-          width: 3em;
-          border-radius: $pill-radius;
-          padding: 0.5em;
-          text-align: center;
-          border: 0.2em solid semantic-color(movie-card-bg);
-        }
-        p{
-          padding: 0;
-          margin: 0;
-          font-family: $lato;
-          font-weight: $lato-black;
-          font-size: 2em;
-          line-height: 0.75; //adjust to visually center when adjusting the border of .number
-        }
         img{
           border-radius: $tile-radius;
           box-shadow: $centered-shadow rgba($pure-black, 0.5);
@@ -144,17 +89,14 @@
         }
       }
       .poster-elemental{
-        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='80' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🔥💧</text></svg>") 16 0,auto;
+        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='80' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🔥</text></svg>") 16 0,auto;
       }
-      .poster-top-gun{
-        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>✈️</text></svg>") 16 0,auto;
-      }
-      .poster-glass-onion{
-        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🔍</text></svg>") 16 0,auto;
-      }
-      .poster-black-panther{
-        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🐈‍⬛</text></svg>") 16 0,auto;
-      }
+    }
+    .popcorn-bucket{
+      background-color: cadetblue;
+      padding: 2em;
+      border-radius: 0 0 $tile-radius-medium $tile-radius-medium;
+
     }
     .divider-container{
       margin-block-start: 2em;
