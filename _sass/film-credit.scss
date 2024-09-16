@@ -1,3 +1,55 @@
 .film-credit{
-  
+  margin-block: 10em;
+  .content-card{
+    border-radius: $tile-radius-medium;
+    padding: 1em;
+    background-color: rgb(0, 153, 255);
+    .poster-area{
+      margin-block: -4em;
+      position: relative;
+      .poster{
+        rotate: 5deg;
+        z-index: 2;
+        img{
+          max-width: 15em;
+          border-radius: $tile-radius;
+          box-shadow: $centered-shadow rgba($pure-black, 0.5);
+        }
+      }
+      .poster2, .poster3{
+        position: absolute;
+        z-index: 1;
+        transition: $sprint;
+        img{
+          max-width: 11em;
+        }
+      }
+      .poster2{
+        top: -4em;
+        left: 0;
+        rotate: -5deg;
+        transform-origin: bottom right;
+      }
+      .poster3{
+        bottom: -3em;
+        right: 1em;
+        rotate: 13deg;
+        transform-origin: bottom left;
+      }
+    }
+    .text-area{
+      p{
+        padding: 0;
+        margin: 0;
+      }
+    }
+    &:hover{
+      .poster2{
+        rotate: -7deg;
+      }
+      .poster3{
+        rotate: 15deg;
+      }
+    }
+  }
 }
