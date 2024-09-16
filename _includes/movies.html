@@ -27,19 +27,18 @@
             </div>
           </div>
         </div>
-        <div class="cell grid-x picks-list shrink align-right">
+        <div class="cell grid-x picks-list auto align-right">
           <h3>top picks</h3>
+          {% assign top_picks = "fall guy,barbie,elemental,blue,green" | split: ',' %}
+          {%- for movie in top_picks -%}
           <div class="list-item cell grid-x align-middle">
-            <p class="cell shrink">fall guy</p>
+            <p class="cell shrink">{{movie}}</p>
             <div class="popcorn-number cell shrink align-middle align-center">
               {% include_relative img/movies/popcorn.svg %}
-              <p class="cell">1</p>
+              <p class="cell">{{forloop.index}}</p>
             </div>
           </div>
-          <div class="list-item cell">fall guy</div>
-          <div class="list-item cell">fall guy</div>
-          <div class="list-item cell">fall guy</div>
-          <div class="list-item cell">fall guy</div>
+          {%- endfor -%}
         </div>
       </div>
       <div class="divider-container grid-x cell align-right">

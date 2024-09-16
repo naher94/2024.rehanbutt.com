@@ -97,9 +97,10 @@ $content-padding: 1em;
         }
         .list-item{
           text-align: right;
-          font-family: $montserrat; //TODO this changes the alignment for some reason
+          font-family: $montserrat;
           font-weight: $montserrat-bold;
-          justify-content: flex-end; //TODO
+          justify-content: flex-end;
+          margin-block-end: 0.5em;
           p{
             margin: 0;
             padding: 0;
