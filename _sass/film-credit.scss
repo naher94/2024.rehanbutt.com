@@ -3,7 +3,10 @@
   .content-card{
     border-radius: $tile-radius-medium;
     padding: 1em;
-    background-color: rgb(0, 153, 255);
+    padding-inline: 3em;
+    background: url(/img/film-credit/shark-blur.jpg);
+    background-size: cover;
+    background-position: bottom;
     .poster-area{
       margin-block: -4em;
       position: relative;
@@ -38,9 +41,15 @@
       }
     }
     .text-area{
+      color: $pure-white;
+      svg{
+        fill: $pure-white;
+      }
       p{
         padding: 0;
         margin: 0;
+        line-height: 1.2;
+        margin-block-start: 0.5em;
       }
     }
     &:hover{
