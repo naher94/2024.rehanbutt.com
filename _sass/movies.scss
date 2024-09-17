@@ -158,11 +158,13 @@ $popcorn-yellow3: #F6F0C9;
               bottom: 0;
               right: 0;
               left: 0;
-              color: $navy-black
+              color: $navy-black;
+              padding-inline-start: 0.1em;
             }
           }
           &:nth-of-type(even){
             svg{
+              rotate: 30deg;
               path{
                 fill: $popcorn-yellow2;
               }
@@ -291,14 +293,14 @@ $popcorn-yellow3: #F6F0C9;
         display: inline-block;
         &:hover{
           .link-cta{
-            background-color: rgba(#fff, 0.1);
+            background-color: rgba(#fff, 0.15);
           }
         }
       }
       .link-cta{
         padding-inline: 0.75em;
         padding-block: 0.25em;
-        background-color: rgba(#fff, 0.05);
+        background-color: rgba(#fff, 0.1);
         border-radius: $tile-radius;
         color: $pure-white;
         font-family: $lato;
