@@ -39,6 +39,9 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
     }
   }
   .cassette-row{
+    @include breakpoint(small only){
+      justify-content: normal;
+    }
     .cassette-wrapper{
       &:nth-of-type(odd){
         rotate: -2deg;
@@ -49,6 +52,10 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
       &:nth-of-type(even){
         rotate: 3deg;
         margin-block-end: 1em;
+        @include breakpoint(small only){
+          //Faking .small-offset-4
+          margin-left: 33.3333333333%;
+        }
       }
     }
   }
@@ -143,11 +150,13 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
         padding: 0.5em;
         display: inline-flex;
         position: absolute;
-        bottom: 2em;
+        // bottom: 2em;
         left: 0;
         right: 0;
         width: fit-content;
         margin: auto;
+        bottom: 50%;
+        transform: translateY(50%);
         .reel-left, .reel-right{
           border-radius: $pill-radius;
           width: 2em;
