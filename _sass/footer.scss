@@ -15,8 +15,8 @@ footer{
     grid-template-rows: 1fr;
     @include breakpoint(small only){
       padding: 3em;
+      display: flex;
     }
-    display: flex;
 
     .closing-remark{
       grid-column: 1 / 7;
