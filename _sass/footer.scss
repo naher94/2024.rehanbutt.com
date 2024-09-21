@@ -13,10 +13,18 @@ footer{
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 1fr;
+    @include breakpoint(small only){
+      padding: 3em;
+    }
+    display: flex;
 
     .closing-remark{
       grid-column: 1 / 7;
       grid-row: 1 / 2;
+      // @include breakpoint(small only){
+      //   grid-column: 1 / 2;
+      //   grid-row: 1 / 2;
+      // }
       h2{
         font-family: $fraunces;
         font-weight: $fraunces-light;
@@ -24,6 +32,13 @@ footer{
         line-height: 1;
         margin-left: 0.5em;
         margin-bottom: 0;
+        @include breakpoint(small only){
+          margin-left: 0;
+          margin-block-start: 0.5em;
+          margin-inline: 0.5em;
+          font-size: 3em;
+          text-align: center;
+        }
       }
     }
   }
@@ -36,6 +51,18 @@ footer{
     margin-bottom: 0;
     line-height: 0.25;
     z-index: 2;
+    @include breakpoint(small only){
+      line-height: 0.75;
+      font-size: 18em;
+      text-align: center;
+      margin-top: 0.15em;
+      // SUDO Cell styling only on mobile
+      flex: 0 0 auto;
+      min-height: 0px;
+      min-width: 0px;
+      width: 100%;
+      // End of SUDO Cell styling only on mobile
+    }
   }
 
   .logo-wrapper{
@@ -49,6 +76,9 @@ footer{
     --blur: 10px;
     -webkit-backdrop-filter: blur(var(--blur));
     backdrop-filter: blur(var(--blur));
+    @include breakpoint(small only){
+      margin-top: -6em;
+    }
   }
   .logo{
     #rehan-logo-footer{
@@ -61,7 +91,7 @@ footer{
         fill: #313131; //Changes the color of my logo inline
       }
       @include breakpoint(small only){
-        height: 22px;
+        height: 60px;
       }
     }
   }
