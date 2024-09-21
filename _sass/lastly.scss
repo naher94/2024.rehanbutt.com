@@ -173,6 +173,9 @@
       svg{
         width: 100%;
       }
+      @include breakpoint(small only){
+        font-size: 1.75em;
+      }
     }
   }
 }

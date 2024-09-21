@@ -1,5 +1,8 @@
 .film-credit{
   margin-block: 10em;
+  @include breakpoint(small only){
+    margin-block-end: 1em;
+  }
   .content-card{
     border-radius: $tile-radius-medium;
     padding: 1em;
@@ -7,9 +10,17 @@
     background: url(/img/film-credit/shark-blur.jpg);
     background-size: cover;
     background-position: bottom;
+    @include breakpoint(small only){
+      padding: 3em;
+    }
     .poster-area{
       margin-block: -4em;
       position: relative;
+      @include breakpoint(small only){
+        margin-block: 0;
+        margin-block-start: -6em;
+        margin-block-end: 6em;
+      }
       .poster{
         rotate: 5deg;
         z-index: 2;
