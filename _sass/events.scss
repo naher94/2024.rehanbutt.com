@@ -20,6 +20,10 @@ $badge-punchouts: $card-bg; //should be card-bg
     }
     .right-section{
       text-align: right;
+      @include breakpoint(small only){
+        text-align: left;
+        margin-block-start: 2em;
+      }
       a{
         display: inline-block;
         &:hover{
