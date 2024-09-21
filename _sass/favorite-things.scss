@@ -79,7 +79,8 @@
     position: relative;
     background-color: orange;
     @include breakpoint(small only){
-      width: 12em;
+      width: 14em;
+      offset-path: circle(38% at 50% 50%);
     }
     &:hover{
       .description-tooltip{
