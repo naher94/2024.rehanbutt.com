@@ -99,21 +99,3 @@
 
   </div>
 </section>
-
-
-<!-- <h3>Top 5 most played songs</h3>
-{% assign songs_order = site.songs | sort: 'play-count' | reverse %}
-  {%- for song in songs_order -%}
-  {% capture song-card %}
-    <div class="album-cover-wrapper cell shrink">
-      <div class="record">
-        <div class="art">
-          <img src="img/music/{{song.album-cover}}" alt="{{song.song-name}} Album Cover">
-        </div>
-      </div>
-    </div>
-  {% endcapture %}
-  <div class="song-tile cell small-12 grid-x">
-    {%- include external-link.html link=song.link content=song-card css-class="grid-x cell" -%}
-  </div>
-{%- endfor -%} -->
