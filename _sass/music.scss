@@ -10,6 +10,11 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
       font-size: 5rem;
       line-height: 4rem;
       margin-top: 0.1em;
+      @include breakpoint(small only){
+        font-size: 3.5rem;
+        line-height: 2.5rem;
+        margin-bottom: 0;
+      }
       .hrs{
         font-weight: $montserrat-light;
       }
@@ -53,8 +58,8 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
         rotate: 3deg;
         margin-block-end: 1em;
         @include breakpoint(small only){
-          //Faking .small-offset-4
-          margin-left: 33.3333333333%;
+          //Faking .small-offset-2
+          margin-left: 16.6666666667%;
         }
       }
     }
@@ -110,29 +115,37 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
       justify-content: space-between;
       background-color: $cassette-case-color;
       position: relative;
+      @include breakpoint(small only){
+        padding-inline: 1em;
+        padding-block-start: 1em;
+      }
       .screw{
         aspect-ratio: 1/1;
         background-color: rgba($pure-black, 0.25);
         width: 0.5em;
         border-radius: $pill-radius;
         position: absolute;
-        $inline-spacing: 1em;
-        $block-spacing: 0.75em;
+        --inline-spacing: 1em;
+        --block-spacing: 0.75em;
+        @include breakpoint(small only){
+          --inline-spacing: 0.5em;
+          --block-spacing: 0.5em;
+        }
         &__1{
-          top: $block-spacing;
-          left: $inline-spacing;
+          top: var(--block-spacing);
+          left: var(--inline-spacing);
         }
         &__2{
-          top: $block-spacing;
-          right: $inline-spacing;
+          top: var(--block-spacing);
+          right: var(--inline-spacing);
         }
         &__3{
-          bottom: $block-spacing;
-          left: $inline-spacing;
+          bottom: var(--block-spacing);
+          left: var(--inline-spacing);
         }
         &__4{
-          bottom: $block-spacing;
-          right: $inline-spacing;
+          bottom: var(--block-spacing);
+          right: var(--inline-spacing);
         }
       }
       .sticker{
@@ -150,7 +163,6 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
         padding: 0.5em;
         display: inline-flex;
         position: absolute;
-        // bottom: 2em;
         left: 0;
         right: 0;
         width: fit-content;
@@ -239,6 +251,9 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @include breakpoint(small only){
+          padding-block-start: 0.75em;
+        }
         .left, .right{
           .circle{
             border-radius: $pill-radius;
@@ -246,6 +261,9 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
             width: 1em;
             background-color: $cassette-punchouts;
             display: inline-block;
+            @include breakpoint(small only){
+              width: 0.75em;
+            }
           }
           .pill{
             border-radius: $pill-radius;
@@ -253,7 +271,10 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
             width: 0.75em;
             background-color: $cassette-punchouts;
             display: inline-block;
-            vertical-align:top;
+            vertical-align: top;
+            @include breakpoint(small only){
+              width: 0.5em;
+            }
           }
         }
         .left{
