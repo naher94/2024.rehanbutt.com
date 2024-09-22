@@ -27,7 +27,7 @@
           font-size: 1.5em;
           font-weight: $fraunces-black;
           @include breakpoint(small only){
-            font-size: 1.25em
+            font-size: 1em
           }
         }
       }
@@ -77,12 +77,13 @@
     width: 10em;
     aspect-ratio: 1/1;
     border-radius: $pill-radius;
+    // TODO note that this offset path thing won't work on iOS 17.. check if its needed by end of year, due to ios18 adoption
     offset-path: circle(35% at 50% 50%);
     offset-rotate: 0deg;
     position: relative;
     background-color: orange;
     @include breakpoint(small only){
-      width: 14em;
+      width: 12em;
       offset-path: circle(38% at 50% 50%);
     }
     &:hover{
