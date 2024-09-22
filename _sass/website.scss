@@ -13,6 +13,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
     .top-bar{
       padding: 0;
       margin-block-end: 1em;
+      background-color: transparent;
     }
     .control-container{
       margin-inline-end: 1em;
@@ -69,6 +70,11 @@ $element-border: 1px solid rgba($pure-black, 0.1);
         margin-block-start: 1em;
         margin-block-end: 3em;
         //Needed for the bleed over
+        @include breakpoint(small only){
+          scale: 1;
+          margin-block-start: 0;
+          margin-block-end: 1em;
+        }
         .small-order-7{
           order: 7;
         }
@@ -209,12 +215,18 @@ $element-border: 1px solid rgba($pure-black, 0.1);
         font-family: $lato;
         font-weight: $lato-black;
         font-size: 2em;
+        @include breakpoint(small only){
+          padding: 0;
+        }
       }
       .text-content{
         margin-block-end: 1em;
         p{
           font-size: 1.25em;
           line-height: 1.4;
+          @include breakpoint(small only){
+            font-size: 1em;
+          }
         }
       }
     }
