@@ -2,6 +2,9 @@ $cassette-case-color: pink;
 $cassette-punchouts: semantic-color(page-bg); //should be page-bg
 .music{
   font-family: $montserrat;
+  .music-child{
+    position: relative;
+  }
   .title-wrapper{
     margin-block: 2em;
     h2{
@@ -28,8 +31,11 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
     }
   }
   .tape-svg-wrapper{
-    position: relative;
+    position: absolute;
     width: 100%;
+    @include breakpoint(small only){
+      display: none;
+    }
     .tape-svg{
       position: absolute;
       // Only works in Chrome
