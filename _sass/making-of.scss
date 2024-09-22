@@ -3,11 +3,15 @@
   --card-spacing: 3em;
   @include breakpoint(small only){
     --card-spacing: 1.5em;
+    margin-top: 0;
   }
   .content-area{
     border-radius: $tile-radius-big;
     background-color: semantic-color(making-of-bg);
     overflow: hidden;
+    @include breakpoint(small only){
+      border-radius: $tile-radius-medium;
+    }
     .text-area{
       padding: var(--card-spacing);
       background-color: semantic-color(making-of-header-bg);
