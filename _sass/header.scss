@@ -4,7 +4,8 @@ header{
   font-weight: $big-shoulders-black;
   overflow: hidden;
   @include breakpoint(small only) {
-    padding: 1rem;
+    padding-block: 1rem;
+    font-size: 0.5em;
   }
   .title-area{
     z-index: 2;
@@ -75,18 +76,23 @@ header{
     z-index: 2;
     position: relative;
     h1{
-      $blur-radius: 30px;
-      $kern-factor: 1em;
+      // $blur-radius: 30px;
+      --blur-radius: 30px;
+      --kern-factor: 1em;
+      @include breakpoint(small only){
+        --kern-factor: 0.5em;
+        --blur-radius: 20px;
+      }
       transition: all 0.5s ease-in-out;
-      padding-left: $kern-factor; //Balances out the letter spacing
-      letter-spacing: $kern-factor;
+      padding-left: var(--kern-factor); //Balances out the letter spacing
+      letter-spacing: var(--kern-factor);
       font-family: $montserrat;
       font-weight: $big-shoulders-black;
       font-size: 5em;
       margin-bottom: 0;
-      text-shadow: -0.35em 0.125em $blur-radius #32C5FF, 0.15em 0.35em $blur-radius #FFE032,  0.3em -0.125em $blur-radius #FF32F7;
+      text-shadow: -0.35em 0.125em var(--blur-radius) #32C5FF, 0.15em 0.35em var(--blur-radius) #FFE032,  0.3em -0.125em var(--blur-radius) #FF32F7;
       &:hover{
-        text-shadow: -0.35em 0.125em $blur-radius #FF32F7, 0.15em 0.35em $blur-radius #32C5FF,  0.3em -0.125em $blur-radius #FFE032;
+        text-shadow: -0.35em 0.125em var(--blur-radius) #FF32F7, 0.15em 0.35em var(--blur-radius) #32C5FF,  0.3em -0.125em var(--blur-radius) #FFE032;
 
       }
     }
