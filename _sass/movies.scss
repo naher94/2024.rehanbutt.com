@@ -4,9 +4,9 @@ $popcorn-yellow2: #EFE8A5;
 $popcorn-yellow3: #F6F0C9;
 
 .movies{
-  margin-top: 30rem;
+  margin-top: 15rem;
   @include breakpoint(small only) {
-    margin-top: 15rem;
+    margin-top: 3rem;
     font-size: 0.5em;
   }
   .title-container{
