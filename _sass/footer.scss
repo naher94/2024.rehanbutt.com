@@ -9,12 +9,13 @@ footer{
     border-radius: $pill-radius;
     background-image: url("../img/footer/glass-texture.jpg"); // Photo credit: https://unsplash.com/@3tnik
     background-size: cover;
+    // TODO rotate or scale this image on mobile for small texture look
     padding: 1em;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 1fr;
     @include breakpoint(small only){
-      padding: 3em;
+      // padding: 3em;
       display: flex;
     }
 
@@ -34,10 +35,11 @@ footer{
         margin-bottom: 0;
         @include breakpoint(small only){
           margin-left: 0;
-          margin-block-start: 0.5em;
+          margin-block-start: 1em;
           margin-inline: 0.5em;
-          font-size: 3em;
+          font-size: 2.5em;
           text-align: center;
+          // padding-inline-start: 0;
         }
       }
     }
@@ -52,8 +54,8 @@ footer{
     line-height: 0.25;
     z-index: 2;
     @include breakpoint(small only){
-      line-height: 0.75;
-      font-size: 18em;
+      line-height: normal;
+      font-size: 8em;
       text-align: center;
       margin-top: 0.15em;
       // SUDO Cell styling only on mobile
@@ -62,6 +64,7 @@ footer{
       min-width: 0px;
       width: 100%;
       // End of SUDO Cell styling only on mobile
+      scale: 1.75;
     }
   }
 
@@ -77,7 +80,7 @@ footer{
     -webkit-backdrop-filter: blur(var(--blur));
     backdrop-filter: blur(var(--blur));
     @include breakpoint(small only){
-      margin-top: -6em;
+      margin-top: -3em;
     }
   }
   .logo{
@@ -91,7 +94,7 @@ footer{
         fill: #313131; //Changes the color of my logo inline
       }
       @include breakpoint(small only){
-        height: 60px;
+        height: 40px;
       }
     }
   }
