@@ -17,10 +17,9 @@
 
   .boarding-card{
     background-color: pink;
-    // aspect-ratio:.75;
     aspect-ratio: 3/2;
-    -webkit-mask-image: radial-gradient(circle 30px at 50% -2% ,#0000 98%,#000);
-    //-2 value to shift the circle up and down
+    -webkit-mask-image: radial-gradient(circle 30px at 50% -0.25em ,#0000 98%,#000);
+    //-0.25em value to shift the circle up and down
     -webkit-mask-size: 100% 100%;
     -webkit-mask-repeat: no-repeat;
     border-radius: 15px;
