@@ -11,6 +11,10 @@
     font-weight: $montserrat-bold;
     font-size: 2em;
   }
+  .column{
+    flex-direction: column;
+  }
+
   .boarding-card{
     background-color: pink;
     // aspect-ratio:.75;
@@ -29,12 +33,12 @@
       height: fit-content;
     }
     &:not(:first-of-type){
-      // margin-top: -19em;
       margin-top: -7em;
       background: linear-gradient(#c421c1,#46004a);
     }
     &:last-of-type{
       border-bottom: 5px solid rgba($pure-black, 0.1);
+      flex-grow: 2;
     }
     .icon-wrapper{
       height: fit-content;
