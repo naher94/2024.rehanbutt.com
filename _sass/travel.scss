@@ -69,22 +69,52 @@
       }
     }
     // Per card styling
-    //TODO decide what the color logic is
-    &.bur-sea{
-      background: linear-gradient(#2273A4,#00274A);
-      color: $pure-white;
-    }
-    &.sea-bur{
-      background: linear-gradient(#2273A4,#00274A);
+    //TODO decide what the color logic is?
+    //// Airline / brand?
+    $alaska-gradient: linear-gradient(#2273A4,#00274A);
+    $lufthansa-yellow: #f9ba00;
+    $lufthansa-blue: #00235f;
+    $lufthansa-gradient: linear-gradient(#FFC510,#C9A105);
+    $lufthansa-gradient2: linear-gradient($lufthansa-yellow,$lufthansa-blue);
+    $lufthansa-gradient3: linear-gradient(#FFC510,#997712);
+    $united-gradient: linear-gradient(#042159,#47c7ea);
+    $united-gradient-flip: linear-gradient(#47c7ea,#042159);
+    $amtrak-gradient: linear-gradient(#06537E,#022031);
+    //add amtrak colors
+    // what for the car colors?
+    &.bur-sea, &.sea-bur{
+      background: $alaska-gradient;
       color: $pure-white;
     }
     &.lax-ewr{
-      background: linear-gradient(#22a47b,#004a49);
+      background: $united-gradient-flip;
+      // background: linear-gradient(#22a47b,#004a49);
       color: $pure-white;
     }
-    &.nyc-dc{
-      background: linear-gradient(#eedb04,#d5ab06);
-      color: $navy-black;
+    &.nyc-dc, &.dc-nyc{
+      // background: linear-gradient(#eedb04,#d5ab06);
+      background: $amtrak-gradient;
+      color: $pure-white;
+    }
+    &.bwi-lax{
+      background: $united-gradient-flip;
+      color: $pure-white;
+    }
+    &.bur-sfo, &.sfo-bur{
+      background: $united-gradient-flip;
+      color: $pure-white;
+    }
+    &.lax-den, &.den-lax{
+      background: $united-gradient-flip;
+      color: $pure-white;
+    }
+    &.lax-fra, &.fra-prg, &.bud-fra, &.fra-lax{
+      background: $lufthansa-gradient3;
+      color: $lufthansa-blue;
+    }
+    &.lax-iad, &.ewr-lax{
+      background: $united-gradient-flip;
+      color: $pure-white;
     }
   }
 }
