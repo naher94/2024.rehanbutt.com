@@ -13,8 +13,21 @@
   }
   .column{
     flex-direction: column;
+    //Mobile styling for the cross column overlap
+    @include breakpoint(small only){
+      &:not(:first-of-type){
+        .boarding-card{
+          &:first-of-type{
+            margin-top: -10em;
+          }
+        }
+      }
+    }
   }
-
+  .title-card{
+    // background: linear-gradient(#22a47b,#004a49);
+    background: linear-gradient(#F79868,#F15F63);
+  }
   .boarding-card{
     background-color: pink;
     aspect-ratio: 3/2;
@@ -25,6 +38,9 @@
     border-radius: 15px;
     padding: 1em;
     transition: $sprint;
+    @include breakpoint(small only){
+      padding: 1.5em;
+    }
     &:hover{
       transform: translateY(-1em);
     }
@@ -34,6 +50,9 @@
     &:not(:first-of-type){
       margin-top: -7em;
       background: linear-gradient(#c421c1,#46004a);
+      @include breakpoint(small only){
+        margin-top: -10em;
+      }
     }
     &:last-of-type{
       border-bottom: 5px solid rgba($pure-black, 0.1);
@@ -54,9 +73,38 @@
         &:last-of-type{
           font-size: 0.75em;
           margin-block-start: -0.25em;
+          @include breakpoint(small only){
+            font-size: 1em;
+          }
         }
       }
     }
+    .stat-label{
+      span{
+        &:first-of-type{
+          font-weight: $montserrat-bold;
+          font-size: 2em;
+          line-height: 1.2;
+          // text-transform: uppercase;
+        }
+        &:last-of-type{
+          font-size: 0.75em;
+          margin-block-start: -0.25em;
+          @include breakpoint(small only){
+            font-size: 1em;
+          }
+        }
+      }
+    }
+    .stat-value{
+      span{
+        font-weight: $montserrat-regular;
+        font-size: 2em;
+        line-height: 1.2;
+        // text-transform: uppercase;
+      }
+    }
+
     .arrival{
       text-align: right;
     }
@@ -70,7 +118,6 @@
     }
     // Per card styling
     //TODO decide what the color logic is?
-    //// Airline / brand?
     $alaska-gradient: linear-gradient(#2273A4,#00274A);
     $lufthansa-yellow: #f9ba00;
     $lufthansa-blue: #00235f;
@@ -80,8 +127,7 @@
     $united-gradient: linear-gradient(#042159,#47c7ea);
     $united-gradient-flip: linear-gradient(#47c7ea,#042159);
     $amtrak-gradient: linear-gradient(#06537E,#022031);
-    //add amtrak colors
-    // what for the car colors?
+    $grey-gradient: linear-gradient(#5C5F71,#000000);
     &.bur-sea, &.sea-bur{
       background: $alaska-gradient;
       color: $pure-white;
@@ -110,10 +156,15 @@
     }
     &.lax-fra, &.fra-prg, &.bud-fra, &.fra-lax{
       background: $lufthansa-gradient3;
-      color: $lufthansa-blue;
+      // color: $lufthansa-blue;
+      color: $pure-black;
     }
     &.lax-iad, &.ewr-lax{
       background: $united-gradient-flip;
+      color: $pure-white;
+    }
+    &.prg-vie, &.vie-bud{
+      background: $grey-gradient;
       color: $pure-white;
     }
   }
