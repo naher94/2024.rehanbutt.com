@@ -100,14 +100,6 @@
   
   $anim-time: 40s;
   $numb: 8; //The number of circles/elements we have
-
-  // TODO move these to the markdown files
-  .circle-1 { background: #814AB1; }
-  .circle-2 { background: #4CBDC9; }
-  .circle-3 { background: #FFCE24; }
-  .circle-4 { background: #FF2D74; }
-  .circle-5 { background: #814AB1; }
-  .circle-6 { background: #4CBDC9; }
   
   //Starts each circle with an offset
   @for $i from 1 through $numb {
