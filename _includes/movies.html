@@ -52,26 +52,35 @@
         </div>
       </div>
       <div class="stats-container grid-x cell">
-        <div class="total-watched cell medium-shrink">
+
+        <div class="total-watched cell medium-shrink grid-x align-middle">
+          <div class="cell shrink icon-container align-center align-middle">
+            {% include_relative img/movies/popcorn.svg %}
+            {% include_relative img/movies/film.svg %}
+           </div>
           <div class="text-container">
-            <p class="sub-description"><i class="fas fa-history"></i> 31% were rewatches</p>
-            <p class="number">185</p> 
+            <p class="number">185</p>
             <p>featured films watched</p>
             <!-- As of Dec 31st -->
           </div>
         </div>
+
+        <!-- TODO rewatches as it own stat 31% rewatches -->
+
         <div class="busy-day cell medium-auto grid-x align-bottom">
           <div class="text-container cell shrink">
-            <p class="sub-description"><i class="fas fa-equals"></i> Tie between</p>
-            <p class="number">Jan 16th & Jan 17th</p> 
+            <!-- <i class="fas fa-equals"></i> -->
+            <p class="number">Jan 16th</p> 
             <p>for the busiest watch days with 6 movies</p>
+            <!-- <p class="sub-description">Tie between</p> -->
           </div>
         </div>
         <div class="first-watch cell medium-shrink grid-x align-bottom">
           <div class="text-container">
-            <p class="sub-description"><i class="fas fa-plane"></i> Watched at 35,000ft</p>
+            <!-- <i class="fas fa-plane"></i> -->
             <p class="number">House of Gucci</p> 
             <p>1st watched</p>
+            <!-- <p class="sub-description">Watched at 35,000ft</p> -->
           </div>
         </div>
 
