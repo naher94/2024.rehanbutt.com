@@ -4,5 +4,5 @@ link:
 description: A collection of concept art from Pixar's Monsters, Inc.
 image: monsters-inc.png
 image-alt: Cover of the Art of Monsters Inc book
-background-color: 4CBDC9
+background-color: b5b8e4
 ---
