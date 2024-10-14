@@ -129,7 +129,7 @@ $popcorn-yellow3: #F6F0C9;
           display: none;
         }
       }
-      .poster-elemental{
+      .poster-deadpool{
         cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='80' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🔥</text></svg>") 16 0,auto;
       }
       .picks-list{
@@ -193,7 +193,7 @@ $popcorn-yellow3: #F6F0C9;
     .divider-container{
       padding-inline: $content-padding;
       margin-block-start: 2em;
-      margin-block-end: 2em;
+      // margin-block-end: 2em;
       .divider-line{
         width: 6em;
         background-color: rgba($pure-white, 0.20);
@@ -209,6 +209,10 @@ $popcorn-yellow3: #F6F0C9;
       @include breakpoint(small only) {
         font-size: 2em;
         padding: 1em;
+      }
+      .statistic{
+        margin-inline-start: 2em;
+        margin-block-start: 2em;
       }
       p{
         font-family: $big-shoulders;
@@ -237,22 +241,20 @@ $popcorn-yellow3: #F6F0C9;
         position: relative;
         margin-inline-end: -0.5em;
         aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center; /* Horizontally centers */
+        align-items: center; /* Vertically centers */
         svg{
           width: 2.5em;
           &:last-of-type{
             width: 1.25em;
             position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            margin: 0 auto;
             fill: #313131; //TODO semantic color
           }
         }
       }
     }
-    .busy-day{
+    .busy-day{ //TODO check if this is still needed
       @include breakpoint(small only) {
         margin-block-start: 1em;
         margin-block-end: 1em;
