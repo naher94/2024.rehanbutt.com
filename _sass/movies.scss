@@ -207,12 +207,15 @@ $popcorn-yellow3: #F6F0C9;
       padding-inline: $content-padding;
       text-shadow: 0 0 20px black;
       @include breakpoint(small only) {
-        font-size: 2em;
+        font-size: 3em;
         padding: 1em;
       }
       .statistic{
         margin-inline-start: 2em;
         margin-block-start: 2em;
+        @include breakpoint(small only){
+          margin-inline-start: 0;
+        }
       }
       p{
         font-family: $big-shoulders;
@@ -252,15 +255,6 @@ $popcorn-yellow3: #F6F0C9;
             fill: #313131; //TODO semantic color
           }
         }
-      }
-    }
-    .busy-day{ //TODO check if this is still needed
-      @include breakpoint(small only) {
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-      }
-      @include breakpoint(medium){
-        justify-content: center;
       }
     }
 
