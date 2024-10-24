@@ -1,8 +1,10 @@
+$mobile-overlap: -10em;
 .travel{
   margin-top: 2rem;
   margin-bottom: 2rem;
   @include breakpoint(small only) {
     margin-top: 1rem;
+    // font-size: 0.8em;
   }
   font-family: $montserrat;
   font-weight: $montserrat-regular;
@@ -18,7 +20,7 @@
       &:not(:first-of-type){
         .boarding-card{
           &:first-of-type{
-            margin-top: -10em;
+            margin-top: $mobile-overlap;
           }
         }
       }
@@ -54,7 +56,7 @@
       margin-top: -7em;
       background: linear-gradient(#c421c1,#46004a);
       @include breakpoint(small only){
-        margin-top: -10em;
+        margin-top: $mobile-overlap;
       }
     }
     &:last-of-type{
@@ -64,6 +66,9 @@
     .icon-wrapper{
       height: fit-content;
       aspect-ratio: 1/1;
+      @include breakpoint(small only){
+        // padding: 0.75em;
+      }
     }
     .departure, .arrival{
       span{
