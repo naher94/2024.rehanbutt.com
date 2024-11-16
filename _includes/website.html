@@ -92,8 +92,23 @@
     
             </div>
           </div>
-          <div class="cell sub-section medium-auto">
+          <div class="popular-pages cell sub-section medium-auto">
             Most Popular Pages
+            {% assign popular-pages = "(page name|page type|755),(turkey|photography|23),(turkey|photography|23),(turkey|photography|23),(turkey|photography|232)" | remove: "(" | remove: ")" | split: ',' %}
+            
+            {%- for popular-page in popular-pages -%}
+            {% assign each = popular-page | split: '|' %}
+            <div class="pop-page">
+              <p class="page-name">{{each[0]}}</p>
+              <div class="page-details grid-x align-justify">
+                <p>{{each[1]}}</p>
+                <p>{{each[2]}}</p>
+              </div>
+            </div>
+            {%- endfor -%}
+      
+
+
           </div>
         </div>
 

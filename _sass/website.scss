@@ -314,5 +314,18 @@ $element-border: 1px solid rgba($pure-black, 0.1);
         }
       }
     }
+    .popular-pages{
+      .pop-page{
+        p{
+          line-height: 1.2;
+        }
+        .page-name{
+          font-weight: $lato-bold;
+        }
+        .page-details{
+          font-size: 0.75em;
+        }
+      }
+    }
   }
 }
