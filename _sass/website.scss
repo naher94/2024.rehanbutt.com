@@ -84,6 +84,14 @@ $element-border: 1px solid rgba($pure-black, 0.1);
           transition: $sprint;
           &:hover{
             animation: wave-animation 2s;
+            &.car-horn{
+              img{
+                top: -6em;
+                scale: 1;
+                transition: $run;
+                opacity: 1;
+              }
+            }
           }
           $egg-size: 12em;
           @include breakpoint(small only){
@@ -165,6 +173,15 @@ $element-border: 1px solid rgba($pure-black, 0.1);
           }
           &.car-horn{
             z-index: 3;
+            img{
+              position: absolute;
+              left: 0;
+              top: 0;
+              z-index: -1;
+              scale: 0.5;
+              transition: $run;
+              opacity: 0;
+            }
             .easter-egg-graphic{
               path{
                 fill: #FF4752;
