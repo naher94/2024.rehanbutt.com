@@ -92,12 +92,13 @@
     
             </div>
           </div>
-          <div class="popular-pages cell sub-section medium-auto">
+          <div class="popular-pages cell sub-section medium-auto align-justify grid-y">
             Most Popular Pages
             {% assign popular-pages = "(page name|page type|755),(turkey|photography|23),(turkey|photography|23),(turkey|photography|23),(turkey|photography|232)" | remove: "(" | remove: ")" | split: ',' %}
             
             {%- for popular-page in popular-pages -%}
             {% assign each = popular-page | split: '|' %}
+            <div class="divider"></div>
             <div class="pop-page">
               <p class="page-name">{{each[0]}}</p>
               <div class="page-details grid-x align-justify">
