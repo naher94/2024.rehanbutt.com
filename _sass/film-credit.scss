@@ -25,7 +25,7 @@
       .poster{
         rotate: 5deg;
         z-index: 2;
-        img:not(.pua){
+        img:not(.pua):not(.heihei){
           max-width: 15em;
           border-radius: $tile-radius;
           box-shadow: $centered-shadow rgba($pure-black, 0.5);
@@ -41,12 +41,21 @@
           opacity: 0;
           transition: $sprint;
         }
+        .heihei{
+          position: absolute;
+          transition: $sprint;
+          bottom: 0;
+          left: 0;
+          rotate: 180deg;
+          opacity: 0;
+          z-index: -1;
+        }
       }
       .poster2, .poster3{
         position: absolute;
         z-index: 1;
         transition: $sprint;
-        img:not(.pua){
+        img:not(.pua):not(.heihei){
           max-width: 11em;
           @include breakpoint(small only){
             max-width: 8em;
@@ -90,6 +99,13 @@
           left: -0.5em;
           transition: $sprint;
           opacity: 1;
+        }
+        .heihei{
+          transition: $sprint;
+          opacity: 1;
+          bottom: -5em;
+          left: 2em;
+          rotate: 200deg;
         }
       }
     }
