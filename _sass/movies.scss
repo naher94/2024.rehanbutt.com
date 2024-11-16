@@ -216,6 +216,30 @@ $popcorn-yellow3: #F6F0C9;
         @include breakpoint(small only){
           margin-inline-start: 0;
         }
+        &:nth-of-type(2n){
+          .icon-container{
+            svg{
+              &:first-of-type{
+                rotate: -35deg;
+                path{
+                  fill: $popcorn-yellow3;
+                }
+              }
+            }
+          }
+        }
+        &:nth-of-type(3n){
+          .icon-container{
+            svg{
+              &:first-of-type{
+                rotate: -50deg;
+                path{
+                  fill: $popcorn-yellow2;
+                }
+              }
+            }
+          }
+        }
       }
       p{
         font-family: $big-shoulders;
