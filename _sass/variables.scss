@@ -88,6 +88,9 @@ $semantic-colors:(
     making-of-bg: #FFF0E5,
     making-of-header-bg: #FEE7D6,
     film-log-h2: #313131,
+    browser-chrome-bg: #E9E9E9,
+    website-sub-section-bg: #E9E9E9,
+    website-divider: rgba($navy-black, 0.25),
     footer-text: #313131,
   ),
   dark:(
@@ -97,6 +100,9 @@ $semantic-colors:(
     making-of-bg: $navy-black-d4,
     making-of-header-bg: $navy-black-d1,
     film-log-h2: $pure-white,
+    browser-chrome-bg: $navy-black-l1,
+    website-sub-section-bg: $navy-black-l1,
+    website-divider: rgba($pure-white, 0.25),
     footer-text: $pure-white,
   ),
 );

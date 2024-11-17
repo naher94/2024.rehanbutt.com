@@ -6,7 +6,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
     margin: 0;
   }
   .browser-chrome{
-    background-color: #E9E9E9; //TODO make semantic
+    background-color: semantic-color(browser-chrome-bg);
     border-radius: $tile-radius-big;
     padding: 1em;
     border: $element-border;
@@ -39,7 +39,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
       }
     }
     .address-bar{
-      background-color: white; //TODO make semantic
+      background-color: semantic-color(page-bg);
       border: $element-border;
       border-radius: $pill-radius;
       padding-block: 0.25em;
@@ -50,6 +50,11 @@ $element-border: 1px solid rgba($pure-black, 0.1);
       }
       svg{
         width: 1.5em;
+        &:not(.honey-dew){
+          path{
+            fill: semantic-color(text);
+          }
+        }
       }
       .address-right{
         .refresh-svg{
@@ -61,7 +66,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
       }
     }
     .content-area{
-      background-color: white; //TODO make semantic
+      background-color: semantic-color(page-bg);
       border-radius: $tile-radius;
       padding: 1em;
       .easter-egg-container{
@@ -250,7 +255,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
   }
   .site-container{
     .sub-section{
-      background-color: #E9E9E9;
+      background-color: semantic-color(website-sub-section-bg);
       border: solid 1px rgba($navy-black, 0.25);
       border-radius: $tile-radius;
       padding: 1em;
@@ -265,7 +270,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
         margin-inline-end: 0;
       }
       .title{
-        border-bottom: solid 1px rgba($navy-black, 0.25);
+        border-bottom: solid 1px semantic-color(website-divider);
         padding-bottom: 0.5em;
         h3{
           font-family: $lato;
@@ -274,7 +279,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
         }
       }
       .big-total{
-        border-bottom: solid 1px rgba($navy-black, 0.25);
+        border-bottom: solid 1px semantic-color(website-divider);
         padding: 0.5em 0;
         .numb{
           font-size: 3em;
@@ -284,7 +289,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
         }
       }
       .busy-day{
-        border-bottom: solid 1px rgba($navy-black, 0.25);
+        border-bottom: solid 1px semantic-color(website-divider);
         padding: 0.5em 0;
         .busy-label{
           font-weight: $lato-black;
@@ -322,7 +327,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
         margin-bottom: 0;
       }
       .divider{
-        border-bottom: solid 1px rgba(31, 41, 55, 0.25);
+        border-bottom: solid 1px semantic-color(website-divider);
       }
       .pop-page{
         p{
