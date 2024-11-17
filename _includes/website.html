@@ -93,7 +93,7 @@
             </div>
           </div>
           <div class="popular-pages cell sub-section medium-auto align-justify grid-y">
-            Most Popular Pages
+            <h3>Most Popular Pages</h3>
             {% assign popular-pages = "(page name|page type|755),(turkey|photography|23),(turkey|photography|23),(turkey|photography|23),(turkey|photography|232)" | remove: "(" | remove: ")" | split: ',' %}
             
             {%- for popular-page in popular-pages -%}
