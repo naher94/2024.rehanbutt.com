@@ -48,7 +48,6 @@ $badge-punchouts: $card-bg; //should be card-bg
         transition: $sprint;
         @include breakpoint(small only){
           order: 2;
-          // @include breakpoint(small only){
           width: auto;
           margin-block-start: 1em;
           padding-inline: 1.25em;
@@ -56,7 +55,6 @@ $badge-punchouts: $card-bg; //should be card-bg
           font-size: 1em;
           line-height: normal;
           margin-block-end: 0;
-          // }
           .copy-area{
             text-wrap: balance;
           }
