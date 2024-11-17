@@ -1,7 +1,8 @@
-$card-bg: #F1F1F1; //TODO make semantic
+$card-bg: semantic-color(events-bg); //TODO make semantic
 $badge-punchouts: $card-bg; //should be card-bg
 .events{
   margin-top: 2rem;
+  color: $navy-black;
   @include breakpoint(small only) {
     margin-top: 1rem;
   }
@@ -73,6 +74,7 @@ $badge-punchouts: $card-bg; //should be card-bg
     font-size: 2em;
     line-height: 1.2;
     margin-bottom: 0;
+    color: semantic-color(events-h2);
     @include breakpoint(small only) {
       font-size: 2rem;
       padding: 0;

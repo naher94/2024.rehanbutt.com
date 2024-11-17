@@ -55,6 +55,9 @@
     backdrop-filter: blur(var(--blur));
     box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.75);
     z-index: 1000; //TODO figure out why this is not working
+    @media (prefers-color-scheme:dark){
+      background: rgba($pure-white,0.15);
+    }
     @include breakpoint(small only){
       font-size: 2em;
       width: 200%;
@@ -113,7 +116,7 @@
       }
     }
     .circle-#{$i} {
-      animation: load-#{$i} $anim-time linear infinite; //TODO uncomment this
+      animation: load-#{$i} $anim-time linear infinite;
       offset-distance: 100% / $numb * $i;
     }
   }
@@ -122,7 +125,7 @@
   text-align: center;
   display: inline-block;
   color:white;
-  background: #000000 -webkit-gradient(linear, 100% 0, 0 0, from(#000000), color-stop(0.5, #626262), to(#000000));//TODO make semantic
+  background: #000000 -webkit-gradient(linear, 100% 0, 0 0, from(#000000), color-stop(0.5, #626262), to(#000000));
   background-position: -4em top;
   background-repeat: no-repeat;
   -webkit-background-clip: text;
@@ -131,6 +134,17 @@
   -webkit-animation-duration: 8s;
   -webkit-animation-iteration-count: infinite;
   -webkit-background-size: 4em 100%;
+  @media (prefers-color-scheme: dark){
+    background: #ffffff -webkit-gradient(linear, 100% 0, 0 0, from(#ffffff), color-stop(0.5, #626262), to(#ffffff));
+    background-position: -4em top;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation-name: shimmer;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-background-size: 4em 100%;
+  }
 }
 @keyframes shimmer {
   0% { background-position: -4em top; }
