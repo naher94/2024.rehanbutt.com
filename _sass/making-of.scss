@@ -58,10 +58,11 @@
         display: inline-block;
         padding-inline: 1.75em;
         padding-block: 0.5em;
-        background-color: $navy-black;
+        background-color: semantic-color(making-of-button-bg);
         font-family: $lato;
         color: $pure-white;
         border-radius: $tile-radius;
+        transition: $sprint;
         &:hover{
           background-color: $navy-black-d4;
         }
