@@ -1,5 +1,5 @@
 footer{
-  color: #313131;
+  color: semantic-color(footer-text);
   font-family: $fraunces;
   padding-bottom: 5rem;
   padding-top: 5rem;
@@ -8,6 +8,9 @@ footer{
   .pill-area{
     border-radius: $pill-radius;
     background-image: url("../img/footer/glass-texture.jpg"); // Photo credit: https://unsplash.com/@3tnik
+    @media (prefers-color-scheme: dark){
+      background-image: url("../img/footer/glass-texture-dark.jpg"); // Photo credit: https://unsplash.com/@3tnik
+    }
     background-size: cover;
     // TODO rotate or scale this image on mobile for small texture look
     padding: 1em;
@@ -58,12 +61,12 @@ footer{
       font-size: 8em;
       text-align: center;
       margin-top: 0.15em;
-      // SUDO Cell styling only on mobile
+      // Pseudo Cell styling only on mobile
       flex: 0 0 auto;
       min-height: 0px;
       min-width: 0px;
       width: 100%;
-      // End of SUDO Cell styling only on mobile
+      // End of pseudo Cell styling only on mobile
       scale: 1.75;
     }
   }
@@ -91,7 +94,7 @@ footer{
         transform: scale(1.1);
       }
       g{
-        fill: #313131; //Changes the color of my logo inline
+        fill: semantic-color(footer-text); //Changes the color of my logo inline
       }
       @include breakpoint(small only){
         height: 40px;

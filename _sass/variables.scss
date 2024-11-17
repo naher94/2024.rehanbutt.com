@@ -87,6 +87,7 @@ $semantic-colors:(
     text-inverted: $pure-white,
     making-of-bg: #FFF0E5,
     making-of-header-bg: #FEE7D6,
+    footer-text: #313131,
   ),
   dark:(
     page-bg: $navy-black-d3,
@@ -94,6 +95,7 @@ $semantic-colors:(
     text-inverted: $navy-black,
     making-of-bg: $navy-black-d4,
     making-of-header-bg: $navy-black-d1,
+    footer-text: $pure-white,
   ),
 );
 
