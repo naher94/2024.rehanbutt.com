@@ -106,6 +106,13 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
       .song-name{
         font-weight: $montserrat-black;
         font-size: 1.20em;
+        svg{
+          g{
+            g{
+              fill: semantic-color(text);
+            }
+          }
+        }
       }
       .artist-name{
         font-weight: $montserrat-medium;

@@ -22,7 +22,7 @@ $popcorn-yellow3: #F6F0C9;
       text-transform: uppercase;
       text-align: right;
       font-size: 4em;
-      color: #313131; //TODO semantic color
+      color: semantic-color(film-log-h2);
       @include breakpoint(small only) {
         padding: 0;
         font-weight: $big-shoulders-black;
