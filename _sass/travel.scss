@@ -29,12 +29,13 @@ $mobile-overlap: -10em;
     //   font-size: 0.75em;
     // }
   }
-  .title-card{
-    // background: linear-gradient(#22a47b,#004a49);
+  .boarding-card.title-card{
     background: linear-gradient(#F79868,#F15F63);
   }
   .boarding-card{
-    background-color: pink;
+    // background: linear-gradient(#c421c1,#46004a);
+    background: linear-gradient(#22a47b,#004a49);
+    // TODO clean this up
     aspect-ratio: 3/2;
     -webkit-mask-image: radial-gradient(circle 30px at 50% -0.25em ,#0000 98%,#000);
     //-0.25em value to shift the circle up and down
@@ -54,7 +55,6 @@ $mobile-overlap: -10em;
     }
     &:not(:first-of-type){
       margin-top: -7em;
-      background: linear-gradient(#c421c1,#46004a);
       @include breakpoint(small only){
         margin-top: $mobile-overlap;
       }
@@ -125,55 +125,66 @@ $mobile-overlap: -10em;
       }
     }
     // Per card styling
-    //TODO decide what the color logic is?
     $alaska-gradient: linear-gradient(#2273A4,#00274A);
-    $lufthansa-yellow: #f9ba00;
-    $lufthansa-blue: #00235f;
-    $lufthansa-gradient: linear-gradient(#FFC510,#C9A105);
-    $lufthansa-gradient2: linear-gradient($lufthansa-yellow,$lufthansa-blue);
-    $lufthansa-gradient3: linear-gradient(#FFC510,#997712);
-    $united-gradient: linear-gradient(#042159,#47c7ea);
-    $united-gradient-flip: linear-gradient(#47c7ea,#042159);
+    $lufthansa-gradient: linear-gradient(#FFC510,#997712);
+    $united-gradient: linear-gradient(#47c7ea,#042159);
     $amtrak-gradient: linear-gradient(#06537E,#022031);
     $grey-gradient: linear-gradient(#5C5F71,#000000);
+    $qatar-gradient: linear-gradient(#8E2157,#3c0c22);
     &.bur-sea, &.sea-bur{
       background: $alaska-gradient;
       color: $pure-white;
     }
     &.lax-ewr{
-      background: $united-gradient-flip;
-      // background: linear-gradient(#22a47b,#004a49);
+      background: $united-gradient;
       color: $pure-white;
     }
     &.nyc-dc, &.dc-nyc{
-      // background: linear-gradient(#eedb04,#d5ab06);
       background: $amtrak-gradient;
       color: $pure-white;
     }
     &.bwi-lax{
-      background: $united-gradient-flip;
+      background: $united-gradient;
       color: $pure-white;
     }
     &.bur-sfo, &.sfo-bur{
-      background: $united-gradient-flip;
+      background: $united-gradient;
       color: $pure-white;
     }
     &.lax-den, &.den-lax{
-      background: $united-gradient-flip;
+      background: $united-gradient;
       color: $pure-white;
     }
     &.lax-fra, &.fra-prg, &.bud-fra, &.fra-lax{
-      background: $lufthansa-gradient3;
-      // color: $lufthansa-blue;
+      background: $lufthansa-gradient;
       color: $pure-black;
     }
     &.lax-iad, &.ewr-lax{
-      background: $united-gradient-flip;
+      background: $united-gradient;
       color: $pure-white;
     }
     &.prg-vie, &.vie-bud{
       background: $grey-gradient;
       color: $pure-white;
+    }
+    &.lax-doh, &.doh-lax{
+      background: $qatar-gradient;
+      color: $pure-white;
+    }
+  }
+  .flighty-credit{
+    text-transform: uppercase;
+    font-weight: $montserrat-bold;
+    .icon-wrapper{
+      border-radius: $tile-radius;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      width: 1.75em;
+      margin-inline-end: 0.5em;
+    }
+    .text-area{
+      font-size: 0.75rem;
+      line-height: 1.2;
     }
   }
 }
