@@ -6,5 +6,3 @@ end-location: Budapest
 end-location-short: bud
 transit-type: car
 ---
-
-<!-- TODO update the date here -->
