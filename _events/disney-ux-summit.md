@@ -9,7 +9,6 @@ end-date: 2024-5-10
 <div class="grid-x cell">
   <div class="main-content cell grid-x align-center">
     <div class="cell logo-wrapper small-8">
-      <!-- TODO replace with accurate logo -->
       {% include events/ux-summit.svg %}
     </div>
     <div class="cell type-label">Speaker</div>
