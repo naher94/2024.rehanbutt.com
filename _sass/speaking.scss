@@ -1,20 +1,47 @@
 .speaking{
   .shape-container{
-    background-color: rebeccapurple;
+    background-color: $navy-black-l9;
     border-radius: $tile-radius;
     padding: 1rem;
     &.header-shape{
       background-color: #46C2F3;
     }
     &.color-block{
-      background-color: maroon;
+      background-color: #9B20D1;
     }
     &.logo-shape{
+      background-color: #F36C3C;
       svg{
-        width: 5em;
+        width: 4em;
         fill: white;
       }
     }
+    &.photo-shape{
+      padding: 0;
+      overflow: hidden;
+    }
+    &.headshot-shape{
+      background: url(/img/speaking/stage-background.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      img{
+        position: absolute;
+        bottom: 0;
+        right: -3em;
+      }
+      @include breakpoint(small only){
+        height: 11em;
+      }
+    }
+  }
+  .grid-margin-y > .cell{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;   
+  }
+  .grid-margin-x > .cell{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
   }
   h2{
     font-family: $big-shoulders;
@@ -30,7 +57,7 @@
   }
   .talk-shape{
     h3{
-      font-size: 1.5em;
+      font-size: 1.25em;
       line-height: 1.2;
       font-weight: $zilla-bold;
     }
@@ -38,6 +65,15 @@
       margin: 0;
       padding: 0;
       line-height: 1.2;
+      font-size: 0.75em;
+    }
+  }
+  .small-order-7{
+    order: 7;
+  }
+  @media print, screen and (min-width: 40em){
+    .medium-order-7{
+      order: 7;
     }
   }
 }
