@@ -1,0 +1,43 @@
+.speaking{
+  .shape-container{
+    background-color: rebeccapurple;
+    border-radius: $tile-radius;
+    padding: 1rem;
+    &.header-shape{
+      background-color: #46C2F3;
+    }
+    &.color-block{
+      background-color: maroon;
+    }
+    &.logo-shape{
+      svg{
+        width: 5em;
+        fill: white;
+      }
+    }
+  }
+  h2{
+    font-family: $big-shoulders;
+    font-weight: $big-shoulders-regular;
+    line-height: 1;
+    span{
+      display: block;
+    }
+    span:first-of-type{
+      font-weight: $big-shoulders-bold;
+      font-size: 0.5em;
+    }
+  }
+  .talk-shape{
+    h3{
+      font-size: 1.5em;
+      line-height: 1.2;
+      font-weight: $zilla-bold;
+    }
+    p{
+      margin: 0;
+      padding: 0;
+      line-height: 1.2;
+    }
+  }
+}
