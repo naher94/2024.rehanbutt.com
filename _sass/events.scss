@@ -1,7 +1,8 @@
 $card-bg: semantic-color(events-bg);
 $badge-punchouts: $card-bg; //should be card-bg
 .events{
-  margin-top: 2rem;
+  margin-top: 10rem;
+  margin-block-end: 8rem;
   color: $navy-black;
   @include breakpoint(small only) {
     margin-top: 1rem;
