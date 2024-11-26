@@ -1,4 +1,5 @@
 .speaking{
+  margin-block: 10rem;
   .shape-container{
     background-color: $navy-black-l9;
     border-radius: $tile-radius;
@@ -25,10 +26,16 @@
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
-      img{
+      .headshot-wrapper{
         position: absolute;
         bottom: 0;
-        right: -3em;
+        right: -4em;
+      }
+      img{
+        // position: absolute;
+        // bottom: 0;
+        // right: -3em;
+        width: 20em;
       }
       @include breakpoint(small only){
         height: 11em;
