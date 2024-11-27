@@ -40,6 +40,9 @@
           left: -9em;
           opacity: 0;
           transition: $sprint;
+          @include breakpoint(small only){
+            top: -4.3em;
+          }
         }
         .heihei{
           position: absolute;
@@ -49,6 +52,9 @@
           rotate: 180deg;
           opacity: 0;
           z-index: -1;
+          @include breakpoint(small only){
+            left: -2.5em;
+          }
         }
       }
       .poster2, .poster3{
