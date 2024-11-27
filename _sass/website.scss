@@ -328,6 +328,9 @@ $element-border: 1px solid rgba($pure-black, 0.1);
       }
       .divider{
         border-bottom: solid 1px semantic-color(website-divider);
+        @include breakpoint(small only){
+          margin-block: 0.5em;
+        }
       }
       .pop-page{
         p{
