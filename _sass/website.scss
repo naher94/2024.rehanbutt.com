@@ -342,6 +342,11 @@ $element-border: 1px solid rgba($pure-black, 0.1);
       }
     }
     .breakdown-section{
+      .sub-section{
+        &:nth-of-type(2){
+          margin-block: 1em;
+        }
+      }
       h3{
         font-size: 1em;
         font-family: $lato;
@@ -349,34 +354,66 @@ $element-border: 1px solid rgba($pure-black, 0.1);
         line-height: 1;
         margin-bottom: 0.5em;
       }
-      .bar-chart{
-        display: flex;
-        .bar-segment{
-          background-color: rgba($navy-black, 0.1);
-          border: solid 1px rgba($navy-black, 0.25);
-          padding: 0.5em;
-          min-width: fit-content;
-          border-radius: 5px;
-          &:nth-of-type(2){
-            margin-inline: 0.25em;
-          }
-          p{
-            line-height: 1.2;
-            &:first-of-type{
+      .code-cleaning{
+        h3{
+          margin-bottom: 0.25em;
+        }
+        .description{
+          line-height: 1.2;
+          font-size: 0.75em;
+          margin-block-end: 0.5em;
+        }
+        .bar-chart{
+          display: flex;
+          .bar-segment{
+            background-color: rgba($navy-black, 0.1);
+            border: solid 1px rgba($navy-black, 0.25);
+            padding: 0.5em;
+            min-width: fit-content;
+            border-radius: 5px;
+            &.plus-code{
+              width: 1%;
+              margin-inline-end: 0.25em;
+            }
+            &.minus-code{
+              width: 99%;
+            }
+            p{
               font-weight: $lato-bold;
             }
-            &:last-of-type{
-              font-size: 0.75em;
+          }
+        }
+      }
+      .device-breakdown{
+        .bar-chart{
+          display: flex;
+          .bar-segment{
+            background-color: rgba($navy-black, 0.1);
+            border: solid 1px rgba($navy-black, 0.25);
+            padding: 0.5em;
+            min-width: fit-content;
+            border-radius: 5px;
+            &:nth-of-type(2){
+              margin-inline: 0.25em;
             }
-          }
-          &.desktop{
-            width: 76%;
-          }
-          &.mobile{
-            width: 20%;
-          }
-          &.tablet{
-            width: 4%;
+            p{
+              line-height: 1.2;
+              &:first-of-type{
+                font-weight: $lato-bold;
+              }
+              &:last-of-type{
+                font-size: 0.75em;
+              }
+            }
+            &.desktop{
+              width: 76%;
+            }
+            &.mobile{
+              width: 20%;
+            }
+            &.tablet{
+              width: 4%;
+            }
           }
         }
       }
