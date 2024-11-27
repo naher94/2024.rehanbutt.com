@@ -264,7 +264,7 @@ $element-border: 1px solid rgba($pure-black, 0.1);
         margin-bottom: 0.625rem;
       }
     }
-    .by-numbers{
+    .by-numbers, .pop-container-wrapper{
       margin-inline-end: 1em;
       @include breakpoint(small only){
         margin-inline-end: 0;

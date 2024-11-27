@@ -58,7 +58,7 @@
           <h2>Web Updates</h2>
           <p>This year as part of my website updates, Easter Egg received a major upgrade. A new home to see which easter eggs you have unlocked. Explore my site and find them all! And a bunch more items behind the scenes. TODO add better copy here</p>
         </div>
-        <div class="grid-x site-container">
+        <div class="grid-x site-container cell">
           <div class="cell sub-section medium-shrink by-numbers">
             <div class="title">
               <h3>By the Numbers</h3>
@@ -92,7 +92,9 @@
     
             </div>
           </div>
-          <div class="popular-pages cell sub-section medium-auto align-justify grid-y">
+
+          <div class="grid-x cell shrink pop-container-wrapper">
+            <div class="popular-pages cell sub-section medium-auto align-justify grid-y">
             <h3>Most Popular Pages</h3>
             {% assign popular-pages = "(page name|page type|755),(turkey|photography|23),(turkey|photography|23),(turkey|photography|23),(turkey|photography|232)" | remove: "(" | remove: ")" | split: ',' %}
             
@@ -107,9 +109,13 @@
               </div>
             </div>
             {%- endfor -%}
-      
+            </div>
+          </div>
 
-
+          <div class="cell medium-auto grid-x">
+            <div class="cell sub-section">
+              device section
+            </div>
           </div>
         </div>
 
