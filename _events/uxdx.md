@@ -7,7 +7,7 @@ end-date: 2024-5-17
 ---
 
 <div class="grid-x cell align-center">
-  <div class="cell logo-wrapper medium-8">
+  <div class="cell logo-wrapper small-8">
     {% include events/uxdx.svg %}
   </div>
   <div class="cell type-label">attendee</div>
