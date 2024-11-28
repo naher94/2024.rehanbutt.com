@@ -50,7 +50,6 @@ $popcorn-yellow3: #F6F0C9;
             rotate: -10deg;
             transform-origin: top right;
             position: relative;
-            // TODO but the 3 popcorn kernels here
             .kernel-container{
               position: absolute;
               bottom: 0;
@@ -100,7 +99,6 @@ $popcorn-yellow3: #F6F0C9;
         margin-block-start: -10em;
         padding-inline-start: $content-padding;
         @include breakpoint(small only) {
-          // margin-inline-end: 2.5em;
           margin-block-start: -16em;
           padding-inline: $content-padding;
         }
