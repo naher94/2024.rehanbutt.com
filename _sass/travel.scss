@@ -1,10 +1,10 @@
 $mobile-overlap: -10em;
+//TODO increase the mobile overlap to -12em or something else
 .travel{
   margin-top: 2rem;
   margin-bottom: 2rem;
   @include breakpoint(small only) {
     margin-top: 1rem;
-    // font-size: 0.8em;
   }
   font-family: $montserrat;
   font-weight: $montserrat-regular;
@@ -25,9 +25,6 @@ $mobile-overlap: -10em;
         }
       }
     }
-    // &:nth-of-type(3){
-    //   font-size: 0.75em;
-    // }
   }
   .boarding-card.title-card{
     background: linear-gradient(#F79868,#F15F63);
@@ -66,9 +63,6 @@ $mobile-overlap: -10em;
     .icon-wrapper{
       height: fit-content;
       aspect-ratio: 1/1;
-      @include breakpoint(small only){
-        // padding: 0.75em;
-      }
     }
     .departure, .arrival{
       span{
@@ -93,7 +87,6 @@ $mobile-overlap: -10em;
           font-weight: $montserrat-bold;
           font-size: 2em;
           line-height: 1.2;
-          // text-transform: uppercase;
         }
         &:last-of-type{
           font-size: 0.75em;
@@ -109,7 +102,6 @@ $mobile-overlap: -10em;
         font-weight: $montserrat-regular;
         font-size: 2em;
         line-height: 1.2;
-        // text-transform: uppercase;
       }
     }
 
