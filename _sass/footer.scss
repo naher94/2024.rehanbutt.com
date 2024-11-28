@@ -18,17 +18,11 @@ footer{
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 1fr;
     @include breakpoint(small only){
-      // padding: 3em;
       display: flex;
     }
-
     .closing-remark{
       grid-column: 1 / 7;
       grid-row: 1 / 2;
-      // @include breakpoint(small only){
-      //   grid-column: 1 / 2;
-      //   grid-row: 1 / 2;
-      // }
       h2{
         font-family: $fraunces;
         font-weight: $fraunces-light;
@@ -42,7 +36,6 @@ footer{
           margin-inline: 0.5em;
           font-size: 2.5em;
           text-align: center;
-          // padding-inline-start: 0;
         }
       }
     }
