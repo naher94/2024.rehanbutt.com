@@ -83,7 +83,6 @@
         } 
       }
       .cell{
-        // TODO relates to the bottom todo
         @include breakpoint(small only){
           padding-right: 0.2rem;
           padding-left: 0.2rem;
@@ -95,7 +94,6 @@
           padding-right: 0;
         }
       }
-      // TODO check if this is needed
       // Reduces the spacing between hero screenshots
       @include breakpoint(small only) {
         .grid-padding-x > .cell{
