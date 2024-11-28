@@ -1,17 +1,26 @@
 .speaking{
   margin-block: 10rem;
   .shape-container{
-    background-color: $navy-black-l9;
+    background-color: semantic-color(speaking-card-bg);
     border-radius: $tile-radius;
     padding: 1rem;
     &.header-shape{
       background-color: #46C2F3;
+      @media (prefers-color-scheme: dark) {
+        background-color: #3b778f;
+      }
     }
     &.color-block{
       background-color: #9B20D1;
+      @media (prefers-color-scheme: dark) {
+        background-color: #6a2987;
+      }
     }
     &.logo-shape{
       background-color: #F36C3C;
+      @media (prefers-color-scheme: dark) {
+        background-color: #af593b;
+      }
       svg{
         width: 4em;
         fill: white;

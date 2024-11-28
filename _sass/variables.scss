@@ -94,6 +94,7 @@ $semantic-colors:(
     browser-chrome-bg: #E9E9E9,
     website-sub-section-bg: #E9E9E9,
     website-divider: rgba($navy-black, 0.25),
+    speaking-card-bg: $navy-black-l9,
     footer-text: #313131,
   ),
   dark:(
@@ -109,6 +110,7 @@ $semantic-colors:(
     browser-chrome-bg: $navy-black-l1,
     website-sub-section-bg: $navy-black-l1,
     website-divider: rgba($pure-white, 0.25),
+    speaking-card-bg: $navy-black-l1,
     footer-text: $pure-white,
   ),
 );
