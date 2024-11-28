@@ -1,6 +1,8 @@
-$mobile-overlap: -10em;
-//TODO increase the mobile overlap to -12em or something else
 .travel{
+  --mobile-overlap: -10em;
+  @include breakpoint(small only) {
+    --mobile-overlap: -12em;
+  }
   margin-top: 2rem;
   margin-bottom: 2rem;
   @include breakpoint(small only) {
@@ -20,7 +22,7 @@ $mobile-overlap: -10em;
       &:not(:first-of-type){
         .boarding-card{
           &:first-of-type{
-            margin-top: $mobile-overlap;
+            margin-top: var(--mobile-overlap);
           }
         }
       }
@@ -53,7 +55,7 @@ $mobile-overlap: -10em;
     &:not(:first-of-type){
       margin-top: -7em;
       @include breakpoint(small only){
-        margin-top: $mobile-overlap;
+        margin-top: var(--mobile-overlap);
       }
     }
     &:last-of-type{
