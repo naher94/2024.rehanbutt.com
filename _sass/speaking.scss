@@ -79,6 +79,10 @@
     }
   }
   .talk-shape{
+    @include breakpoint(small only){
+      // TODO Seems to solve the weird grid off set of the cells on mobile as it relates to grid-margin-x
+      flex: auto;
+    }
     h3{
       font-size: 1.25em;
       line-height: 1.2;
