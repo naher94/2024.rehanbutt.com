@@ -5,7 +5,6 @@
       <!-- TODO update the number -->
       <h2 class="cell shrink">12,861<span class="hrs">mins</span> <span class="description">of music listened to</span></h2>
     </div>
-    <!-- TODO scale the tape svg to the full height of the container and check the Chrome hover after -->
     <div class="tape-svg-wrapper">
       {%- include_relative img/music/tape.svg -%}
     </div>
@@ -47,7 +46,6 @@
             </div>
           </div>
         {% endcapture %}
-
       <div class="cassette-wrapper cell grid-x small-10 medium-4">
         {%- include external-link.html link=song.link content=song-card css-class="grid-x cell" -%}
       </div>
@@ -91,12 +89,10 @@
             </div>
           </div>
         {% endcapture %}
-
       <div class="cassette-wrapper cell grid-x small-10 medium-4">
         {%- include external-link.html link=song.link content=song-card css-class="grid-x cell" -%}
       </div>
       {%- endfor -%}
     </div>
-
   </div>
 </section>
