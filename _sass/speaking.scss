@@ -1,5 +1,8 @@
 .speaking{
   margin-block: 10rem;
+  @include breakpoint(small only){
+    margin-block-end: 3rem;
+  }
   .shape-container{
     background-color: semantic-color(speaking-card-bg);
     border-radius: $tile-radius;
@@ -63,6 +66,10 @@
     font-family: $big-shoulders;
     font-weight: $big-shoulders-regular;
     line-height: 1;
+    margin-bottom: 0;
+    @include breakpoint(small only){
+      font-size: 3em;
+    }
     span{
       display: block;
     }
