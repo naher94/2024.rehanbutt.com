@@ -74,6 +74,7 @@
             <div class="country-visits">
               <p class="country-label">Most page views by country</p>
               {% assign country-list = "(🇺🇸|United States|7551),(🇮🇳|India|435),(🇨🇳|China|332)" | remove: "(" | remove: ")" | split: ',' %}
+              <!-- TODO update the numbers -->
               <!-- Data as of Dec 31st -->
               {% for country in country-list %}
               {% assign each = country | split: '|' %}
@@ -113,7 +114,7 @@
           </div>
 
           <div class="cell medium-auto grid-y breakdown-section">
-            <div class="cell sub-section">
+            <div class="cell sub-section auto">
               <h3>Other Section</h3>
               <!-- TODO add something here -->
             </div>
