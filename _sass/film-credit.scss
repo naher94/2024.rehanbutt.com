@@ -110,8 +110,11 @@
           transition: $sprint;
           opacity: 1;
           bottom: -3em;
-          left: -2em;
+          left: -4em;
           rotate: 224deg;
+          @include breakpoint(small only){
+            left: -3em;
+          }
         }
       }
     }
