@@ -5,7 +5,8 @@ $badge-punchouts: $card-bg; //should be card-bg
   margin-block-end: 8rem;
   color: $navy-black;
   @include breakpoint(small only) {
-    margin-top: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
   .content-area{
     position: relative;
