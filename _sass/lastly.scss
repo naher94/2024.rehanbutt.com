@@ -2,7 +2,7 @@
   margin-top: 10rem;
   margin-bottom: 10rem;
   @include breakpoint(small only){
-    margin-top: 3rem;
+    margin-top: 0;
     margin-bottom: 3rem;
     font-size: 1.25em;
   }
@@ -72,7 +72,7 @@
       rotate: 5deg;
       @include breakpoint(small only){
         scale: 0.9;
-        margin-block-start: -5em;
+        margin-block-start: -2em;
       }
       .polaroid{
         &:before {
