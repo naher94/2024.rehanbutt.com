@@ -90,15 +90,12 @@
                 </div>
               </div>
               {% endfor %}
-    
             </div>
           </div>
-
           <div class="grid-x cell medium-shrink pop-container-wrapper">
             <div class="popular-pages cell sub-section medium-auto align-justify grid-y">
             <h3>Most Popular Pages</h3>
             {% assign popular-pages = "(page name|page type|755),(turkey|photography|23),(turkey|photography|23),(turkey|photography|23),(turkey|photography|232)" | remove: "(" | remove: ")" | split: ',' %}
-            
             {%- for popular-page in popular-pages -%}
             {% assign each = popular-page | split: '|' %}
             <div class="divider"></div>
@@ -112,7 +109,6 @@
             {%- endfor -%}
             </div>
           </div>
-
           <div class="cell medium-auto grid-y breakdown-section">
             <div class="cell sub-section auto">
               <h3>Other Section</h3>
@@ -149,7 +145,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
