@@ -1,8 +1,5 @@
 .travel{
   --mobile-overlap: -10em;
-  @include breakpoint(small only) {
-    --mobile-overlap: -12em;
-  }
   margin-top: 2rem;
   margin-bottom: 2rem;
   @include breakpoint(small only) {
