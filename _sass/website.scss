@@ -1,5 +1,9 @@
 $element-border: 1px solid rgba($pure-black, 0.1);
 .website{
+  @include breakpoint(small only){
+    overflow-x: clip;
+    overflow-y: visible;
+  }
   margin-top: 2rem;
   p{
     padding: 0;
@@ -347,7 +351,14 @@ $element-border: 1px solid rgba($pure-black, 0.1);
     .breakdown-section{
       .sub-section{
         &:nth-of-type(2){
-          margin-block: 1em;
+          @include breakpoint(medium up){
+            margin-block: 1em;
+          }
+        }
+        &:last-of-type{
+          @include breakpoint(small only){
+            margin-bottom: 0;
+          }
         }
       }
       h3{
