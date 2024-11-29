@@ -80,7 +80,7 @@
   }
   .talk-shape{
     @include breakpoint(small only){
-      // TODO Seems to solve the weird grid off set of the cells on mobile as it relates to grid-margin-x
+      // TODO Seems to solve the weird grid offset of the cells on mobile as it relates to grid-margin-x; but feels hacky
       flex: auto;
     }
     h3{

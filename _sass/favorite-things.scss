@@ -36,7 +36,6 @@
     }
   }
   .wheel{
-    // background-color: pink; //TODO remove this
     aspect-ratio: 1/1;
     // height of this element assumes all the circles are vertically laid out
   }
@@ -56,7 +55,7 @@
     -webkit-backdrop-filter: blur(var(--blur));
     backdrop-filter: blur(var(--blur));
     box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.75);
-    z-index: 1000; //TODO figure out why this is not working
+    z-index: 1000; //TODO figure out why this is not working; z-index is relative to the position of the parent hence the overlap. More to figure out here
     @media (prefers-color-scheme:dark){
       background: rgba($pure-white,0.15);
     }
