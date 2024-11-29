@@ -105,8 +105,44 @@
       border-radius: $pill-radius;
       overflow: hidden;
     }
+    @mixin color-opacity($color){
+      @media (prefers-color-scheme: dark){
+        background-color: rgba($color, 0.75);
+      }
+    }
     &.circle-1{
-      // background-color: ;
+      background-color: #ffcbcb;
+      @include color-opacity(#ffcbcb);
+    }
+    &.circle-2{
+      // TODO update this color
+      background-color: #4CBDC9;
+      @include color-opacity(#4CBDC9);
+    }
+    &.circle-3{
+      // TODO update this color
+      background-color: #FF2D74;
+      @include color-opacity(#FF2D74);
+    }
+    &.circle-4{
+      background-color: #ebd5ff;
+      @include color-opacity(#ebd5ff);
+    }
+    &.circle-5{
+      background-color: #ffe382;
+      @include color-opacity(#ffe382);
+    }
+    &.circle-6{
+      background-color: #93c0d9;
+      @include color-opacity(#93c0d9);
+    }
+    &.circle-7{
+      background-color: #ffe1ba;
+      @include color-opacity(#ffe1ba);
+    }
+    &.circle-8{
+      background-color: #b5b8e4;
+      @include color-opacity(#b5b8e4);
     }
   }
   
