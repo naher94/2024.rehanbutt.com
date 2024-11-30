@@ -40,6 +40,9 @@
           left: -9em;
           opacity: 0;
           transition: $sprint;
+          @media (prefers-reduced-motion) {
+            transition: $jog;
+          }
           @include breakpoint(small only){
             top: -4.3em;
           }
@@ -52,6 +55,9 @@
           rotate: 180deg;
           opacity: 0;
           z-index: -1;
+          @media (prefers-reduced-motion) {
+            transition: $jog;
+          }
           @include breakpoint(small only){
             left: -2.5em;
           }
@@ -61,6 +67,9 @@
         position: absolute;
         z-index: 1;
         transition: $sprint;
+        @media (prefers-reduced-motion) {
+          transition: $jog;
+        }
         img:not(.pua):not(.heihei){
           max-width: 11em;
           @include breakpoint(small only){
@@ -105,6 +114,9 @@
           left: -0.5em;
           transition: $sprint;
           opacity: 1;
+          @media (prefers-reduced-motion) {
+            transition: $jog;
+          }
         }
         .heihei{
           transition: $sprint;
@@ -112,6 +124,9 @@
           bottom: -3em;
           left: -4em;
           rotate: 224deg;
+          @media (prefers-reduced-motion) {
+            transition: $jog;
+          }
           @include breakpoint(small only){
             left: -3em;
           }

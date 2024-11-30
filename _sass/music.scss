@@ -88,6 +88,9 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
     a{
       color: semantic-color(text);
       transition: $sprint;
+      @media (prefers-reduced-motion) {
+        transition: $jog;
+      }
       &:hover{
         scale: 1.05;
       }
