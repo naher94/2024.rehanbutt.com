@@ -40,8 +40,37 @@
     // height of this element assumes all the circles are vertically laid out
   }
   .hovered{
+    //Specifics touch
     @media (pointer: fine) {
       animation-play-state: paused !important;
+    }
+  }
+  .show-hide{
+    visibility: visible !important;
+  }
+
+  .mobile-description-wrapper{
+    display: none;
+    margin-block-start: 3em;
+    // Mobile device and touch is what the below says
+    @include breakpoint(small only){
+      @media (not (pointer: fine)) {
+        display: block;
+      }
+    }
+    .description-tooltip{
+      width: 100%;
+      margin: 0;
+    }
+  }
+  .fave-circle{
+    .description-tooltip{
+      // On mobile and touch hide the OG descriptions
+      @include breakpoint(small only){
+        @media (not (pointer: fine)) {
+          display: none;
+        }
+      }
     }
   }
   .description-tooltip{
