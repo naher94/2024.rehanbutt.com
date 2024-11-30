@@ -1,4 +1,4 @@
-const elements = document.getElementsByClassName('circle');
+const elements = document.getElementsByClassName('fave-circle');
 
 // Convert HTMLCollection to array for easier manipulation
 const elementsArray = Array.from(elements);
@@ -25,3 +25,17 @@ elementsArray.forEach(function(element) {
     // Adding event listener for mouseout
     element.addEventListener('mouseout', removeHoverClass);
 });
+
+//---------------------------
+
+// To account for click and make the descriptions accessible on mobile
+// TODO once the animation is fixed then do a position fix on mobile
+elementsArray.forEach((element) => {
+    element.addEventListener('touchstart', (event) => {
+        const isHighlighted = element.classList.contains('highlight');
+        elementsArray.forEach((el) => el.classList.remove('highlight'));
+        if (!isHighlighted) {
+            element.classList.add('highlight');
+        }
+    });
+});  

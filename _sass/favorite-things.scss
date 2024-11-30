@@ -40,7 +40,9 @@
     // height of this element assumes all the circles are vertically laid out
   }
   .hovered{
-    animation-play-state: paused !important;
+    @media (pointer: fine) {
+      animation-play-state: paused !important;
+    }
   }
   .description-tooltip{
     position: absolute;
@@ -77,10 +79,11 @@
       font-size: 1em;
     }
   }
-  .circle {
+  .fave-circle {
     width: 10em;
     aspect-ratio: 1/1;
     border-radius: $pill-radius;
+    box-sizing: content-box;
     // TODO note that this offset path thing won't work on iOS 17.. check if its needed by end of year, due to iOS 18 adoption
     //Seems to work in 17.6.1 but not in the simulator
     @supports (offset-path: circle(35% at 50% 50%)){
@@ -96,6 +99,13 @@
       offset-path: circle(38% at 50% 50%);
     }
     &:hover{
+      .description-tooltip{
+        visibility: visible;
+      }
+    }
+    &.highlight{
+      outline: 5px solid $signature-teal;
+      outline-offset: 5px;
       .description-tooltip{
         visibility: visible;
       }
