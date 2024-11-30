@@ -121,11 +121,17 @@ $badge-punchouts: $card-bg; //should be card-bg
     
     .slide-track {
       animation: scroll 40s linear infinite;
+      @media (prefers-reduced-motion) {
+        animation: scroll 80s linear infinite;
+      }
       display: flex;
       width: 4600px;
       margin-top: 2em;
       @include breakpoint(small only){
         animation: scroll 60s linear infinite;
+        @media (prefers-reduced-motion) {
+          animation: scroll 120s linear infinite;
+        }
       }
     }
     .e-badge{
