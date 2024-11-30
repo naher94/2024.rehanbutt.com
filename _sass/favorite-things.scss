@@ -183,7 +183,10 @@
     }
   }
   
-  $anim-time: 40s;
+  --anim-time: 40s;
+  @media (prefers-reduced-motion) {
+    --anim-time: 100s;
+  }
   $numb: 8; //The number of circles/elements we have
   
   //Starts each circle with an offset
@@ -198,7 +201,7 @@
       }
     }
     .circle-#{$i} {
-      animation: load-#{$i} $anim-time linear infinite;
+      animation: load-#{$i} var(--anim-time) linear infinite;
       offset-distance: 100% / $numb * $i;
     }
   }
