@@ -41,6 +41,9 @@ header{
       gap: var(--gap);
       min-width: 100%;
       animation: scroll 120s linear infinite;
+      @media (prefers-reduced-motion) {
+        animation: scroll 240s linear infinite;
+      }
       filter: blur(5px);
       .outline-wrapper{
         position: relative;
