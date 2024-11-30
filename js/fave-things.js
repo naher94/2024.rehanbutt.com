@@ -28,19 +28,7 @@ elementsArray.forEach(function(element) {
 
 //---------------------------
 
-// To account for click and make the descriptions accessible on mobile
-// elementsArray.forEach((element) => {
-//     element.addEventListener('touchstart', (event) => {
-//         const isHighlighted = element.classList.contains('highlight');
-//         elementsArray.forEach((el) => el.classList.remove('highlight'));
-//         if (!isHighlighted) {
-//             element.classList.add('highlight');
-//         }
-//     });
-// });
-
 let previousChild = null; // Track the previously selected child element
-
 elementsArray.forEach((element, index) => {
     element.addEventListener('touchstart', (event) => {
         const isHighlighted = element.classList.contains('highlight');
