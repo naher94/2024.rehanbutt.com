@@ -93,6 +93,9 @@ $element-border: 1px solid rgba($pure-black, 0.1);
           transition: $sprint;
           &:hover{
             animation: wave-animation 2s;
+            @media (prefers-reduced-motion) {
+              animation: wave-animation 6s;
+            }
             &.car-horn{
               img{
                 top: -7em;

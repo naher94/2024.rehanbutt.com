@@ -100,7 +100,6 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
       border-radius: $tile-radius;
       margin-block-end: 0.5em;
       padding-inline: 1.5em;
-      // padding-block: 0.5em;
       padding-block: 1em;
       font-size: 0.8em;
       .song-name{
@@ -182,6 +181,10 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
         margin: auto;
         bottom: 50%;
         transform: translateY(50%);
+        --animation-time: 15s;
+        @media (prefers-reduced-motion) {
+          --animation-time: 30s;
+        }
         .reel-left, .reel-right{
           border-radius: $pill-radius;
           width: 2em;
@@ -197,7 +200,7 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
             }
           }
           svg{
-            animation: 15s rotate linear infinite;
+            animation: var(--animation-time) rotate linear infinite;
             animation-direction: alternate;
             @media (prefers-color-scheme: dark){
               g{
@@ -242,14 +245,14 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
           .spool1{
             top: -100%;
             left: -115%;
-            animation: 15s spool1-scale linear infinite;
+            animation: var(--animation-time) spool1-scale linear infinite;
             animation-direction: alternate;
           }
           .spool2{
             top: -100%;
             right: -115%;
             scale: 0.75;
-            animation: 15s spool2-scale linear infinite;
+            animation: var(--animation-time) spool2-scale linear infinite;
             animation-direction: alternate;
           }
         }
