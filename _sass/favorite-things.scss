@@ -47,6 +47,7 @@
   }
   .show-hide{
     visibility: visible !important;
+    display: block !important;
   }
 
   .mobile-description-wrapper{
@@ -62,6 +63,8 @@
       width: 100%;
       margin: 0;
       margin-inline-start: 0;
+      position: relative;
+      display: none;
     }
   }
   .fave-circle{
