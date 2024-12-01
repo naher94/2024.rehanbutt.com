@@ -147,37 +147,36 @@
         background-color: rgba($color, 0.75);
       }
     }
-    &.circle-1{
+    &.actions{
       background-color: #ffcbcb;
       @include color-opacity(#ffcbcb);
     }
-    &.circle-2{
-      // TODO update this color
-      background-color: #4CBDC9;
-      @include color-opacity(#4CBDC9);
+    &.organic-dried-strawberries{
+      background-color: #c2e3fd;
+      @include color-opacity(#c2e3fd);
     }
-    &.circle-3{
+    &.battery-pack{
       // TODO update this color
       background-color: #FF2D74;
       @include color-opacity(#FF2D74);
     }
-    &.circle-4{
+    &.bic-cristal-renew{
       background-color: #ebd5ff;
       @include color-opacity(#ebd5ff);
     }
-    &.circle-5{
+    &.jetlag-the-game{
       background-color: #ffe382;
       @include color-opacity(#ffe382);
     }
-    &.circle-6{
+    &.lessons-in-chemistry{
       background-color: #93c0d9;
       @include color-opacity(#93c0d9);
     }
-    &.circle-7{
+    &.ltt-scribedriver{
       background-color: #ffe1ba;
       @include color-opacity(#ffe1ba);
     }
-    &.circle-8{
+    &.the-art-of-monsters-inc{
       background-color: #b5b8e4;
       @include color-opacity(#b5b8e4);
     }

@@ -9,7 +9,8 @@
       </div>
       <div class="cell wheel">
         {%- for thing in site.fave-things -%}
-        <div class="fave-circle circle-{{forloop.index}}">
+        {% assign class-name = thing.name | replace: " ", "-" | downcase | remove: "." %}
+        <div class="fave-circle circle-{{forloop.index}} {{class-name}}">
           <div class="image-wrapper">
             <img src="../img/fave-things/{{thing.image}}" alt="{{thing.image-alt}}">
           </div>
