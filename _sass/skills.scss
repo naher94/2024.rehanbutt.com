@@ -145,12 +145,11 @@
       margin: 0;
       font-size: 1.75em;
       text-align: justify;
+      width: 100%;
       @include breakpoint(small only){
         font-size: 1.25em;
         line-height: normal;
       }
-      width: 100%;
-      text-align: justify;
       &::after {
         content: ""; /* Add an invisible element to trigger justification */
         display: inline-block;
