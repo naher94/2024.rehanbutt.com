@@ -149,6 +149,13 @@
         font-size: 1.25em;
         line-height: normal;
       }
+      width: 100%;
+      text-align: justify;
+      &::after {
+        content: ""; /* Add an invisible element to trigger justification */
+        display: inline-block;
+        width: 100%; /* Stretch it to occupy full width */
+      }
     }
   }
 }
