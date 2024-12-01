@@ -90,7 +90,7 @@
     -webkit-backdrop-filter: blur(var(--blur));
     backdrop-filter: blur(var(--blur));
     box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.75);
-    z-index: 1000; //TODO figure out why this is not working; z-index is relative to the position of the parent hence the overlap. More to figure out here
+    z-index: 2;
     @media (prefers-color-scheme:dark){
       background: rgba($pure-white,0.15);
     }
@@ -126,6 +126,7 @@
       offset-path: circle(38% at 50% 50%);
     }
     &:hover{
+      z-index: 100;
       .description-tooltip{
         visibility: visible;
       }
