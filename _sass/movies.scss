@@ -209,6 +209,11 @@ $popcorn-yellow3: #F6F0C9;
         @include breakpoint(small only){
           margin-inline-start: 0;
         }
+        &:hover{
+          .icon-container{
+            rotate: 10deg;
+          }
+        }
         &:nth-of-type(2n){
           .icon-container{
             svg{
@@ -229,6 +234,53 @@ $popcorn-yellow3: #F6F0C9;
                 path{
                   fill: $popcorn-yellow2;
                 }
+              }
+            }
+          }
+        }
+        &.total-watched{
+          .icon-container{
+            svg{
+              &:last-of-type{
+                margin-left: 0.12em;
+              }
+            }
+          }
+        }
+        &.rewatched{
+          .icon-container{
+            svg{
+              &:last-of-type{
+                margin-left: 0.15em;
+                margin-bottom: 0.15em;
+              }
+            }
+          }
+        }
+        &.busy-day{
+          .icon-container{
+            svg{
+              &:last-of-type{
+                margin-bottom: 0.15em;
+              }
+            }
+          }
+        }
+        &.first-watch{
+          .icon-container{
+            svg{
+              &:last-of-type{
+                margin-left: 0.05em;
+                margin-bottom: 0.2em;
+              }
+            }
+          }
+        }
+        &.watch-gap{
+          .icon-container{
+            svg{
+              &:last-of-type{
+                margin-left: 0.15em;
               }
             }
           }
@@ -264,6 +316,7 @@ $popcorn-yellow3: #F6F0C9;
         display: flex;
         justify-content: center; /* Horizontally centers */
         align-items: center; /* Vertically centers */
+        transition: $sprint;
         svg{
           width: 2.5em;
           &:last-of-type{
