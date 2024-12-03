@@ -307,6 +307,16 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
           }
         }
       }
+      @mixin cassette-setter($color,$image) {
+        $cassette-case-color: $color;
+        background-color: $cassette-case-color;
+        .reel-window{
+          background-color: $cassette-case-color;
+        }
+        .sticker{
+          background-image: url("../img/music/" + $image);
+        }
+      }
       &.whoops{
         $cassette-case-color: cadetblue;
         background-color: $cassette-case-color;
@@ -326,6 +336,19 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
         .sticker{
           background-image: url("../img/music/minute.jpg");
         }
+      }
+      &.fn-up-the-disco{
+        @include cassette-setter(#edbba1,"jt-everything-i-thought-it-was.png");
+
+      }
+      &.liar-feat-fireboy-dml, &.infinity-sex{
+        @include cassette-setter(#edbba1,"jt-everything-i-thought-it-was.png");
+      }
+      &.california-lullaby{
+        @include cassette-setter(#954546,"california-lullaby.jpg");
+      }
+      &.cheeky{
+        @include cassette-setter(#8d7e77,"cheeky.jpg");
       }
     }
   }

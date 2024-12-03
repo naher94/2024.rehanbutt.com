@@ -1,9 +1,8 @@
 <section class="music grid-container" id="music" aria-label="Music Section">
   <div class="grid-x music-child">
     <div class="grid-x cell title-wrapper medium-order-2 align-center">
-      <!-- As of November 28th -->
-      <!-- TODO update the number -->
-      <h2 class="cell shrink">12,861<span class="hrs">mins</span> <span class="description">of music listened to</span></h2>
+      <!-- As of December 3rd -->
+      <h2 class="cell shrink">9,130<span class="hrs">mins</span> <span class="description">of music listened to</span></h2>
     </div>
     <div class="tape-svg-wrapper">
       {%- include_relative img/music/tape.svg -%}
@@ -19,7 +18,7 @@
               <div class="cell shrink">{{song.play-count}} plays</div>
             </div>
           </div>
-          <div class="cassette cell {{song.song-name | replace: ' ', '-' | downcase}}">
+          <div class="cassette cell {{song.song-name | replace: ' ', '-' | remove: '.' | remove: '(' | remove: ')' | remove: '*' |remove: "'" | downcase}}">
             <div class="screw screw__1"></div>
             <div class="screw screw__2"></div>
             <div class="screw screw__3"></div>

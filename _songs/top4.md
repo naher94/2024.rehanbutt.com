@@ -1,9 +1,7 @@
 ---
-album-cover: "kelly-time.jpg"
-song-name: Kelly Time
-artist: Owl City
-play-count: 18
-link: "https://www.youtube.com/watch?v=RyuvUkrYl8Q"
+album-cover: "cheeky.jpg"
+song-name: Cheeky
+artist: Inna
+play-count: 21
+link: "https://www.youtube.com/watch?v=Dcm8B2v2uAs"
 ---
-
-<!-- TODO Update -->
