@@ -310,31 +310,17 @@ $cassette-punchouts: semantic-color(page-bg); //should be page-bg
       @mixin cassette-setter($color,$image) {
         $cassette-case-color: $color;
         background-color: $cassette-case-color;
+        @media (prefers-color-scheme: dark) {
+          background-color: mix($pure-black, $cassette-case-color, 30%);
+        }
         .reel-window{
           background-color: $cassette-case-color;
+          @media (prefers-color-scheme: dark) {
+            background-color: mix($pure-black, $cassette-case-color, 30%);
+          }
         }
         .sticker{
           background-image: url("../img/music/" + $image);
-        }
-      }
-      &.whoops{
-        $cassette-case-color: cadetblue;
-        background-color: $cassette-case-color;
-        .reel-window{
-          background-color: $cassette-case-color;
-        }
-        .sticker{
-          background-image: url("../img/music/whoops.jpg");
-        }
-      }
-      &.minute{
-        $cassette-case-color: rgb(249, 138, 255);
-        background-color: $cassette-case-color;
-        .reel-window{
-          background-color: $cassette-case-color;
-        }
-        .sticker{
-          background-image: url("../img/music/minute.jpg");
         }
       }
       &.fn-up-the-disco{
