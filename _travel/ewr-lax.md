@@ -6,5 +6,3 @@ end-location: Los Angeles
 end-location-short: lax
 transit-type: plane
 ---
-
-<!-- TODO update the date here -->
