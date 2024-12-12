@@ -28,15 +28,14 @@
             </div>
           </div>
           <div class="cell shrink poster-box small-order-3">
-            <div class="poster grid-x cell">
-              <!-- TODO update image and alt text -->
-              <img src="/img/movies/fallguy.jpg" alt="Glass Onion Poster">
+            <div class="poster grid-x cell poster-wildrobot">
+              <img src="/img/movies/wildrobot.jpg" alt="The Wild Robot Poster">
             </div>
           </div>
         </div>
         <div class="cell grid-x picks-list auto align-right">
           <h3>top picks</h3>
-          {% assign top_picks = "The Fall Guy,Deadpool & Wolverine,red,blue,green" | split: ',' %}
+          {% assign top_picks = "The Fall Guy,Deadpool & Wolverine,The Wild Robot,Inside Out 2,Rise of the Planet of the Apes" | split: ',' %}
           {%- for movie in top_picks -%}
           <div class="list-item cell grid-x align-middle">
             <p class="cell shrink">{{movie}}</p>
@@ -53,8 +52,6 @@
           <div class="divider-line"></div>
         </div>
       </div>
-
-      <!-- TODO update data -->
       <div class="stats-container grid-x cell align-right">
         <div class="statistic total-watched cell medium-shrink grid-x align-middle">
           <div class="cell shrink icon-container align-center align-middle">
@@ -62,9 +59,9 @@
             {% include_relative img/movies/film.svg %}
           </div>
           <div class="text-container">
-            <p class="number">185</p>
+            <p class="number">115</p>
             <p>featured films watched</p>
-            <!-- As of Dec 31st -->
+            <!-- As of Dec 10th -->
           </div>
         </div>
         <div class="statistic rewatched cell medium-shrink grid-x align-middle">
@@ -73,7 +70,7 @@
             {% include_relative img/movies/history.svg %}
           </div>
           <div class="text-container">
-            <p class="number">31%</p>
+            <p class="number">41%</p>
             <p>were rewatches</p>
           </div>
         </div>
@@ -83,8 +80,8 @@
             {% include_relative img/movies/timer.svg %}
           </div>
           <div class="text-container cell shrink">
-            <p class="number">Feb 17th</p> 
-            <p>busiest watch days with 6 movies</p>
+            <p class="number">Nov 3rd</p> 
+            <p>busiest watch days with 8 movies</p>
           </div>
         </div>
         <div class="statistic first-watch cell medium-shrink grid-x">
@@ -103,7 +100,7 @@
             {% include_relative img/movies/gap.svg %}
           </div>
           <div class="text-container">
-            <p class="number">15 days</p> 
+            <p class="number">68 days</p> 
             <p>biggest watch gap</p>
           </div>
         </div>
