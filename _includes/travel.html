@@ -6,7 +6,7 @@
           <h2>Travel Log</h2>
         </div>
         {% assign travel_order = site.travel | sort: 'date' %}
-        {%- for trip in travel_order limit: 9 -%}
+        {%- for trip in travel_order limit: 11 -%}
         {%- assign class-travel = {{trip.start-location-short}} | append: "-" | append: {{trip.end-location-short}} | downcase -%}
         <div class="boarding-card cell grid-x align-justify {{class-travel}}">
           <div class="content-area cell grid-x align-middle">
@@ -135,6 +135,7 @@
           </div>
         </div>
         <!-- TODO add more stat cards -->
+        <!-- TODO update stat cards data -->
         <!-- most flown aircraft -->
         <!-- Flew a 747 for the first time in about 20 years -->
       </div>
