@@ -156,11 +156,6 @@
       background-color: #c2e3fd;
       @include color-opacity(#c2e3fd);
     }
-    &.battery-pack{
-      // TODO update this color
-      background-color: #FF2D74;
-      @include color-opacity(#FF2D74);
-    }
     &.bic-cristal-renew{
       background-color: #ebd5ff;
       @include color-opacity(#ebd5ff);
@@ -187,7 +182,7 @@
   @media (prefers-reduced-motion) {
     --anim-time: 100s;
   }
-  $numb: 8; //The number of circles/elements we have
+  $numb: 7; //The number of circles/elements we have
   
   //Starts each circle with an offset
   @for $i from 1 through $numb {
