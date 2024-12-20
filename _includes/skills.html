@@ -6,7 +6,6 @@
         <text x="-0.5" y="17">Skills</text>
       </svg>
       <div class="tag-container">
-        <!-- TODO update positioning of pills -->
         {% assign skills-list = "Design Ops,Product Management,Systems Design,Mentoring,Data Analysis,Discovery Research,Product Development,Web Dev" | split: ',' %}
         {%- for skill in skills-list -%}
           <div class="pill pill__{{forloop.index}}">
