@@ -163,8 +163,8 @@
             </div>
           </div>
         </div>
-        <div class="boarding-card cell align-justify grid-y">
-          <div class="content-area cell grid-x flighty-credit align-middle">
+        <div class="boarding-card cell align-justify grid-y flighty-credit">
+          <div class="content-area cell grid-x align-middle">
             <div class="stat-label cell auto grid-x">
               <div class="cell grid-x align-justify align-middle">
                 <span class="cell shrink card-title">Flighty</span>
@@ -175,8 +175,18 @@
               <span class="cell subline">Flight Data captured with Flighty</span>
             </div>
           </div>
+          {% capture cta-content %}
+          <div class="link-cta grid-x cell align-middle align-justify">
+            <div class="cell small-10 text-bit">
+              *Not actual codes. Explore the airport naming system.
+            </div>
+            <div class="cell shrink">
+              {% include_relative img/events/arrow-right.svg %}
+            </div>
+          </div>
+          {% endcapture %}
+          {%- include external-link.html link="https://www.youtube.com/watch?v=jfOUVYQnuhw" content=cta-content css-class="" -%}
         </div>
-        <!-- TODO add the these are not real airport codes thing -->
       </div>
     </div>
   </div>

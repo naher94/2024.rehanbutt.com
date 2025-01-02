@@ -198,7 +198,42 @@
       overflow: hidden;
       aspect-ratio: 1/1;
       width: 1.75em;
-      margin-inline-end: 0.5em;
+    }
+    a{
+      &:hover{
+        .link-cta{
+          background-color: rgba(#fff, 0.15);
+        }
+      }
+    }
+    .link-cta{
+      padding-inline: 0.75em;
+      padding-block: 0.25em;
+      background-color: rgba(#fff, 0.1);
+      border-radius: $tile-radius;
+      color: $pure-white;
+      font-family: $lato;
+      font-weight: $lato-bold;
+      width: fit-content;
+      font-size: 0.8em;
+      transition: $sprint;
+      @include breakpoint(small only){
+        width: auto;
+        margin-block-start: 1em;
+        padding-inline: 1.25em;
+        padding-block: 0.5em;
+        font-size: 1em;
+      }
+      .text-bit{
+        text-wrap: balance;
+        line-height: 1.2;
+      }
+      svg{
+        margin-inline-start: 0.25em;
+        height: 1.5em;
+        display: flex;
+        fill: #fff;
+      }
     }
   }
 }
