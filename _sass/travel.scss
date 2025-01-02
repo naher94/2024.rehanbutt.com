@@ -175,20 +175,30 @@
     }
   }
   .flighty-credit{
-    text-transform: uppercase;
     font-weight: $montserrat-bold;
-    color: rgba($pure-white, 0.75);
+    .stat-label{
+      span.card-title{
+        font-weight: $montserrat-bold;
+        font-size: 2em;
+        line-height: 1.2;
+        margin-block-start: 0;
+      }
+      span.subline{
+        line-height: 1.5;
+        font-size: 0.75em;
+        margin-block-start: -0.25em;
+        font-weight: $montserrat-regular;
+        @include breakpoint(small only){
+          font-size: 1em;
+        }
+      }
+    }
     .icon-wrapper{
       border-radius: $tile-radius;
       overflow: hidden;
       aspect-ratio: 1/1;
       width: 1.75em;
-      // TODO figure out why making this smaller doesn't work
       margin-inline-end: 0.5em;
-    }
-    .text-area{
-      font-size: 0.75rem;
-      line-height: 1.2;
     }
   }
 }
