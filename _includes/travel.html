@@ -6,7 +6,7 @@
           <h2>Travel Log</h2>
         </div>
         {% assign travel_order = site.travel | sort: 'date' %}
-        {%- for trip in travel_order limit: 11 -%}
+        {%- for trip in travel_order limit: 13 -%}
         {%- assign class-travel = {{trip.start-location-short}} | append: "-" | append: {{trip.end-location-short}} | downcase -%}
         <div class="boarding-card cell grid-x align-justify {{class-travel}}">
           <div class="content-area cell grid-x align-middle">
@@ -35,7 +35,7 @@
 
       <div class="grid-x cell medium-4 small-12 column">
         {%- for trip in travel_order offset: continue -%}
-        {%- assign class-travel = {{trip.start-location-short}} | append: "-" | append: {{trip.end-location-short}} | downcase -%}
+        {%- assign class-travel = {{trip.start-location-short}} | append: "-" | append: {{trip.end-location-short}} | downcase | remove: "*" -%}
         <div class="boarding-card cell grid-x align-justify {{class-travel}}">
           <div class="content-area cell grid-x align-middle">
             <div class="departure cell small-5">
@@ -50,6 +50,8 @@
                   {%- include_relative img/travel/train.svg -%}
                 {%- when "plane" -%}
                   {%- include_relative img/travel/plane.svg -%}
+                {%- when "boat" -%}
+                  {%- include_relative img/travel/boat.svg -%}
               {%- endcase -%}
             </div>
             <div class="arrival cell small-5">
@@ -65,7 +67,7 @@
         <div class="boarding-card cell">
           <div class="content-area cell grid-x">
             <div class="stat-label cell auto">
-              <span>4D 17H</span>
+              <span>4D 1H</span>
               <span>Flight Time</span>
             </div>
           </div>
@@ -73,7 +75,7 @@
         <div class="boarding-card cell">
           <div class="content-area cell grid-x">
             <div class="stat-label cell auto">
-              <span>4H</span>
+              <span>7H</span>
               <span>Lost to Delays</span>
             </div>
           </div>
@@ -81,7 +83,7 @@
         <div class="boarding-card cell">
           <div class="content-area cell grid-x">
             <div class="stat-label cell auto">
-              <span>21000mi</span>
+              <span>44,727mi</span>
               <span>Total Miles Flown</span>
             </div>
           </div>
@@ -89,15 +91,15 @@
         <div class="boarding-card cell">
           <div class="content-area cell grid-x">
             <div class="stat-label cell auto">
-              <span>2.2x</span>
-              <span>Times Around the Glove</span>
+              <span>1.8x</span>
+              <span>Times Around the Globe</span>
             </div>
           </div>
         </div>
         <div class="boarding-card cell">
           <div class="content-area cell grid-x">
             <div class="stat-label cell auto">
-              <span>200mi</span>
+              <span>253mi</span>
               <span>Shortest Flight</span>
             </div>
           </div>
@@ -105,7 +107,7 @@
         <div class="boarding-card cell">
           <div class="content-area cell grid-x">
             <div class="stat-label cell auto">
-              <span>8212mi</span>
+              <span>8294mi</span>
               <span>Longest Flight</span>
             </div>
           </div>
@@ -113,7 +115,7 @@
         <div class="boarding-card cell">
           <div class="content-area cell grid-x">
             <div class="stat-label cell auto">
-              <span>7</span>
+              <span>15</span>
               <span>Airports Visited</span>
             </div>
           </div>
@@ -122,7 +124,7 @@
           <div class="content-area cell grid-x">
             <div class="stat-label cell auto">
               <span>LAX</span>
-              <span>Busiest Airport with 9 Flights</span>
+              <span>Busiest Airport with 10 Flights</span>
             </div>
           </div>
           <div class="content-area cell grid-x flighty-credit align-middle">
@@ -138,6 +140,7 @@
         <!-- TODO update stat cards data -->
         <!-- most flown aircraft -->
         <!-- Flew a 747 for the first time in about 20 years -->
+        <!-- TODO add the these are not real airport codes thing -->
       </div>
     </div>
   </div>

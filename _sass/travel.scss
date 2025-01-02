@@ -124,6 +124,7 @@
     $grey-gradient: linear-gradient(#5C5F71,#000000);
     $qatar-gradient: linear-gradient(#8E2157,#3c0c22);
     $egypt-gradient: linear-gradient(#0b67b2,#0b183b);
+    $movenpick-gradient: linear-gradient(#8c7343,#574829);
     &.bur-sea, &.sea-bur{
       background: $alaska-gradient;
       color: $pure-white;
@@ -162,6 +163,10 @@
     }
     &.lax-doh, &.doh-lax, &.cai-doh{
       background: $qatar-gradient;
+      color: $pure-white;
+    }
+    &.lxr-esn, &.esn-edf, &.edf-kom, &.kom-asw{
+      background: $movenpick-gradient;
       color: $pure-white;
     }
     &.doh-cai, &.cai-lxr, &.asw-cai{

@@ -6,5 +6,3 @@ end-location: Cairo
 end-location-short: cai
 transit-type: plane
 ---
-
-<!-- TODO update date here -->
