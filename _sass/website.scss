@@ -332,6 +332,11 @@ $element-border: 1px solid rgba($pure-black, 0.1);
         font-weight: $lato-black;
         font-size: 1.25rem;
         margin-bottom: 0;
+        span{
+          display: block;
+          font-size: 0.6em;
+          font-weight: $lato-regular;
+        }
       }
       .divider{
         border-bottom: solid 1px semantic-color(website-divider);
