@@ -59,23 +59,22 @@
           <p>This year as part of my website updates, Easter Egg received a major upgrade. A new home to see which easter eggs you have unlocked. Explore my site and find them all! And a bunch more items behind the scenes. TODO add better copy here</p>
         </div>
         <div class="grid-x site-container cell">
+          <!-- Data as of Dec 31st -->
           <div class="cell sub-section medium-shrink by-numbers">
             <div class="title">
               <h3>By the Numbers</h3>
             </div>
             <div class="big-total">
-              <p class="numb">11.3K</p>
+              <p class="numb">19.7K</p>
               <p>Total site visits 2024</p>
             </div>
             <div class="busy-day">
-              <p>July 30th</p>
+              <p>March 10th</p>
               <p class="busy-label">Busiest Visit Day</p>
             </div>
             <div class="country-visits">
               <p class="country-label">Most page views by country</p>
-              {% assign country-list = "(🇺🇸|United States|7551),(🇮🇳|India|435),(🇨🇳|China|332)" | remove: "(" | remove: ")" | split: ',' %}
-              <!-- TODO update the numbers -->
-              <!-- Data as of Dec 31st -->
+              {% assign country-list = "(🇺🇸|United States|13520),(🇬🇧|United Kingdom|1399),(🇵🇱|Poland|916)" | remove: "(" | remove: ")" | split: ',' %}
               {% for country in country-list %}
               {% assign each = country | split: '|' %}
               <div class="country-container grid-x">
@@ -128,6 +127,7 @@
             </div>
             <div class="cell sub-section device-breakdown">
               <h3>Device Breakdown</h3>
+              <!-- TODO update these numbers -->
               <div class="bar-chart">
                 <div class="bar-segment desktop">
                   <p>76%</p>
