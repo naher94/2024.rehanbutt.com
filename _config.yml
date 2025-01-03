@@ -21,6 +21,7 @@ keywords: >
 
 # Build settings
 markdown: kramdown
+verbose: true
 
 plugins: [jekyll-sitemap]
 
