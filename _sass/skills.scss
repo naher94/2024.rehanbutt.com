@@ -1,6 +1,7 @@
 .skills{
   @include breakpoint(small only){
     margin-block: 3rem;
+    margin-block-start: 5em;
   }
   .text-hero{
     position: relative;
