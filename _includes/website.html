@@ -97,7 +97,7 @@
               Most Popular Pages
               <span>*excluding top level pages</span>
             </h3>
-            {% assign popular-pages = "(Product Principles|article|556),(Tesla Watch App|project|445),(Istanbul|photography|428),(Enviromental Conditions|project|373),(My Tech Go Tos|resource|318)" | remove: "(" | remove: ")" | split: ',' %}
+            {% assign popular-pages = "(Product Principles|article|556),(Tesla Watch App|project|445),(Istanbul|photography|428),(Environmental Conditions|project|373),(My Tech Go Tos|resource|318)" | remove: "(" | remove: ")" | split: ',' %}
             {%- for popular-page in popular-pages -%}
             {% assign each = popular-page | split: '|' %}
             <div class="divider"></div>
